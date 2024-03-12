@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% load i18n %} <!-- Charge le tag i18n pour utiliser les fonctionnalités de traduction -->
+
+{% block content %}
+<div class="min-h-screen flex flex-col items-center justify-center">
+  <div class="text-center px-4">
+    <h1 class="text-4xl font-bold text-yellow-400 mb-4"> <i class="fa-solid fa-check pr-4"></i>{% trans "Thank You!" %}</h1>
+    <p class="text-xl text-white mb-6">
+      {% trans "Your message has been successfully sent. We will contact you soon." %}
+    </p>
+
+    <a
+      href="{% url 'home' %}"
+      class="inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-yellow-500 to-orange-500 px-6 py-3 text-sm font-medium uppercase leading-tight text-gray-900 shadow-md transition duration-150 ease-in-out hover:shadow-outline hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50"
+    >
+      {% trans "Return to Homepage" %}
+    </a>
+  </div>
+</div>
+{% endblock %}

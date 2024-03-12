@@ -1,0 +1,102 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-10 16:28+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: .\blog\models.py:20
+msgid "First Name"
+msgstr "នាមខ្លួន"
+
+#: .\blog\models.py:21
+msgid "Last Name"
+msgstr "នាមត្រកូល"
+
+#: .\blog\models.py:22
+msgid "Email"
+msgstr "អ៊ីមែល"
+
+#: .\blog\models.py:23
+msgid "Phone"
+msgstr "ទូរស័ព្ទ"
+
+#: .\blog\models.py:24
+msgid "Message"
+msgstr "សារ"
+
+#: .\theme\templates\base.html:126
+msgid "Hello friends!"
+msgstr "សួស្តី​មិត្តភក្តិ!"
+
+#: .\theme\templates\_contact.html
+msgid "SEND"
+msgstr "ផ្ញើ"
+
+msgid "Please enter a valid email address."
+msgstr "សូមបញ្ចូលអាស័យដ្ឋានអ៊ីមែលដែលត្រឹមត្រូវ។"
+
+msgid "This field is required."
+msgstr "ចន្លោះនេះត្រូវបានទាមទារ។"
+
+msgid "Please enter a valid name with letters only."
+msgstr "សូមបញ្ចូលឈ្មោះដែលមានតែអក្សរប៉ុណ្ណោះ។"
+
+msgid "Please enter a valid phone number with digits only."
+msgstr "សូមបញ្ចូលលេខទូរស័ព្ទដែលមានតែលេខប៉ុណ្ណោះ។"
+
+msgid "Thank You!"
+msgstr "សូមអរគុណ!"
+
+msgid "Your message has been successfully sent. We will contact you soon."
+msgstr "សាររបស់អ្នកបានបញ្ជូនជោគជ័យ។ យើងនឹងទាក់ទងអ្នកឆាប់ៗនេះ។"
+
+msgid "Return to Homepage"
+msgstr "ត្រឡប់ទៅទំព័រដើម"
+
+msgid "Your message has been successfully sent!"
+msgstr "សាររបស់អ្នកបានផ្ញើជោគជ័យហើយ!"
+
+msgid "An error occurred while sending your message."
+msgstr "មានកំហុសកើតឡើងខណៈពេលកំពុងផ្ញើសាររបស់អ្នក។"
+
+msgid "We are a leading concierge company based in Cambodia, specializing in providing comprehensive rental management solutions for property owners. Our mission is to simplify real estate leasing by offering services that ensure peace of mind and profitability for our clients."
+msgstr "យើងជាក្រុមហ៊ុនកុងស៊ីអែរឈានមុខគេនៅកម្ពុជា ដែលមានឯកទេសក្នុងការផ្តល់ជូននូវដំណោះស្រាយគ្រប់គ្រងការជួលសម្រាប់ម្ចាស់អចលនទ្រព្យ។ បេសកកម្មរបស់យើងគឺការសាមញ្ញការជួលអចលនទ្រព្យដោយផ្តល់ជូននូវសេវាកម្មដែលធានានូវការអត់ធ្មត់និងប្រាក់ចំណេញសម្រាប់អតិថិជនរបស់យើង។"
+
+msgid "General Information"
+msgstr "ព័ត៌មានទូទៅ"
+
+msgid "About"
+msgstr "អំពីយើង"
+
+msgid "Our Offers"
+msgstr "ការផ្តល់ជូនរបស់យើង"
+
+msgid "Contact Us"
+msgstr "ទំនាក់ទំនងយើង"
+
+msgid "Legal Information"
+msgstr "ព័ត៌មានផ្លូវច្បាប់"
+
+msgid "Privacy Policy"
+msgstr "គោលការណ៍ភាពឯកជន"
+
+msgid "Legal Mentions"
+msgstr "កំណត់ច្បាប់"
+
+msgid "FAQs"
+msgstr "សំណួរដែលសួរញឹកញាប់"
+
