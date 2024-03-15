@@ -1,0 +1,27 @@
+{% load static i18n %}
+
+<section class="container mx-auto mt-20 text-center text-white">
+    <div class="my-8 flex flex-col gap-8">
+      <div class="inline-block">
+        <p class="inline-block border-b border-yellow-400 py-2 text-gray-300">
+          {% trans "SERVICE" %}
+        </p>
+      </div>
+      <h2 class="text-2xl font-medium">
+        {% trans "CONCIERGE OFFERS" %}
+      </h2>
+    </div>
+
+    <section class="mb-32 flex flex-col items-center justify-center gap-6 gap-y-8 p-6 text-center sm:px-0 md:flex-row mt-10">
+      {% for service in services %}
+      <div class="flex h-96 basis-96 flex-col items-center justify-end gap-y-2 rounded-3xl bg-cover bg-center px-16 py-4" style="background-image: url('{% static service.image %}');">
+        <h2 class="font-oxygen text-3xl font-bold text-white">{{ service.title }}</h2>
+        <a href="{{ service.link }}" class="group relative mb-2 me-2 inline-flex min-w-[160px] items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-yellow-500 to-orange-500 p-0.5 text-sm font-medium text-gray-900 hover:text-black focus:outline-none focus:ring-4 focus:ring-yellow-200 group-hover:from-yellow-500 group-hover:to-orange-500 dark:text-white dark:focus:ring-yellow-800">
+          <span class="relative rounded-md bg-white px-8 py-2.5 transition-all duration-75 ease-in group-hover:bg-opacity-0 dark:bg-black">
+            {% trans "SEE DETAILS" %}
+          </span>
+        </a>
+      </div>
+      {% endfor %}
+    </section>
+</section>

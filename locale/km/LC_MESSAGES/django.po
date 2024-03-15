@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-10 16:28+0100\n"
+"POT-Creation-Date: 2024-03-13 23:48+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,85 +18,124 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: .\blog\models.py:20
-msgid "First Name"
-msgstr "នាមខ្លួន"
-
-#: .\blog\models.py:21
-msgid "Last Name"
-msgstr "នាមត្រកូល"
-
-#: .\blog\models.py:22
-msgid "Email"
-msgstr "អ៊ីមែល"
-
-#: .\blog\models.py:23
-msgid "Phone"
-msgstr "ទូរស័ព្ទ"
-
-#: .\blog\models.py:24
-msgid "Message"
-msgstr "សារ"
-
-#: .\theme\templates\base.html:126
-msgid "Hello friends!"
-msgstr "សួស្តី​មិត្តភក្តិ!"
-
-#: .\theme\templates\_contact.html
-msgid "SEND"
-msgstr "ផ្ញើ"
-
-msgid "Please enter a valid email address."
-msgstr "សូមបញ្ចូលអាស័យដ្ឋានអ៊ីមែលដែលត្រឹមត្រូវ។"
-
-msgid "This field is required."
-msgstr "ចន្លោះនេះត្រូវបានទាមទារ។"
-
+#: .\blog\forms.py:10 .\theme\templates\_contact.html:72
+#: .\theme\templates\_contact.html:79
 msgid "Please enter a valid name with letters only."
 msgstr "សូមបញ្ចូលឈ្មោះដែលមានតែអក្សរប៉ុណ្ណោះ។"
 
+#: .\blog\forms.py:16 .\theme\templates\_contact.html:86
 msgid "Please enter a valid phone number with digits only."
 msgstr "សូមបញ្ចូលលេខទូរស័ព្ទដែលមានតែលេខប៉ុណ្ណោះ។"
 
-msgid "Thank You!"
-msgstr "សូមអរគុណ!"
+#: .\blog\forms.py:23 .\blog\models.py:20
+msgid "First Name"
+msgstr "នាមខ្លួន"
 
-msgid "Your message has been successfully sent. We will contact you soon."
-msgstr "សាររបស់អ្នកបានបញ្ជូនជោគជ័យ។ យើងនឹងទាក់ទងអ្នកឆាប់ៗនេះ។"
+#: .\blog\forms.py:28 .\blog\models.py:21
+msgid "Last Name"
+msgstr "នាមត្រកូល"
 
-msgid "Return to Homepage"
-msgstr "ត្រឡប់ទៅទំព័រដើម"
+#: .\blog\forms.py:31 .\blog\models.py:22
+msgid "Email"
+msgstr "អ៊ីមែល"
 
+#: .\blog\forms.py:33 .\theme\templates\_contact.html:65
+msgid "Please enter a valid email address."
+msgstr "សូមបញ្ចូលអាស័យដ្ឋានអ៊ីមែលដែលត្រឹមត្រូវ។"
+
+#: .\blog\forms.py:34
+msgid "This field is required."
+msgstr "ចន្លោះនេះត្រូវបានទាមទារ។"
+
+#: .\blog\forms.py:41 .\blog\models.py:23
+msgid "Phone"
+msgstr "ទូរស័ព្ទ"
+
+#: .\blog\forms.py:47 .\blog\models.py:24
+msgid "Message"
+msgstr "សារ"
+
+#: .\blog\views.py:17
 msgid "Your message has been successfully sent!"
 msgstr "សាររបស់អ្នកបានផ្ញើជោគជ័យហើយ!"
 
+#: .\blog\views.py:20
 msgid "An error occurred while sending your message."
 msgstr "មានកំហុសកើតឡើងខណៈពេលកំពុងផ្ញើសាររបស់អ្នក។"
 
-msgid "We are a leading concierge company based in Cambodia, specializing in providing comprehensive rental management solutions for property owners. Our mission is to simplify real estate leasing by offering services that ensure peace of mind and profitability for our clients."
-msgstr "យើងជាក្រុមហ៊ុនកុងស៊ីអែរឈានមុខគេនៅកម្ពុជា ដែលមានឯកទេសក្នុងការផ្តល់ជូននូវដំណោះស្រាយគ្រប់គ្រងការជួលសម្រាប់ម្ចាស់អចលនទ្រព្យ។ បេសកកម្មរបស់យើងគឺការសាមញ្ញការជួលអចលនទ្រព្យដោយផ្តល់ជូននូវសេវាកម្មដែលធានានូវការអត់ធ្មត់និងប្រាក់ចំណេញសម្រាប់អតិថិជនរបស់យើង។"
+#: .\theme\templates\_contact.html:33
+msgid "SEND"
+msgstr "ផ្ញើ"
 
+#: .\theme\templates\_homepage_section.html:30
+msgid "Get started"
+msgstr "ចាប់ផ្តើម"
+
+#: .\theme\templates\_homepage_section.html:38
+msgid "Learn more"
+msgstr "សូមរៀនបន្ថែម"
+
+#: .\theme\templates\base.html:140
+msgid ""
+"We are a leading concierge company based in Cambodia, specializing in "
+"providing comprehensive rental management solutions for property owners. Our "
+"mission is to simplify real estate leasing by offering services that ensure "
+"peace of mind and profitability for our clients."
+msgstr ""
+"យើងជាក្រុមហ៊ុនកុងស៊ីអែរឈានមុខគេនៅកម្ពុជា "
+"ដែលមានឯកទេសក្នុងការផ្តល់ជូននូវដំណោះស្រាយគ្រប់គ្រងការជួលសម្រាប់ម្ចាស់អចលនទ្រព្យ។ "
+"បេសកកម្មរបស់យើងគឺការសាមញ្ញការជួលអចលនទ្រព្យដោយផ្តល់ជូននូវសេវាកម្មដែលធានានូវការអត់ធ្មត់និងប្រាក់ចំណេញសម្រាប់អតិថិជនរបស់យើង។"
+
+#: .\theme\templates\base.html:146
 msgid "General Information"
 msgstr "ព័ត៌មានទូទៅ"
 
+#: .\theme\templates\base.html:151
 msgid "About"
 msgstr "អំពីយើង"
 
+#: .\theme\templates\base.html:156
 msgid "Our Offers"
 msgstr "ការផ្តល់ជូនរបស់យើង"
 
+#: .\theme\templates\base.html:161
 msgid "Contact Us"
 msgstr "ទំនាក់ទំនងយើង"
 
+#: .\theme\templates\base.html:168
 msgid "Legal Information"
 msgstr "ព័ត៌មានផ្លូវច្បាប់"
 
+#: .\theme\templates\base.html:172
 msgid "Privacy Policy"
 msgstr "គោលការណ៍ភាពឯកជន"
 
+#: .\theme\templates\base.html:177
 msgid "Legal Mentions"
 msgstr "កំណត់ច្បាប់"
 
+#: .\theme\templates\base.html:181
 msgid "FAQs"
 msgstr "សំណួរដែលសួរញឹកញាប់"
 
+#: .\theme\templates\thanks.html:8
+msgid "Thank You!"
+msgstr "សូមអរគុណ!"
+
+#: .\theme\templates\thanks.html:10
+msgid "Your message has been successfully sent. We will contact you soon."
+msgstr "សាររបស់អ្នកបានបញ្ជូនជោគជ័យ។ យើងនឹងទាក់ទងអ្នកឆាប់ៗនេះ។"
+
+#: .\theme\templates\thanks.html:17
+msgid "Return to Homepage"
+msgstr "ត្រឡប់ទៅទំព័រដើម"
+
+#~ msgid "Hello friends!"
+#~ msgstr "សួស្តី​មិត្តភក្តិ!"
+
+#~ msgid ""
+#~ "Enjoy hassle-free property management, with the guarantee of optimized "
+#~ "profitability for your rentals."
+#~ msgstr ""
+#~ "រីករាយជាមួយការគ្រប់គ្រងអចលនទ្រព្យដោយគ្មានបញ្ហា "
+#~ "ជាមួយនឹងការធានានៃប្រាក់ចំណេញដែលបានបង្កើនឡើង។"

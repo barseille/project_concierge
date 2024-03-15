@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+# from .views import send_test_email
 
 urlpatterns = [
     path("", views.home, name="home"),
@@ -7,6 +8,6 @@ urlpatterns = [
     path('thanks/', views.thanks, name='thanks'),
     
     
-    
-    path('test/', views.test, name="test")
+    # path('send-test-email/', send_test_email, name='send_test_email'),
+    # path('test/', views.test, name="test")
 ]

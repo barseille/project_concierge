@@ -1,0 +1,45 @@
+{% load static i18n %}
+
+<!-- _homepage_section.html -->
+<section class="pt-30">
+  <div
+    class="relative min-h-screen bg-cover bg-center"
+    style="background-image: url('{% static 'images/6.webp' %}')"
+  >
+    <div class="px-6 pt-14 lg:px-8">
+      <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+        <div class="text-center">
+          <h1 class="text-3xl font-bold tracking-tight text-white sm:text-6xl">
+            {% trans "Enjoy hassle-free property management, with the guarantee
+            of optimized profitability for your rentals" %}
+          </h1>
+          <p class="mt-6 text-lg leading-8 text-white">
+            {% trans "Profitability, peace of mind, and security are the pillars
+            on which we build our commitment to you. When you open the doors of
+            Maison Holya, you'll discover that the word hospitality takes on its
+            full meaning." %}
+          </p>
+          <div class="mt-10 flex items-center justify-center gap-x-6">
+            <a
+              href="#"
+              class="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-yellow-500 to-orange-500 text-sm font-semibold text-black hover:text-black focus:outline-none focus-visible:ring-4 focus-visible:ring-yellow-200 focus-visible:ring-offset-2 dark:text-white dark:focus:ring-yellow-800"
+            >
+              <span
+                class="relative rounded-md bg-black px-3.5 py-3 transition-all ease-in duration-75 group-hover:bg-opacity-0 dark:bg-black"
+              >
+                {% trans "Get started" %}
+              </span>
+            </a>
+            <a
+              href="#"
+              class="rounded-md border border-white px-2 py-2 text-sm font-semibold leading-6 text-white transition-all ease-in-out duration-300 hover:bg-black hover:text-white"
+              aria-label="Learn more"
+            >
+              {% trans "Learn more" %} <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

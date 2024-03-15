@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-10 16:25+0100\n"
+"POT-Creation-Date: 2024-03-13 23:47+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,85 +17,104 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-
-#: .\blog\models.py:20
-msgid "First Name"
-msgstr "Prénom"
-
-#: .\blog\models.py:21
-msgid "Last Name"
-msgstr "Nom"
-
-#: .\blog\models.py:22
-msgid "Email"
-msgstr "Courriel"
-
-#: .\blog\models.py:23
-msgid "Phone"
-msgstr "Téléphone"
-
-#: .\blog\models.py:24
-msgid "Message"
-msgstr "Message"
-
-#: .\theme\templates\base.html:126
-msgid "Hello friends!"
-msgstr "bonjour les amis !"
-
-#: .\theme\templates\_contact.html
-msgid "SEND"
-msgstr "Envoyer"
-
-msgid "Please enter a valid email address."
-msgstr "Veuillez entrer une adresse email valide."
-
-msgid "This field is required."
-msgstr "Ce champ est obligatoire."
-
+#: .\blog\forms.py:10 .\theme\templates\_contact.html:72
+#: .\theme\templates\_contact.html:79
 msgid "Please enter a valid name with letters only."
 msgstr "Veuillez entrer un nom valide composé uniquement de lettres."
 
+#: .\blog\forms.py:16 .\theme\templates\_contact.html:86
 msgid "Please enter a valid phone number with digits only."
 msgstr "Veuillez entrer un numéro de téléphone valide composé uniquement de chiffres."
 
-msgid "Thank You!"
-msgstr "Merci !"
+#: .\blog\forms.py:28 .\blog\models.py:21
+msgid "Last Name"
+msgstr "Nom de famille"
 
-msgid "Your message has been successfully sent. We will contact you soon."
-msgstr "Votre message a été envoyé avec succès. Nous vous contacterons bientôt."
+#: .\blog\forms.py:31 .\blog\models.py:22
+msgid "Email"
+msgstr "Courriel"
 
-msgid "Return to Homepage"
-msgstr "Retourner à la page d'accueil"
+#: .\blog\forms.py:33 .\theme\templates\_contact.html:65
+msgid "Please enter a valid email address."
+msgstr "Veuillez saisir une adresse e-mail valide."
 
+#: .\blog\forms.py:34
+msgid "This field is required."
+msgstr "Ce champ est requis."
+
+#: .\blog\forms.py:41 .\blog\models.py:23
+msgid "Phone"
+msgstr "Téléphone"
+
+#: .\blog\forms.py:47 .\blog\models.py:24
+msgid "Message"
+msgstr "Message"
+
+#: .\blog\views.py:17
 msgid "Your message has been successfully sent!"
 msgstr "Votre message a été envoyé avec succès !"
 
+#: .\blog\views.py:20
 msgid "An error occurred while sending your message."
-msgstr "Une erreur est survenue lors de l'envoi de votre message."
+msgstr "Une erreur s'est produite lors de l'envoi de votre message."
 
-msgid "We are a leading concierge company based in Cambodia, specializing in providing comprehensive rental management solutions for property owners. Our mission is to simplify real estate leasing by offering services that ensure peace of mind and profitability for our clients."
-msgstr "Nous sommes une entreprise de conciergerie de premier plan basée au Cambodge, spécialisée dans la fourniture de solutions complètes de gestion locative pour les propriétaires. Notre mission est de simplifier la location immobilière en proposant des services qui garantissent la tranquillité d'esprit et la rentabilité pour nos clients."
+#: .\theme\templates\_contact.html:33
+msgid "SEND"
+msgstr "ENVOYER"
 
+#: .\theme\templates\_homepage_section.html:30
+msgid "Get started"
+msgstr "Commencer"
+
+#: .\theme\templates\base.html:140
+msgid ""
+"We are a leading concierge company based in Cambodia, specializing in "
+"providing comprehensive rental management solutions for property owners. Our "
+"mission is to simplify real estate leasing by offering services that ensure "
+"peace of mind and profitability for our clients."
+msgstr "Nous sommes une société de conciergerie de premier plan au Cambodge, spécialisée dans la fourniture de solutions complètes de gestion locative pour les propriétaires. Notre mission est de simplifier la location immobilière en offrant des services garantissant tranquillité d'esprit et rentabilité pour nos clients."
+
+#: .\theme\templates\base.html:146
 msgid "General Information"
 msgstr "Informations Générales"
 
+#: .\theme\templates\base.html:151
 msgid "About"
-msgstr "À propos"
+msgstr "À Propos"
 
+#: .\theme\templates\base.html:156
 msgid "Our Offers"
-msgstr "Nos offres"
+msgstr "Nos Offres"
 
+#: .\theme\templates\base.html:161
 msgid "Contact Us"
-msgstr "Contactez-nous"
+msgstr "Contactez-Nous"
 
+#: .\theme\templates\base.html:168
 msgid "Legal Information"
-msgstr "Informations légales"
+msgstr "Informations Légales"
 
+#: .\theme\templates\base.html:172
 msgid "Privacy Policy"
-msgstr "Politique de confidentialité"
+msgstr "Politique de Confidentialité"
 
+#: .\theme\templates\base.html:177
 msgid "Legal Mentions"
-msgstr "Mentions légales"
+msgstr "Mentions Légales"
 
+#: .\theme\templates\base.html:181
 msgid "FAQs"
 msgstr "FAQ"
+
+#: .\theme\templates\thanks.html:8
+msgid "Thank You!"
+msgstr "Merci !"
+
+#: .\theme\templates\thanks.html:10
+msgid "Your message has been successfully sent. We will contact you soon."
+msgstr "Votre message a été envoyé avec succès. Nous vous contacterons bientôt."
+
+#: .\theme\templates\thanks.html:17
+msgid "Return to Homepage"
+msgstr "Retour à l'Accueil"
+
