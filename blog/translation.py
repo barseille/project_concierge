@@ -1,5 +1,5 @@
 from modeltranslation.translator import register, TranslationOptions
-from .models import Service, Testimonial, FAQ
+from .models import Service, Testimonial, FAQ, SiteInformation
 
 @register(Service)
 class ServiceTranslationOptions(TranslationOptions):
@@ -14,3 +14,7 @@ class TestimonialTranslationOptions(TranslationOptions):
 @register(FAQ)
 class FAQTranslationOptions(TranslationOptions):
     fields = ('question', 'answer',)
+    
+@register(SiteInformation)
+class SiteInformationTranslationOptions(TranslationOptions):
+    fields = ('concierge_description',)

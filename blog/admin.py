@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Contact, Service, Testimonial, FAQ
+from .models import Contact, Service, Testimonial, FAQ, SiteInformation
 
 
 @admin.register(Contact)
@@ -27,6 +27,10 @@ class TestimonialAdmin(admin.ModelAdmin):
 @admin.register(FAQ)
 class FAQAdmin(admin.ModelAdmin):
     list_display = ('question', 'answer')
+    
+@admin.register(SiteInformation)
+class SiteInformationAdmin(admin.ModelAdmin):
+    list_display = ('concierge_description',)
     
 
 

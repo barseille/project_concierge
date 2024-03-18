@@ -137,16 +137,18 @@
           </div>
 
           <p class="max-w-[500px] text-sm text-white text-center sm:text-left">
-            {% trans "We are a leading concierge company based in Cambodia,
-            specializing in providing comprehensive rental management solutions
-            for property owners. Our mission is to simplify real estate leasing
-            by offering services that ensure peace of mind and profitability for
-            our clients." %}
-          </p>
+            {{ site_info.concierge_description }}
+        </p>
+
+          {% comment %} <p class="max-w-[500px] text-sm text-white text-center sm:text-left">
+            {% blocktrans %}
+            We are a leading concierge company based in Cambodia, specializing in providing comprehensive rental management solutions for property owners. Our mission is to simplify real estate leasing by offering services that ensure peace of mind and profitability for our clients.
+            {% endblocktrans %}
+          </p> {% endcomment %}
         </div>
 
         <ul class="text-sm flex flex-col text-center sm:text-left gap-y-2">
-          <li class="text-yellow-600 text-base font-semibold mb-2 ">
+          <li class="text-yellow-600 text-base font-semibold mb-2">
             {% trans "General Information" %}
           </li>
 
@@ -167,7 +169,7 @@
           </li>
         </ul>
 
-        <ul class="text-sm flex flex-col text-center sm:text-left gap-y-2 ">
+        <ul class="text-sm flex flex-col text-center sm:text-left gap-y-2">
           <li class="text-yellow-600 text-base font-semibold mb-2">
             {% trans "Legal Information" %}
           </li>
@@ -187,7 +189,7 @@
         </ul>
       </div>
 
-      <div class=" mt-20 mb-4 flex justify-center px-4 text-white">
+      <div class="mt-20 mb-4 flex justify-center px-4 text-white">
         <p class="text-sm" id="copyright">
           Copyright © <span id="year"></span> AngkorLuxe
         </p>

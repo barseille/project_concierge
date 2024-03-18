@@ -44,3 +44,11 @@ class FAQ(models.Model):
 
     def __str__(self):
         return self.question
+    
+
+class SiteInformation(models.Model):
+    concierge_description = models.TextField(_("Concierge Company Description"), help_text=_("Description of the concierge company services."))
+
+    def __str__(self):
+        return "Site Information"
+        

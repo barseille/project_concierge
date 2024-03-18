@@ -4,30 +4,28 @@
 
 
 <section
-  class="container mx-auto mb-32 grid gap-6 text-center sm:grid-cols-2 lg:grid-cols-3"
+  class="px-4 sm:px-12 mx-auto mb-32 grid gap-6 text-center sm:grid-cols-3 lg:grid-cols-3"
 >
   {% for service in services %}
   <div
-    class="flex flex-col items-center justify-end gap-y-2 rounded-3xl overflow-hidden bg-gradient-to-r from-black to-white"
+    class="flex flex-col items-center justify-end gap-y-2 rounded-3xl overflow-hidden bg-gradient-to-r from-black to-gray-500"
   >
     <img
       src="{{ service.image.url }}"
       alt="{{ service.title }}"
       class="w-full h-96 object-cover"
     />
-    <h2 class="font-oxygen text-lg font-bold text-white uppercase">
+    <h2 class="font-oxygen text-lg font-semibold text-white uppercase">
       {{ service.title }}
     </h2>
     <a
-      href="{{ service.link }}"
-      class="group relative mb-2 inline-flex min-w-[160px] items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-yellow-500 to-orange-500 p-0.5 text-sm font-medium text-gray-900 hover:text-black focus:outline-none focus:ring-4 focus:ring-yellow-200 group-hover:from-yellow-500 group-hover:to-orange-500 dark:text-white dark:focus:ring-yellow-800"
-    >
-      <span
-        class="relative rounded-md bg-white px-8 py-2.5 transition-all duration-75 ease-in group-hover:bg-opacity-0 dark:bg-black"
-      >
-        {% trans "SEE DETAILS" %}
-      </span>
-    </a>
+    href="{{ service.link }}"
+    class="inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-yellow-500 to-orange-500 px-4 py-2 text-sm uppercase leading-tight text-black shadow-md transition duration-150 ease-in-out hover:shadow-outline hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 font-semibold mb-4"
+  >
+    {% trans "SEE DETAILS" %}
+  </a>
+
+
   </div>
   {% endfor %}
 </section>

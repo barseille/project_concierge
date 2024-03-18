@@ -2,9 +2,35 @@
 
 {% include "_section_title.html" with subheading="our values" heading="our strength" %}
 
-
-
 <section>
+  <div class="container mx-auto grid gap-5 text-center text-white sm:grid-cols-3 my-10">
+    <div class="flex flex-col justify-around border-gray-300">
+      <h3 class="font-bold">
+        <span><i class="fa-solid fa-sack-dollar mr-2"></i></span>{% trans "PROFITABILITY" %}
+      </h3>
+      <p>{% trans "Optimized income" %}</p>
+      <div class="mx-auto w-10 border-b border-stone-500 py-1 pt-5 sm:hidden"></div>
+    </div>
+
+    <div class="flex flex-col justify-around border-gray-300">
+      <h3 class="font-bold">
+        <span><i class="fa-solid fa-sack-dollar mr-2"></i></span>{% trans "SECURITY" %}
+      </h3>
+      <p>{% trans "A property in excellent" %}</p>
+      <div class="mx-auto w-10 border-b border-stone-500 py-1 pt-5 sm:hidden"></div>
+    </div>
+
+    <div class="flex flex-col justify-around border-gray-300">
+      <h3 class="font-bold">
+        <span><i class="fa-solid fa-sack-dollar mr-2"></i></span>{% trans "SERENITY" %}
+      </h3>
+      <p>{% trans "Satisfied tenants" %}</p>
+      <div class="mx-auto w-10 border-b border-stone-500 py-1 pt-5 sm:hidden"></div>
+    </div>
+  </div>
+</section>
+
+{% comment %} <section>
   <div class=" container mx-auto grid gap-10 p-10 mb-10 sm:grid-cols-3 text-white text-center ">
     <!-- Valeurs ici -->
     <div class="flex flex-col justify-around border-gray-300">
@@ -28,7 +54,7 @@
       <p>Éviter les dégradations à long terme</p>
     </div>
   </div>
-</section>
+</section> {% endcomment %}
 
 <!-- Section avec image de fond  -->
 <div

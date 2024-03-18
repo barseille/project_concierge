@@ -26,6 +26,11 @@ msgstr "Veuillez entrer un nom valide composé uniquement de lettres."
 msgid "Please enter a valid phone number with digits only."
 msgstr "Veuillez entrer un numéro de téléphone valide composé uniquement de chiffres."
 
+#: .\blog\forms.py:23 .\blog\models.py:20
+msgid "First Name"
+msgstr "Prénom"
+
+
 #: .\blog\forms.py:28 .\blog\models.py:21
 msgid "Last Name"
 msgstr "Nom de famille"
@@ -66,13 +71,19 @@ msgstr "ENVOYER"
 msgid "Get started"
 msgstr "Commencer"
 
-#: .\theme\templates\base.html:140
 msgid ""
 "We are a leading concierge company based in Cambodia, specializing in "
-"providing comprehensive rental management solutions for property owners. Our "
-"mission is to simplify real estate leasing by offering services that ensure "
-"peace of mind and profitability for our clients."
-msgstr "Nous sommes une société de conciergerie de premier plan au Cambodge, spécialisée dans la fourniture de solutions complètes de gestion locative pour les propriétaires. Notre mission est de simplifier la location immobilière en offrant des services garantissant tranquillité d'esprit et rentabilité pour nos clients."
+"providing comprehensive rental management solutions for property owners. "
+"Our mission is to simplify real estate leasing by offering services that "
+"ensure peace of mind and profitability for our clients."
+msgstr ""
+"Nous sommes une entreprise de conciergerie de premier plan basée au Cambodge, "
+"spécialisée dans la fourniture de solutions complètes de gestion locative pour "
+"les propriétaires. Notre mission est de simplifier la location immobilière en "
+"offrant des services qui garantissent la tranquillité d'esprit et la rentabilité "
+"pour nos clients."
+
+
 
 #: .\theme\templates\base.html:146
 msgid "General Information"
@@ -81,7 +92,7 @@ msgstr "Informations Générales"
 msgid "learn more about us"
 msgstr "En Savoir Plus Sur Nous"
 
-msgid "about"
+msgid "About"
 msgstr "À Propos"
 
 #: .\theme\templates\base.html:156
@@ -146,6 +157,9 @@ msgstr "notre force"
 
 msgid "testimonials"
 msgstr "témoignages"
+
+msgid "our owners wanted to share their experiences"
+msgstr "Nos propriétaires ont voulu partager leurs expériences"
 
 msgid "Frequently Asked Questions"
 msgstr "Questions Fréquentes"

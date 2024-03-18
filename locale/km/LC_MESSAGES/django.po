@@ -75,16 +75,16 @@ msgstr "ចាប់ផ្តើម"
 msgid "Learn more"
 msgstr "សូមរៀនបន្ថែម"
 
-#: .\theme\templates\base.html:140
 msgid ""
 "We are a leading concierge company based in Cambodia, specializing in "
-"providing comprehensive rental management solutions for property owners. Our "
-"mission is to simplify real estate leasing by offering services that ensure "
-"peace of mind and profitability for our clients."
+"providing comprehensive rental management solutions for property owners. "
+"Our mission is to simplify real estate leasing by offering services that "
+"ensure peace of mind and profitability for our clients."
 msgstr ""
 "យើងជាក្រុមហ៊ុនកុងស៊ីអែរឈានមុខគេនៅកម្ពុជា "
 "ដែលមានឯកទេសក្នុងការផ្តល់ជូននូវដំណោះស្រាយគ្រប់គ្រងការជួលសម្រាប់ម្ចាស់អចលនទ្រព្យ។ "
 "បេសកកម្មរបស់យើងគឺការសាមញ្ញការជួលអចលនទ្រព្យដោយផ្តល់ជូននូវសេវាកម្មដែលធានានូវការអត់ធ្មត់និងប្រាក់ចំណេញសម្រាប់អតិថិជនរបស់យើង។"
+
 
 #: .\theme\templates\base.html:146
 msgid "General Information"
@@ -93,7 +93,7 @@ msgstr "ព័ត៌មានទូទៅ"
 msgid "learn more about us"
 msgstr "ស្វែងយល់បន្ថែមអំពីយើង"
 
-msgid "about"
+msgid "About"
 msgstr "អំពីយើង"
 
 #: .\theme\templates\base.html:156
