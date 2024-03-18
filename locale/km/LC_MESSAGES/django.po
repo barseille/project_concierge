@@ -90,8 +90,10 @@ msgstr ""
 msgid "General Information"
 msgstr "ព័ត៌មានទូទៅ"
 
-#: .\theme\templates\base.html:151
-msgid "About"
+msgid "learn more about us"
+msgstr "ស្វែងយល់បន្ថែមអំពីយើង"
+
+msgid "about"
 msgstr "អំពីយើង"
 
 #: .\theme\templates\base.html:156
@@ -139,3 +141,46 @@ msgstr "ត្រឡប់ទៅទំព័រដើម"
 #~ msgstr ""
 #~ "រីករាយជាមួយការគ្រប់គ្រងអចលនទ្រព្យដោយគ្មានបញ្ហា "
 #~ "ជាមួយនឹងការធានានៃប្រាក់ចំណេញដែលបានបង្កើនឡើង។"
+
+msgid "Complete Property Management"
+msgstr "ការគ្រប់គ្រងអចលនទ្រព្យទាំងមូល"
+
+
+msgid "Our complete management service takes care of all aspects of your luxury rental, including maintenance, cleaning, booking management, and 24/7 customer service. We ensure that your property remains impeccable and that your guests have an unforgettable experience."
+msgstr "សេវាកម្មគ្រប់គ្រងរួមបញ្ចូលគ្នារបស់យើងថែទាំគ្រប់ផ្នែកនៃការជួលប្រណីតរបស់អ្នក រួមបញ្ចូលគ្នា ការថែទាំ ការសម្អាត ការគ្រប់គ្រងការកក់ និងសេវាកម្មអតិថិជន ២៤/៧។ យើងធានាថាអចលនទ្រព្យរបស់អ្នកនៅថ្មីស្អាត ហើយភ្ញៀវរបស់អ្នកមានបទពិសោធន៍ដ៏មិនអាចភ្លេចបាន។"
+
+msgid "services"
+msgstr "សេវាកម្ម"
+
+msgid "concierge offers"
+msgstr "ការផ្តល់ជូនពីកុងស៊ីអែរ"
+
+msgid "Enjoy hassle-free property management, with the guarantee of optimized profitability for your rentals"
+msgstr "រីករាយជាមួយការគ្រប់គ្រងអចលនទ្រព្យដោយគ្មានបញ្ហា, ដោយធានានូវប្រាក់ចំណេញដែលបានបង្កើនឡើងសម្រាប់ការជួលរបស់អ្នក។"
+
+msgid "Profitability, serenity, and security are the foundations of our commitment to you. By choosing ANGKOR LUXE, you will experience the true essence of hospitality."
+msgstr "ភាពចំណេញ, សេរីភាព, និងសន្តិសុខគឺជាមូលដ្ឋាននៃការប្តេជ្ញាចិត្តរបស់យើងចំពោះអ្នក។ ដោយជ្រើសរើស ANGKOR LUXE, អ្នកនឹងបានជួបប្រទះនូវអត្ថន័យពិតប្រាកដនៃភាពរាប់អាន។"
+
+msgid "our values"
+msgstr "តម្លៃរបស់យើង"
+
+msgid "our strength"
+msgstr "កម្លាំងរបស់យើង"
+
+msgid "testimonials"
+msgstr "សម្ដីអ្នកប្រើប្រាស់"
+
+msgid "our owners wanted to share their experiences"
+msgstr "ម្ចាស់របស់យើងចង់ចែករំលែកបទពិសោធន៍របស់ពួកគេ"
+
+msgid "Frequently Asked Questions"
+msgstr "សំណួរដែលសួរញឹកញាប់"
+
+msgid "Find Answers to Your Queries"
+msgstr "ស្វែងរកចម្លើយសម្រាប់សំណួររបស់អ្នក"
+
+msgid "contact us"
+msgstr "ទាក់ទងយើង"
+
+msgid "let's discuss your project together"
+msgstr "តោះពិភាក្សាអំពីគម្រោងរបស់អ្នកជាមួយគ្នា"

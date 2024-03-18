@@ -33,18 +33,21 @@ INSTALLED_APPS = [
     "theme",
     "authentication",
     "blog",
+    "modeltranslation",
 ]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.locale.LocaleMiddleware",
+    "middleware.AdminLocaleMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+
 
 
 ROOT_URLCONF = "config.urls"
@@ -148,3 +151,9 @@ EMAIL_PORT = int(os.getenv('EMAIL_PORT', 587))
 EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS', 'True') == 'True'
 EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
+
+# Chemin du système de fichiers où les fichiers téléchargés seront stockés.
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# URL publique de base pour servir les fichiers média téléchargés.
+MEDIA_URL = '/media/'

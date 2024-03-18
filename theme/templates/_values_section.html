@@ -1,0 +1,37 @@
+{% load static i18n %}
+
+{% include "_section_title.html" with subheading="our values" heading="our strength" %}
+
+
+
+<section>
+  <div class=" container mx-auto grid gap-10 p-10 mb-10 sm:grid-cols-3 text-white text-center ">
+    <!-- Valeurs ici -->
+    <div class="flex flex-col justify-around border-gray-300">
+      <h3 class="font-bold">
+        <span><i class="fa-solid fa-sack-dollar mr-2"></i></span>GAIN DE TEMPS
+      </h3>
+      <p>Déléguer cette responsabilité</p>
+    </div>
+
+    <div class="flex flex-col justify-around border-gray-300">
+      <h3 class="font-bold">
+        <span><i class="fa-solid fa-sack-dollar mr-2"></i></span>OPTIMISATION
+      </h3>
+      <p>Connaissance du marché</p>
+    </div>
+
+    <div class="flex flex-col justify-around border-gray-300">
+      <h3 class="font-bold">
+        <span><i class="fa-solid fa-sack-dollar mr-2"></i></span>MÉNAGE
+      </h3>
+      <p>Éviter les dégradations à long terme</p>
+    </div>
+  </div>
+</section>
+
+<!-- Section avec image de fond  -->
+<div
+  class="bg-cover bg-center min-h-screen"
+  style="background-image: url('{% static 'images/9.webp' %}')"
+></div>

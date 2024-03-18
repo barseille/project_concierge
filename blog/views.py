@@ -2,14 +2,18 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import ContactForm
 from django.utils.translation import gettext_lazy as _
-from .models import Service, Contact
+from .models import Service, Testimonial,FAQ
 
 def home(request):
     form = ContactForm()
     service = Service.objects.all()
+    testimonial = Testimonial.objects.all()
+    faqs = FAQ.objects.all()
     context = {
         'form': form,
-        'services': service
+        'services': service,
+        'testimonials': testimonial,
+        'faqs': faqs
     }
     return render(request, 'home.html', context)
 

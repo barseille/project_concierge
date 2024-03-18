@@ -20,3 +20,27 @@ class Service(models.Model):
     
     def __str__(self):
         return self.title
+
+class Testimonial(models.Model):
+    name = models.CharField(_("Name"), max_length=100)
+    role = models.CharField(_("Role"), max_length=100, blank=True, null=True)
+    message = models.TextField(_("Message"))
+    photo = models.ImageField(upload_to='testimonials/', blank=True, null=True)
+
+    class Meta:
+        verbose_name = _("Testimonial")
+        verbose_name_plural = _("Testimonials")
+
+    def __str__(self):
+        return self.name
+
+class FAQ(models.Model):
+    question = models.CharField(_("Question"), max_length=255)
+    answer = models.TextField(_("Answer"))
+
+    class Meta:
+        verbose_name = _("FAQ")
+        verbose_name_plural = _("FAQs")
+
+    def __str__(self):
+        return self.question

@@ -78,8 +78,10 @@ msgstr "Nous sommes une société de conciergerie de premier plan au Cambodge, s
 msgid "General Information"
 msgstr "Informations Générales"
 
-#: .\theme\templates\base.html:151
-msgid "About"
+msgid "learn more about us"
+msgstr "En Savoir Plus Sur Nous"
+
+msgid "about"
 msgstr "À Propos"
 
 #: .\theme\templates\base.html:156
@@ -118,3 +120,41 @@ msgstr "Votre message a été envoyé avec succès. Nous vous contacterons bient
 msgid "Return to Homepage"
 msgstr "Retour à l'Accueil"
 
+msgid "Complete Property Management"
+msgstr "Gestion Complète de Propriété"
+
+msgid "Our complete management service takes care of all aspects of your luxury rental, including maintenance, cleaning, booking management, and 24/7 customer service. We ensure that your property remains impeccable and that your guests have an unforgettable experience."
+msgstr "Notre service de gestion complète prend en charge tous les aspects de votre location de luxe, y compris la maintenance, le nettoyage, la gestion des réservations et le service client 24/7. Nous assurons que votre propriété reste impeccable et que vos invités vivent une expérience inoubliable."
+
+msgid "services"
+msgstr "services"
+
+msgid "concierge offers"
+msgstr "offres de conciergerie"
+
+msgid "Enjoy hassle-free property management, with the guarantee of optimized profitability for your rentals"
+msgstr "Profitez d'une gestion locative sans souci, avec la garantie d'une rentabilité optimisée pour vos locations."
+
+msgid "Profitability, serenity, and security are the foundations of our commitment to you. By choosing ANGKOR LUXE, you will experience the true essence of hospitality."
+msgstr "La rentabilité, la sérénité, et la sécurité constituent les fondements de notre dévouement envers vous. En choisissant ANGKOR LUXE, vous expérimenterez la véritable essence de l'hospitalité."
+
+msgid "our values"
+msgstr "nos valeurs"
+
+msgid "our strength"
+msgstr "notre force"
+
+msgid "testimonials"
+msgstr "témoignages"
+
+msgid "Frequently Asked Questions"
+msgstr "Questions Fréquentes"
+
+msgid "Find Answers to Your Queries"
+msgstr "Trouvez les Réponses à Vos Interrogations"
+
+msgid "contact us"
+msgstr "Contactez-nous"
+
+msgid "let's discuss your project together"
+msgstr "Discutons ensemble de votre projet"

@@ -1,0 +1,83 @@
+{% load i18n %}
+
+{% include "_section_title.html" with subheading="testimonials" heading="our owners wanted to share their experiences" %}
+
+
+  
+  <!-- Carrousel -->
+<section class="container mx-auto mt-10 text-center text-white">
+    <div id="default-carousel" class="relative w-full" data-carousel="slide">
+      <!-- Carrousel items -->
+      <div class="relative h-auto min-h-[10rem] overflow-hidden rounded-lg px-20">
+        {% for testimonial in testimonials %}
+        <div class="carousel-item {{ forloop.first|yesno:",hidden" }}" data-carousel-item>
+          {% if testimonial.photo %}
+          <img src="{{ testimonial.photo.url }}" alt="{{ testimonial.name }}" class="mx-auto h-24 w-24 rounded-full object-cover">
+          {% endif %}
+          <p class="py-4">“{{ testimonial.message }}”</p>
+          <p class="pt-2">- {{ testimonial.name }}</p>
+        </div>
+        {% endfor %}
+      </div>
+  
+      <!-- Navigation buttons -->
+      <div class="absolute left-0 right-0 top-1/4 flex -translate-y-1/2 transform justify-between px-4">
+        <button type="button" class="carousel-prev">
+          <i class="fas fa-chevron-left fa-2x text-white hover:text-yellow-400"></i>
+        </button>
+  
+        <button type="button" class="carousel-next">
+          <i class="fas fa-chevron-right fa-2x text-white hover:text-yellow-400"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+  
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Sélection du carrousel et des éléments/items du carrousel
+        const carousel = document.getElementById("default-carousel");
+        const carouselItems = document.querySelectorAll("[data-carousel-item]");
+        let currentIndex = 0; // L'index de l'élément actuellement visible
+      
+        // Fonction pour ajuster la hauteur du carrousel
+        function adjustCarouselHeight() {
+          let maxHeight = 0;
+          carouselItems.forEach((item) => {
+            const display = item.style.display; // Sauvegarde l'état d'affichage actuel
+            item.style.display = "block"; // Affiche l'élément pour mesurer sa hauteur
+            const itemHeight = item.offsetHeight; // Mesure la hauteur
+            maxHeight = Math.max(maxHeight, itemHeight); // Mise à jour de la hauteur maximale
+            item.style.display = display; // Restaure l'état d'affichage
+          });
+          carousel.style.height = `${maxHeight}px`; // Applique la hauteur maximale au carrousel
+        }
+      
+        // Fonction pour montrer un élément du carrousel basé sur l'index
+        function showCarouselItem(index) {
+          carouselItems.forEach((item, idx) => {
+            item.classList.toggle("hidden", idx !== index); // Cache tous les éléments sauf l'actif
+          });
+          adjustCarouselHeight(); // Ajuste la hauteur à celle de l'élément actif
+        }
+      
+        // Écouteurs d'événements pour les boutons de navigation
+        document.querySelector(".carousel-prev").addEventListener("click", () => {
+          currentIndex = (currentIndex === 0) ? carouselItems.length - 1 : currentIndex - 1;
+          showCarouselItem(currentIndex); // Montre l'élément précédent
+        });
+      
+        document.querySelector(".carousel-next").addEventListener("click", () => {
+          currentIndex = (currentIndex === carouselItems.length - 1) ? 0 : currentIndex + 1;
+          showCarouselItem(currentIndex); // Montre l'élément suivant
+        });
+      
+        // Initialisation : montre le premier élément et ajuste la hauteur
+        showCarouselItem(currentIndex);
+      
+        // Ajuste la hauteur lors du redimensionnement de la fenêtre
+        window.addEventListener("resize", adjustCarouselHeight);
+      });
+      
+</script>
