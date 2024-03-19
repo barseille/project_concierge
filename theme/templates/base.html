@@ -15,6 +15,11 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
 
     <title>ANGKOR LUXE - Gestion locative optimisée</title>
     <meta
@@ -138,13 +143,17 @@
 
           <p class="max-w-[500px] text-sm text-white text-center sm:text-left">
             {{ site_info.concierge_description }}
-        </p>
+          </p>
 
-          {% comment %} <p class="max-w-[500px] text-sm text-white text-center sm:text-left">
-            {% blocktrans %}
-            We are a leading concierge company based in Cambodia, specializing in providing comprehensive rental management solutions for property owners. Our mission is to simplify real estate leasing by offering services that ensure peace of mind and profitability for our clients.
-            {% endblocktrans %}
-          </p> {% endcomment %}
+          {% comment %}
+          <p class="max-w-[500px] text-sm text-white text-center sm:text-left">
+            {% blocktrans %} We are a leading concierge company based in
+            Cambodia, specializing in providing comprehensive rental management
+            solutions for property owners. Our mission is to simplify real
+            estate leasing by offering services that ensure peace of mind and
+            profitability for our clients. {% endblocktrans %}
+          </p>
+          {% endcomment %}
         </div>
 
         <ul class="text-sm flex flex-col text-center sm:text-left gap-y-2">
@@ -233,20 +242,7 @@
         // Ici, on écoute le chargement du DOM. Ensuite, on sélectionne le bouton du menu et le menu lui-même. On ajoute un écouteur d'événement sur le bouton qui bascule la classe hidden pour montrer et cacher le menu et changer l'icône.
       });
     </script>
-    <script>
-      // Fonction pour enregistrer la position de défilement actuelle dans le stockage local
-      function saveScrollPosition() {
-        localStorage.setItem(
-          "scrollPosition",
-          window.scrollY || window.pageYOffset
-        );
-      }
 
-      // Attachez cette fonction à l'événement de changement du sélecteur de langue
-      document
-        .getElementById("languageSelector")
-        .addEventListener("change", saveScrollPosition);
-    </script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         var scrollPosition = localStorage.getItem("scrollPosition");
@@ -255,6 +251,7 @@
           localStorage.removeItem("scrollPosition"); // Optionnel : supprimez la position stockée après l'avoir utilisée
         }
       });
+      AOS.init();
     </script>
   </body>
 </html>

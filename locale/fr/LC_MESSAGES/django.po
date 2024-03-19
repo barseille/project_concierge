@@ -92,6 +92,9 @@ msgstr "Informations Générales"
 msgid "learn more about us"
 msgstr "En Savoir Plus Sur Nous"
 
+msgid "Learn more"
+msgstr "En Savoir Plus"
+
 msgid "About"
 msgstr "À Propos"
 

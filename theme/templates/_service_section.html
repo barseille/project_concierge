@@ -3,35 +3,45 @@
 {% include "_section_title.html" with subheading="services" heading="concierge offers" %}
 
 
-<section
-  class="px-4 sm:px-12 mx-auto mb-32 grid gap-6 text-center sm:grid-cols-3 lg:grid-cols-3"
->
+<section class="px-6 sm:px-12 mx-auto mb-32 grid gap-8 text-center sm:grid-cols-3 lg:grid-cols-3">
+
   {% for service in services %}
-  <div
-    class="flex flex-col items-center justify-end gap-y-2 rounded-3xl overflow-hidden bg-gradient-to-r from-black to-gray-500"
-  >
-    <img
-      src="{{ service.image.url }}"
-      alt="{{ service.title }}"
-      class="w-full h-96 object-cover"
-    />
-    <h2 class="font-oxygen text-lg font-semibold text-white uppercase">
-      {{ service.title }}
-    </h2>
-    <a
-    href="{{ service.link }}"
-    class="inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-yellow-500 to-orange-500 px-4 py-2 text-sm uppercase leading-tight text-black shadow-md transition duration-150 ease-in-out hover:shadow-outline hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 font-semibold mb-4"
-  >
-    {% trans "SEE DETAILS" %}
-  </a>
+    <!-- Le bloc entier devient un lien -->
 
+    <a href="{{ service.link }}" class="group" data-aos="fade-up" data-aos-delay="{{ forloop.counter0|add:'200' }}">
+      <div class="flex flex-col items-center justify-end gap-y-2 rounded-3xl overflow-hidden bg-gradient-to-r from-black to-gray-500 transform transition duration-300 ease-in-out hover:scale-105">
+        <img src="{{ service.image.url }}" alt="{{ service.title }}" class="w-full h-96 object-cover" />
+        <div class="flex flex-col px-4 py-4">        
+          <h2 class="font-oxygen text-lg font-semibold text-white uppercase">
+            {{ service.title }}
+          </h2>
+          <span class="text-white text-sm opacity-75 group-hover:underline sm:hidden">{% trans "Learn more" %}<i class="fas fa-chevron-right ml-2"></i></span>
+        </div>
+      </div>
+    </a>
 
-  </div>
   {% endfor %}
 </section>
+
+
 
 <!-- Section avec image de fond  -->
 <div
   class="bg-cover bg-center min-h-screen"
   style="background-image: url('{% static 'images/6.webp' %}')"
 ></div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Vérifie la largeur de l'écran
+    if (window.innerWidth >= 640) { // Taille "sm" en pixels selon Tailwind CSS par défaut
+      const serviceLinks = document.querySelectorAll('section a.group');
+      serviceLinks.forEach((link, index) => {
+        // Applique un délai différent pour chaque élément
+        let delay = index * 200; // 200ms entre chaque élément
+        link.setAttribute('data-aos-delay', delay.toString());
+      });
+    }
+  });
+  </script>
+  
