@@ -68,11 +68,11 @@ msgid "SEND"
 msgstr "ផ្ញើ"
 
 #: .\theme\templates\_homepage_section.html:30
-msgid "Get started"
+msgid "Get Started"
 msgstr "ចាប់ផ្តើម"
 
 #: .\theme\templates\_homepage_section.html:38
-msgid "Learn more"
+msgid "Learn More"
 msgstr "សូមរៀនបន្ថែម"
 
 msgid ""
@@ -184,3 +184,6 @@ msgstr "ទាក់ទងយើង"
 
 msgid "let's discuss your project together"
 msgstr "តោះពិភាក្សាអំពីគម្រោងរបស់អ្នកជាមួយគ្នា"
+
+msgid "Our Values"
+msgstr "តម្លៃរបស់យើង"

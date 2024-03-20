@@ -68,7 +68,7 @@ msgid "SEND"
 msgstr "ENVOYER"
 
 #: .\theme\templates\_homepage_section.html:30
-msgid "Get started"
+msgid "Get Started"
 msgstr "Commencer"
 
 msgid ""
@@ -92,7 +92,7 @@ msgstr "Informations Générales"
 msgid "learn more about us"
 msgstr "En Savoir Plus Sur Nous"
 
-msgid "Learn more"
+msgid "Learn More"
 msgstr "En Savoir Plus"
 
 msgid "About"
@@ -175,3 +175,11 @@ msgstr "Contactez-nous"
 
 msgid "let's discuss your project together"
 msgstr "Discutons ensemble de votre projet"
+
+msgid "Our Values"
+msgstr "Nos valeurs"
+
+
+
+
+

@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import ContactForm
 from django.utils.translation import gettext_lazy as _
+from django.core.mail import send_mail
+from django.conf import settings
 from .models import Service, Testimonial,FAQ, SiteInformation
 
 def home(request):
@@ -21,10 +23,6 @@ def home(request):
     }
     return render(request, 'home.html', context)
 
-
-
-from django.core.mail import send_mail
-from django.conf import settings
 
 def contact_view(request):
     if request.method == 'POST':
@@ -55,6 +53,18 @@ def contact_view(request):
 
 def thanks(request):
     return render(request, 'thanks.html')
+
+
+def our_values(request):
+    return render(request, 'our_values.html')
+
+
+
+
+
+
+
+
 
 
 
