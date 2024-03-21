@@ -56,7 +56,17 @@ def thanks(request):
 
 
 def our_values(request):
-    return render(request, 'our_values.html')
+    form = ContactForm()
+    testimonial = Testimonial.objects.all()
+    site_info = SiteInformation.objects.first()
+    # Ajoutez ici d'autres données que vous pourriez vouloir passer au template, si nécessaire
+    context = {
+        'form': form,
+        'testimonials': testimonial,
+        'site_info': site_info,
+        # Ajoutez d'autres contextes au besoin
+    }
+    return render(request, 'our_values.html', context)
 
 
 

@@ -10,7 +10,7 @@
 
     <a href="{{ service.link }}" class="group" data-aos="fade-up" data-aos-delay="{{ forloop.counter0|add:'200' }}">
       <div class="flex flex-col items-center justify-end gap-y-2 rounded-3xl overflow-hidden bg-gradient-to-r from-black to-gray-500 transform transition duration-300 ease-in-out hover:scale-105">
-        <img src="{{ service.image.url }}" alt="{{ service.title }}" class="w-full h-96 object-cover" />
+        <img src="{{ service.image.url }}" alt="{{ service.title }}" class="w-full h-96 object-cover" loading="lazy"/>
         <div class="flex flex-col px-4 py-4">        
           <h2 class="font-oxygen text-lg font-semibold text-white uppercase">
             {{ service.title }}
@@ -26,10 +26,17 @@
 
 
 <!-- Section avec image de fond  -->
-<div
+{% comment %} <div
   class="bg-cover bg-center min-h-screen"
   style="background-image: url('{% static 'images/6.webp' %}')"
-></div>
+></div> {% endcomment %}
+
+<img 
+  src="{% static 'images/6.webp' %}" 
+  alt="" 
+  class="w-full h-[700px] object-cover object-center" 
+  loading="lazy">
+
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {

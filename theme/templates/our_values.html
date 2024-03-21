@@ -1,9 +1,72 @@
-{% extends 'base.html' %}
-{% load static i18n %}
+{% extends 'base.html' %} 
+{% load static i18n %} 
+
 
 {% block content %}
-<section class="pt-30">
-<!-- Contenu spécifique à la page About ici -->
-<h1> Je suis le about.html</h1>
+<div class="pt-[90px]"></div>
+
+
+<img 
+  src="{% static 'images/poignee_de_main.svg' %}" 
+  alt="Une poignée de main symbolisant l'intégrité et la coopération" 
+  class="w-full sm:h-[500px] md:object-cover object-scale-down" 
+  loading="lazy" />
+
+
+
+{% include "_section_title.html" with subheading="Les Principes Qui Nous Guident" heading="Our Values" %}
+
+<section class="container mx-auto text-white pb-4 px-4 text-center">
+  <p class="text-lg">
+    Chez ANGKOR LUXE, nos valeurs guident chacune de nos actions et décisions,
+    assurant un service exceptionnel et une approche éthique envers la gestion
+    locative. Découvrez les principes qui nous animent.
+  </p>
 </section>
+
+<section
+  class="container mx-auto mt-16  grid md:grid-cols-2 gap-10 text-center"
+>
+  <!-- Valeur 1 -->
+  <div
+    class="flex flex-col items-center my-4 gap-6"
+    data-aos="fade-up"
+    data-aos-duration="1000"
+  >
+    <img src="{% static 'images/balance.svg' %}" alt="Symbole de l'intégrité - une balance" loading="lazy" class="" />
+    <h4
+      class="text-base font-medium text-gray-300 uppercase border-b border-yellow-400 pb-2"
+    >
+      Intégrité
+    </h4>
+    <p class="text-white mt-2">
+      L'intégrité est au cœur de nos opérations, garantissant transparence et
+      honnêteté dans toutes nos interactions.
+    </p>
+  </div>
+
+  <!-- Valeur 2 -->
+  <div
+    class="flex flex-col items-center my-4 gap-6"
+    data-aos="fade-up"
+    data-aos-duration="1000"
+  >
+    <img src="{% static 'images/ampoule.svg' %}" alt="Symbole de l'innovation - une ampoule allumée" loading="lazy" class="" />
+    <h4
+      class="text-base font-medium text-gray-300 uppercase border-b border-yellow-400 pb-2"
+    >
+      Innovation
+    </h4>
+    <p class="text-white mt-2">
+      Nous embrassons l'innovation pour améliorer continuellement nos services
+      et offrir des solutions avant-gardistes à nos clients.
+    </p>
+  </div>
+  <!-- Ajoutez d'autres valeurs ici -->
+</section>
+
+{% include '_testimonials_section.html' %} {% include "_contact.html" %} 
+
+
+
 {% endblock %}

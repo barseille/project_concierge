@@ -12,7 +12,7 @@
         {% for testimonial in testimonials %}
         <div class="carousel-item {{ forloop.first|yesno:",hidden" }}" data-carousel-item>
           {% if testimonial.photo %}
-          <img src="{{ testimonial.photo.url }}" alt="{{ testimonial.name }}" class="mx-auto h-24 w-24 rounded-full object-cover">
+          <img src="{{ testimonial.photo.url }}" alt="{{ testimonial.name }}" class="mx-auto h-24 w-24 rounded-full object-cover" loading="lazy" />
           {% endif %}
           <p class="py-4">“{{ testimonial.message }}”</p>
           <p class="pt-2">- {{ testimonial.name }}</p>
