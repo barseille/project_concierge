@@ -21,6 +21,15 @@ class Service(models.Model):
     def __str__(self):
         return self.title
 
+
+class Offering(models.Model):
+    service = models.ForeignKey(Service, on_delete=models.CASCADE, related_name='offerings')
+    text = models.CharField(max_length=500)
+    
+    def __str__(self):
+        return self.text
+
+
 class Testimonial(models.Model):
     name = models.CharField(_("Name"), max_length=100)
     role = models.CharField(_("Role"), max_length=100, blank=True, null=True)

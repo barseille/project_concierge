@@ -179,6 +179,9 @@ msgstr "Discutons ensemble de votre projet"
 msgid "Our Values"
 msgstr "Nos valeurs"
 
+msgid "Included in this package:"
+msgstr "Inclus dans cette formule :"
+
 
 
 

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Contact, Service, Testimonial, FAQ, SiteInformation
+from .models import Contact, Service, Testimonial, FAQ, SiteInformation, Offering
 
 
 @admin.register(Contact)
@@ -33,6 +33,10 @@ class SiteInformationAdmin(admin.ModelAdmin):
     list_display = ('concierge_description',)
     
 
+@admin.register(Offering)
+class OfferingAdmin(admin.ModelAdmin):
+    list_display = ('text', 'service')
+    list_filter = ('service',)
 
 # admin.site.register(Contact, ContactAdmin)
 # admin.site.register(Service)

@@ -5,6 +5,8 @@ from django.utils.translation import gettext_lazy as _
 from django.core.mail import send_mail
 from django.conf import settings
 from .models import Service, Testimonial,FAQ, SiteInformation
+from django.views.generic import DetailView
+
 
 def home(request):
     form = ContactForm()
@@ -68,10 +70,23 @@ def our_values(request):
     }
     return render(request, 'our_values.html', context)
 
-
-
-
-
+class ServiceDetailView(DetailView):
+    model = Service
+    template_name = 'service_detail.html'
+    context_object_name = 'service'
+    
+    
+    def get_context_data(self, **kwargs):
+        # Appel de la méthode de base pour obtenir le contexte
+        context = super().get_context_data(**kwargs)
+        
+        # Ajout de données supplémentaires au contexte
+        context['faqs'] = FAQ.objects.all()
+        context['form'] = ContactForm()
+        context['testimonials'] = Testimonial.objects.all()
+        context['site_info'] = SiteInformation.objects.first()
+        return context
+   
 
 
 

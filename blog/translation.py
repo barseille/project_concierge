@@ -1,9 +1,13 @@
 from modeltranslation.translator import register, TranslationOptions
-from .models import Service, Testimonial, FAQ, SiteInformation
+from .models import Service, Testimonial, FAQ, SiteInformation, Offering
 
 @register(Service)
 class ServiceTranslationOptions(TranslationOptions):
     fields = ('title', 'description',)
+    
+@register(Offering)
+class OfferingTranslationOptions(TranslationOptions):
+    fields = ('text',)
 
 
 @register(Testimonial)

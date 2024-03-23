@@ -187,3 +187,6 @@ msgstr "តោះពិភាក្សាអំពីគម្រោងរបស
 
 msgid "Our Values"
 msgstr "តម្លៃរបស់យើង"
+
+msgid "Included in this package:"
+msgstr "រួមបញ្ចូលក្នុងកញ្ចប់នេះ៖"
