@@ -84,24 +84,27 @@
                 >{% trans "Our Values" %}</a
               >
             </li>
-            <li class="py-6 text-center md:mr-6 md:py-0 relative group">
-              <a
-                href="#"
-                class="text-sm font-semibold uppercase hover:text-yellow-500 pb-1  transition duration-300"
-                >{% trans "Our Offers" %}</a
-              >
-              <div class="absolute hidden group-hover:block bg-black mt-2">
-                <ul class="py-2">
-                    {% for service in services %}
-                        <li>
-                            <a href="{% url 'service-detail' pk=service.pk %}" class="block px-4 py-2 text-sm text-white hover:text-yellow-500">
-                                {{ service.title }}
-                            </a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </div>
+
+
+
+            <!-- Liens formules-->
+            <li class="py-6 text-center md:mr-6 md:py-0 relative group" onmouseover="menuOpen()" onmouseout="menuClose()">
+              <a href="#" class="offers-link text-sm font-semibold uppercase hover:text-yellow-500 pb-1 transition duration-300">
+                  {% trans "Our Offers" %}
+              </a>
+              <div id="offers-dropdown" class="absolute hidden group-hover:block bg-black md:left-[-1rem] rounded-md">
+                  <ul class="py-2">
+                      {% for service in services %}
+                          <li>
+                              <a href="{% url 'service-detail' pk=service.pk %}" class="block py-4 px-4  text-white hover:text-yellow-500">
+                                  {{ service.title }}
+                              </a>
+                          </li>
+                      {% endfor %}
+                  </ul>
+              </div>
             </li>
+
 
 
 
@@ -262,22 +265,39 @@
       };
     </script>
 
-    {% comment %}
     <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var scrollPosition = localStorage.getItem("scrollPosition");
-        if (scrollPosition) {
-          window.scrollTo(0, scrollPosition);
-          localStorage.removeItem("scrollPosition"); // Optionnel : supprimez la position stockée après l'avoir utilisée
-        }
+      document.addEventListener("DOMContentLoaded", function() {
+          const offersLink = document.querySelector(".offers-link");
+          const offersDropdown = document.getElementById('offers-dropdown');
+      
+          // Fonction pour afficher le menu
+          function showMenu() {
+              offersDropdown.classList.remove('hidden');
+          }
+      
+          // Fonction pour cacher le menu
+          function hideMenu() {
+              offersDropdown.classList.add('hidden');
+          }
+      
+          // Attache l'événement de survol au lien et au menu
+          offersLink.addEventListener('mouseover', showMenu);
+          offersDropdown.addEventListener('mouseover', showMenu);
+      
+          // Attache l'événement pour cacher le menu quand on quitte le lien/menu
+          offersLink.addEventListener('mouseout', hideMenu);
+          offersDropdown.addEventListener('mouseout', hideMenu);
       });
-    </script>
-    {% endcomment %}
+      </script>
+      
+
+
     <script>
       // Ce code attend que tous les contenus de la page, y compris les images, soient complètement chargés avant d'initialiser AOS
       window.onload = function () {
         AOS.init();
       };
     </script>
+
   </body>
 </html>

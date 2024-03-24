@@ -44,8 +44,10 @@ class Testimonial(models.Model):
         return self.name
 
 class FAQ(models.Model):
+    service = models.ForeignKey(Service, on_delete=models.CASCADE, related_name='faqs', null=True, blank=True)
     question = models.CharField(_("Question"), max_length=255)
     answer = models.TextField(_("Answer"))
+    is_general = models.BooleanField(default=False, help_text=_("Mark this FAQ as a general FAQ that applies to all services."))
 
     class Meta:
         verbose_name = _("FAQ")

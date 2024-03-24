@@ -21,6 +21,8 @@
     </div>
 
 
+    
+
     {% include "_section_title.html" with subheading="Offers" heading="INCLUDED" %}
 
     <!-- Section pour afficher les offres liées au service -->
@@ -38,7 +40,9 @@
     
 </div>
 
-{% include '_faq_section.html' %}
+<!-- Section question/réponses pour les formules proposées -->
+{% include '_faq_section.html' with faqs=service.faqs.all %}
+
 {% include '_contact.html' %}
 
 {% endblock %}

@@ -26,7 +26,8 @@ class TestimonialAdmin(admin.ModelAdmin):
  
 @admin.register(FAQ)
 class FAQAdmin(admin.ModelAdmin):
-    list_display = ('question', 'answer')
+    list_display = ('question', 'service', 'is_general')
+    list_filter = ('service', 'is_general')
     
 @admin.register(SiteInformation)
 class SiteInformationAdmin(admin.ModelAdmin):

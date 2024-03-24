@@ -14,12 +14,13 @@ def home(request):
     testimonial = Testimonial.objects.all()
     faqs = FAQ.objects.all()
     site_info = SiteInformation.objects.first()
+    general_faqs = FAQ.objects.filter(is_general=True)
     
     context = {
         'form': form,
         'services': service,
         'testimonials': testimonial,
-        'faqs': faqs,
+        'general_faqs': general_faqs,
         'site_info': site_info,
         
     }
@@ -81,7 +82,8 @@ class ServiceDetailView(DetailView):
         context = super().get_context_data(**kwargs)
         
         # Ajout de données supplémentaires au contexte
-        context['faqs'] = FAQ.objects.all()
+        context['service_faqs'] = self.object.faqs.all()
+        context['general_faqs'] = FAQ.objects.filter(is_general=True)
         context['form'] = ContactForm()
         context['testimonials'] = Testimonial.objects.all()
         context['site_info'] = SiteInformation.objects.first()
