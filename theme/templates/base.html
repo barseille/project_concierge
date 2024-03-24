@@ -5,11 +5,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    {% comment %} <link
+    {% comment %}
+    <link
       href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css"
       rel="stylesheet"
     />
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script> {% endcomment %}
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    {% endcomment %}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -46,7 +48,7 @@
           <img
             src="{% static 'images/logo.png' %}"
             alt="Logo de ANGKOR LUXE"
-            class="mr-2 h-auto w-10 sm:mr-4" 
+            class="mr-2 h-auto w-10 sm:mr-4"
           />
 
           <h1
@@ -75,27 +77,39 @@
             id="toggled-menu"
             class="absolute left-0 top-full hidden w-full flex-col items-center bg-black px-4 font-montserrat text-white md:relative md:top-auto md:flex md:w-auto md:flex-row md:items-center md:border-none md:px-0"
           >
-            <li class="py-6 text-center md:mr-6 md:py-0  ">
+            <li class="py-6 text-center md:mr-6 md:py-0">
               <a
                 href="{% url 'our_values' %}"
-                class="text-sm font-semibold uppercase hover:text-yellow-500
-                pb-1 hover:border-b hover:border-yellow-500 transition duration-300"
+                class="text-sm font-semibold uppercase hover:text-yellow-500 pb-1 transition duration-300"
                 >{% trans "Our Values" %}</a
               >
             </li>
-            <li class="py-6 text-center md:mr-6 md:py-0 ">
+            <li class="py-6 text-center md:mr-6 md:py-0 relative group">
               <a
                 href="#"
-                class="text-sm font-semibold uppercase hover:text-yellow-500
-                pb-1 hover:border-b hover:border-yellow-500 transition duration-300"
+                class="text-sm font-semibold uppercase hover:text-yellow-500 pb-1  transition duration-300"
                 >{% trans "Our Offers" %}</a
               >
+              <div class="absolute hidden group-hover:block bg-black mt-2">
+                <ul class="py-2">
+                    {% for service in services %}
+                        <li>
+                            <a href="{% url 'service-detail' pk=service.pk %}" class="block px-4 py-2 text-sm text-white hover:text-yellow-500">
+                                {{ service.title }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
             </li>
+
+
+
+
             <li class="py-6 text-center md:mr-6 md:py-0">
               <a
                 href="#"
-                class="text-sm font-semibold uppercase hover:text-yellow-500
-                pb-1 sm:hover:border-b sm:hover:border-yellow-500 sm:transition duration-300"
+                class="text-sm font-semibold uppercase hover:text-yellow-500 pb-1 sm:transition duration-300"
                 >{% trans "Contact Us" %}</a
               >
             </li>
@@ -147,10 +161,9 @@
           <p class="max-w-[500px] text-white text-center sm:text-left">
             {{ site_info.concierge_description }}
           </p>
-
         </div>
 
-        <ul class=" flex flex-col text-center sm:text-left gap-y-2">
+        <ul class="flex flex-col text-center sm:text-left gap-y-2">
           <li class="text-yellow-600 text-base font-semibold mb-2">
             {% trans "General Information" %}
           </li>
@@ -238,18 +251,19 @@
     </script>
 
     <script>
-      window.onload = function() {
+      window.onload = function () {
         var scrollPosition = localStorage.getItem("scrollPosition");
         if (scrollPosition) {
-          setTimeout(function() {
+          setTimeout(function () {
             window.scrollTo(0, scrollPosition);
             localStorage.removeItem("scrollPosition");
           }, 0); // Un délai minimal peut parfois aider à s'assurer que la restauration de la position se fait après le reflow complet de la page.
         }
       };
     </script>
-    
-    {% comment %} <script>
+
+    {% comment %}
+    <script>
       document.addEventListener("DOMContentLoaded", function () {
         var scrollPosition = localStorage.getItem("scrollPosition");
         if (scrollPosition) {
@@ -257,14 +271,13 @@
           localStorage.removeItem("scrollPosition"); // Optionnel : supprimez la position stockée après l'avoir utilisée
         }
       });
-     
-    </script> {% endcomment %}
+    </script>
+    {% endcomment %}
     <script>
       // Ce code attend que tous les contenus de la page, y compris les images, soient complètement chargés avant d'initialiser AOS
-      window.onload = function() {
+      window.onload = function () {
         AOS.init();
       };
     </script>
-    
   </body>
 </html>
