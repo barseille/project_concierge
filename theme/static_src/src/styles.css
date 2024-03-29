@@ -10,7 +10,6 @@
 }
 
 @media (max-width: 640px) {
-  
   nav ul {
     position: fixed;
     left: -100%;
@@ -25,5 +24,14 @@
   }
   nav.active ul {
     left: 0;
+  }
+}
+
+@media (max-width: 640px) {
+
+
+  #nav form {
+    flex-grow: 0; /* Empêche le formulaire de prendre trop de place */
+    
   }
 }

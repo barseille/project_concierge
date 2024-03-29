@@ -1,11 +1,11 @@
 {% load static i18n %}
 
-<header class="fixed w-full bg-black shadow-lg z-50">
+<header class="fixed w-full bg-black z-50">
   <nav
     id="nav"
     class="container mx-auto flex items-center justify-between p-4 text-white"
   >
-    <!-- logo -->
+    <!-- Conteneur pour le logo et le titre -->
     <div>
       <a
         href="{% url 'home' %}"
@@ -15,34 +15,64 @@
         <img
           src="{% static 'images/logo.png' %}"
           alt="Logo de ANGKOR LUXE"
-          class="h-auto w-10"
+          class="hidden md:block h-auto w-8 sm:w-10"
         />
         <h1
-          class="text-base font-semibold uppercase bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 via-yellow-300 to-yellow-600"
+          id="title"
+          class="text-sm font-semibold uppercase bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 via-yellow-300 to-yellow-600 whitespace-nowrap"
         >
           ANGKOR LUXE
         </h1>
       </a>
     </div>
 
-    <ul
-      class="sm:flex flex-col sm:flex-row justify-between items-center bg-black text-lg"
-    >
-      <li class="text-center p-4">
-        <a href="{% url 'our_values' %}" class="hover:text-yellow-500">{% trans "Our Values" %}</a>
-      </li>
-      <li class="text-center p-4">
-        <a href="{% url 'services' %}" class="hover:text-yellow-500">{% trans "Our Offers" %}</a>
-      </li>
-      <li class="text-center p-4">
-        <a href="#" class="hover:text-yellow-500">{% trans "Contact Us" %}</a>
-      </li>
-    </ul>
-   
-    <button id="menu-btn" class="sm:hidden">
-      <span class="material-symbols-outlined text-white">menu</span>
-      <span class="material-symbols-outlined text-white hidden">close</span>
-    </button>
+    <div class="nav-selector flex justify-between items-center">
+      <ul
+        class="sm:flex flex-col sm:flex-row justify-between items-center bg-black sm:text-base lg:ml-60"
+      >
+        <li class="text-center p-4">
+          <a
+            href="{% url 'our_values' %}"
+            class="hover:text-yellow-500 whitespace-nowrap"
+            >{% trans "Our Values" %}</a
+          >
+        </li>
+        <li class="text-center p-4">
+          <a
+            href="{% url 'services' %}"
+            class="hover:text-yellow-500 whitespace-nowrap"
+            >{% trans "Our Offers" %}</a
+          >
+        </li>
+        <li class="text-center p-4">
+          <a href="#" class="hover:text-yellow-500 whitespace-nowrap"
+            >{% trans "Contact Us" %}</a
+          >
+        </li>
+      </ul>
+
+      <button id="menu-btn" class="sm:hidden">
+        <span class="material-symbols-outlined text-white p-2">menu</span>
+        <span class="material-symbols-outlined text-white hidden p-2"
+          >close</span
+        >
+      </button>
+
+      <form action="{% url 'set_language' %}" method="post">
+        {% csrf_token %}
+        <input name="next" type="hidden" value="{{ request.path }}" />
+        <select
+          name="language"
+          onchange="this.form.submit()"
+          id="languageSelector"
+          class="bg-black text-white rounded-lg text-sm border-none te"
+        >
+          <option value="en">EN</option>
+          <option value="fr">FR</option>
+          <option value="km">KM</option>
+        </select>
+      </form>
+    </div>
   </nav>
 </header>
 
@@ -69,4 +99,3 @@
     window.addEventListener("resize", adjustMenuTop);
   });
 </script>
-
