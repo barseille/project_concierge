@@ -8,7 +8,7 @@
     font-family: "Montserrat", "Roboto", "Oxygen", sans-serif;
   }
 }
-
+/* Animation du défilement du menu burger dans navbar */
 @media (max-width: 640px) {
   nav ul {
     position: fixed;
@@ -25,13 +25,12 @@
   nav.active ul {
     left: 0;
   }
-}
-
-@media (max-width: 640px) {
-
-
   #nav form {
     flex-grow: 0; /* Empêche le formulaire de prendre trop de place */
-    
   }
+}
+#languageSelector:focus {
+  outline: none;
+  border-color: transparent;
+  box-shadow: 0 0 0 2px #fbbf24; /* Couleur yellow-500 de Tailwind */
 }
