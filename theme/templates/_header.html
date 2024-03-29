@@ -1,0 +1,108 @@
+{% load static i18n %}
+
+<header class="fixed w-full bg-black shadow-lg z-50">
+  <nav
+    id="nav"
+    class="container mx-auto flex items-center justify-between p-4 text-white"
+  >
+    <!-- logo -->
+    <div>
+      <a
+        href="{% url 'home' %}"
+        class="flex flex-col items-center"
+        aria-label="Home page"
+      >
+        <img
+          src="{% static 'images/logo.png' %}"
+          alt="Logo de ANGKOR LUXE"
+          class="h-auto w-10"
+        />
+        <h1
+          class="text-base font-semibold uppercase bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 via-yellow-300 to-yellow-600"
+        >
+          ANGKOR LUXE
+        </h1>
+      </a>
+    </div>
+
+    <ul
+      class="sm:flex flex-col sm:flex-row justify-between items-center bg-black text-lg"
+    >
+      <li class="text-center p-4">
+        <a href="#" class="hover:text-yellow-500">accueil</a>
+      </li>
+      <li class="text-center p-4">
+        <a href="#" class="hover:text-yellow-500">boutique</a>
+      </li>
+      <li class="text-center p-4">
+        <a href="#" class="hover:text-yellow-500">blog</a>
+      </li>
+    </ul>
+    {% comment %}
+    <div id="icons" class="hidden"></div>
+    {% endcomment %}
+    <button id="menu-btn" class="sm:hidden">
+      <span class="material-symbols-outlined text-white">menu</span>
+      <span class="material-symbols-outlined text-white hidden">close</span>
+    </button>
+  </nav>
+</header>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const nav = document.getElementById("nav");
+    const menuBtn = document.getElementById("menu-btn");
+    const menu = nav.querySelector("ul");
+    const menuOpenIcon = menuBtn.children[0];
+    const menuCloseIcon = menuBtn.children[1];
+
+    menuBtn.addEventListener("click", () => {
+      const isActive = nav.classList.toggle("active");
+      menuOpenIcon.classList.toggle("hidden", isActive);
+      menuCloseIcon.classList.toggle("hidden", !isActive);
+    });
+
+    function adjustMenuTop() {
+      const navHeight = nav.offsetHeight;
+      menu.style.top = `${navHeight}px`;
+    }
+
+    adjustMenuTop();
+    window.addEventListener("resize", adjustMenuTop);
+  });
+</script>
+
+{% comment %}
+<script>
+  const links = document.querySelectorAll("nav li");
+
+  icons.addEventListener("click", () => {
+    nav.classList.toggle("active");
+  });
+
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
+      nav.classList.remove("active");
+    });
+  });
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Sélectionne le bouton pour afficher le menu et le conteneur du menu
+    const nav = document.getElementById("nav");
+    const menu = nav.querySelector("ul");
+
+    // Fonction pour ajuster le 'top' du menu en fonction de la hauteur de la barre de navigation
+    function adjustMenuTop() {
+      const navHeight = nav.offsetHeight; // Obtient la hauteur actuelle de la barre de navigation
+      menu.style.top = `${navHeight}px`; // Ajuste le 'top' du menu pour qu'il apparaisse juste en dessous de la barre de navigation
+    }
+
+    // Appelle adjustMenuTop à chaque fois que la taille de la fenêtre change
+    window.addEventListener("resize", adjustMenuTop);
+
+    // Appelle adjustMenuTop une fois au chargement initial
+    adjustMenuTop();
+  });
+</script>
+{% endcomment %}

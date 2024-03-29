@@ -71,6 +71,8 @@ def our_values(request):
     }
     return render(request, 'our_values.html', context)
 
+
+
 class ServiceDetailView(DetailView):
     model = Service
     template_name = 'service_detail.html'

@@ -5,13 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    {% comment %}
-    <link
-      href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
-    {% endcomment %}
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -32,272 +26,48 @@
       src="https://kit.fontawesome.com/33a775bcdb.js"
       crossorigin="anonymous"
     ></script>
-
-    {% tailwind_css %}
+    {% comment %}
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
+    {% endcomment %} {% tailwind_css %}
   </head>
   <body class="bg-black">
-    <header class="fixed w-full bg-black shadow-lg z-50">
-      <nav
-        class="container mx-auto flex items-center justify-between py-6 font-roboto px-4"
-      >
-        <a
-          href="{% url 'home' %}"
-          class="flex items-center flex-1 md:flex-initial"
-          aria-label="Home page"
-        >
-          <img
-            src="{% static 'images/logo.png' %}"
-            alt="Logo de ANGKOR LUXE"
-            class="mr-2 h-auto w-10 sm:mr-4"
-          />
+    {% include '_header.html' %}
 
-          <h1
-            class="bg-gradient-to-r from-yellow-600 via-yellow-300 to-yellow-600 bg-clip-text font-montserrat text-base font-semibold uppercase text-transparent"
-          >
-            ANGKOR LUXE
-          </h1>
-        </a>
-
-        <div class="flex">
-          <!-- Burger menu button -->
-          <button
-            aria-label="toggle button"
-            aria-expanded="false"
-            id="menu-btn"
-            class="cursor-pointer md:hidden mr-4 pt-1"
-          >
-            <span class="material-symbols-outlined text-white"> menu </span>
-            <span class="material-symbols-outlined hidden text-white">
-              close
-            </span>
-          </button>
-
-          <!-- Menu items -->
-          <ul
-            id="toggled-menu"
-            class="absolute left-0 top-full hidden w-full flex-col items-center bg-black px-4 font-montserrat text-white md:relative md:top-auto md:flex md:w-auto md:flex-row md:items-center md:border-none md:px-0"
-          >
-            <li class="py-6 text-center md:mr-6 md:py-0">
-              <a
-                href="{% url 'our_values' %}"
-                class="text-sm font-semibold uppercase hover:text-yellow-500 pb-1 transition duration-300"
-                >{% trans "Our Values" %}</a
-              >
-            </li>
-
-
-
-            <!-- Liens formules-->
-            <li class="py-6 text-center md:mr-6 md:py-0 relative group" onmouseover="menuOpen()" onmouseout="menuClose()">
-              <a href="#" class="offers-link text-sm font-semibold uppercase hover:text-yellow-500 pb-1 transition duration-300">
-                  {% trans "Our Offers" %}
-              </a>
-              <div id="offers-dropdown" class="absolute hidden group-hover:block bg-black md:left-[-1rem] rounded-md">
-                  <ul class="py-2">
-                      {% for service in services %}
-                          <li>
-                              <a href="{% url 'service-detail' pk=service.pk %}" class="block py-4 px-4  text-white hover:text-yellow-500">
-                                  {{ service.title }}
-                              </a>
-                          </li>
-                      {% endfor %}
-                  </ul>
-              </div>
-            </li>
-
-
-
-
-
-            <li class="py-6 text-center md:mr-6 md:py-0">
-              <a
-                href="#"
-                class="text-sm font-semibold uppercase hover:text-yellow-500 pb-1 sm:transition duration-300"
-                >{% trans "Contact Us" %}</a
-              >
-            </li>
-          </ul>
-        </div>
-
-        <div class="inline-block relative">
-          <form action="{% url 'set_language' %}" method="post">
-            {% csrf_token %}
-            <input name="next" type="hidden" value="{{ request.path }}" />
-            <select
-              name="language"
-              onchange="this.form.submit()"
-              id="languageSelector"
-              class="block appearance-none bg-black text-white border border-gray-300 rounded-lg py-2 pl-2 pr-8 leading-tight text-sm"
-            >
-              <option value="en">EN</option>
-              <option value="fr">FR</option>
-              <option value="km">KM</option>
-            </select>
-          </form>
-        </div>
-      </nav>
-    </header>
     <main>
       {% block content %}
       <!-- Le contenu spécifique des pages sera inséré ici -->
       {% endblock %}
     </main>
 
-    <footer class="text-white">
-      <div
-        class="container mx-auto mt-20 flex flex-col justify-center sm:justify-around gap-10 px-10 sm:flex-row sm:px-0"
-      >
-        <div class="flex flex-col gap-y-4">
-          <div class="flex justify-center items-end sm:justify-start">
-            <img
-              src="{% static 'images/logo.png' %}"
-              alt="Logo de ANGKOR LUXE"
-              class="mr-2 h-auto w-9 sm:mr-4"
-            />
-            <h3
-              class="bg-gradient-to-r from-yellow-600 via-yellow-300 to-yellow-600 bg-clip-text font-montserrat text-base font-semibold uppercase text-transparent"
-            >
-              ANGKOR LUXE
-            </h3>
-          </div>
-
-          <p class="max-w-[500px] text-white text-center sm:text-left">
-            {{ site_info.concierge_description }}
-          </p>
-        </div>
-
-        <ul class="flex flex-col text-center sm:text-left gap-y-2">
-          <li class="text-yellow-600 text-base font-semibold mb-2">
-            {% trans "General Information" %}
-          </li>
-
-          <li>
-            <a href="{% url 'our_values' %}" class="hover:text-yellow-600"
-              >{% trans "Our Values" %}</a
-            >
-          </li>
-          <li>
-            <a href="#ouroffers" class="hover:text-yellow-600"
-              >{% trans "Our Offers" %}</a
-            >
-          </li>
-          <li>
-            <a href="#contact" class="hover:text-yellow-600"
-              >{% trans "Contact Us" %}</a
-            >
-          </li>
-        </ul>
-
-        <ul class="text-sm flex flex-col text-center sm:text-left gap-y-2">
-          <li class="text-yellow-600 text-base font-semibold mb-2">
-            {% trans "Legal Information" %}
-          </li>
-          <li>
-            <a href="#privacypolicy" class="hover:text-yellow-600"
-              >{% trans "Privacy Policy" %}</a
-            >
-          </li>
-          <li>
-            <a href="#legalmentions" class="hover:text-yellow-600"
-              >{% trans "Legal Mentions" %}</a
-            >
-          </li>
-          <li>
-            <a href="#faqs" class="hover:text-yellow-600">{% trans "FAQs" %}</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="mt-20 mb-4 flex justify-center px-4 text-white">
-        <p class="" id="copyright">
-          Copyright © <span id="year"></span> AngkorLuxe
-        </p>
-      </div>
-    </footer>
+    {% include '_footer.html' %}
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        // Traduction de langue
-        var selectedLanguage = "{{ request.LANGUAGE_CODE }}";
+        // Sélection et application de la langue choisie
         var languageSelector = document.getElementById("languageSelector");
         if (languageSelector) {
+          var selectedLanguage = "{{ request.LANGUAGE_CODE }}";
           languageSelector.value = selectedLanguage;
         }
-
-        // Définir l'année courante
-        const yearSpan = document.getElementById("year");
-        const currentYear = new Date().getFullYear();
-        yearSpan.textContent = currentYear;
-
-        // Menu Hamburger
-
-        const toggleMenuBtn = document.querySelector("#menu-btn");
-        const toggledMenu = document.querySelector("#toggled-menu");
-        const menuIcon = document.querySelector(
-          "#menu-btn .material-symbols-outlined:first-child"
-        );
-        const closeIcon = document.querySelector(
-          "#menu-btn .material-symbols-outlined:last-child"
-        );
-
-        toggleMenuBtn.addEventListener("click", () => {
-          toggledMenu.classList.toggle("hidden");
-          menuIcon.classList.toggle("hidden");
-          closeIcon.classList.toggle("hidden");
-          const isExpanded =
-            toggleMenuBtn.getAttribute("aria-expanded") === "true";
-          toggleMenuBtn.setAttribute("aria-expanded", !isExpanded);
-        });
-
-        // Ici, on écoute le chargement du DOM. Ensuite, on sélectionne le bouton du menu et le menu lui-même. On ajoute un écouteur d'événement sur le bouton qui bascule la classe hidden pour montrer et cacher le menu et changer l'icône.
-      });
-    </script>
-
-    <script>
-      window.onload = function () {
+    
+        // Fonction pour sauvegarder la position de défilement et soumettre le formulaire
+        window.saveScrollPositionAndSubmitForm = function(selectElement) {
+          localStorage.setItem("scrollPosition", window.pageYOffset || document.documentElement.scrollTop);
+          selectElement.form.submit();
+        };
+    
+        // Restaurer la position de défilement précédemment sauvegardée après rechargement
         var scrollPosition = localStorage.getItem("scrollPosition");
         if (scrollPosition) {
-          setTimeout(function () {
-            window.scrollTo(0, scrollPosition);
-            localStorage.removeItem("scrollPosition");
-          }, 0); // Un délai minimal peut parfois aider à s'assurer que la restauration de la position se fait après le reflow complet de la page.
+          window.scrollTo(0, scrollPosition);
+          localStorage.removeItem("scrollPosition");
         }
-      };
-    </script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function() {
-          const offersLink = document.querySelector(".offers-link");
-          const offersDropdown = document.getElementById('offers-dropdown');
-      
-          // Fonction pour afficher le menu
-          function showMenu() {
-              offersDropdown.classList.remove('hidden');
-          }
-      
-          // Fonction pour cacher le menu
-          function hideMenu() {
-              offersDropdown.classList.add('hidden');
-          }
-      
-          // Attache l'événement de survol au lien et au menu
-          offersLink.addEventListener('mouseover', showMenu);
-          offersDropdown.addEventListener('mouseover', showMenu);
-      
-          // Attache l'événement pour cacher le menu quand on quitte le lien/menu
-          offersLink.addEventListener('mouseout', hideMenu);
-          offersDropdown.addEventListener('mouseout', hideMenu);
       });
-      </script>
-      
-
-
-    <script>
-      // Ce code attend que tous les contenus de la page, y compris les images, soient complètement chargés avant d'initialiser AOS
-      window.onload = function () {
-        AOS.init();
-      };
     </script>
-
+    
   </body>
 </html>

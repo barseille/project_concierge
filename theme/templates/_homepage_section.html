@@ -1,29 +1,54 @@
 {% load static i18n %}
 
 <!-- _homepage_section.html -->
-
-<!-- _homepage_section.html -->
-<section class="pt-30">
+<section class="pt-20">
   <div class="relative min-h-screen">
     <!-- Image avec positionnement absolu pour couvrir le conteneur -->
-    <img src="{% static 'images/6.webp' %}" alt="Une poignée de main symbolisant l'intégrité et la coopération" class="absolute w-full h-full object-cover" loading="lazy">
+    <img
+      src="{% static 'images/6.webp' %}"
+      alt="Une poignée de main symbolisant l'intégrité et la coopération"
+      class="absolute w-full h-full object-cover"
+      loading="lazy"
+    />
 
     <!-- Contenu superposé sur l'image -->
     <div class="relative px-6 pt-14 lg:px-8">
       <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
         <div class="text-center">
-          <h1 class="text-3xl font-bold tracking-tight text-white sm:text-6xl" data-aos="fade-left" data-aos-duration="1000">
-            {% trans "Enjoy hassle-free property management, with the guarantee of optimized profitability for your rentals" %}
+          <h1
+            class="text-3xl font-bold tracking-tight text-white sm:text-6xl"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
+            {% trans "Enjoy hassle-free property management, with the guarantee
+            of optimized profitability for your rentals" %}
           </h1>
-          <p class="mt-6 text-lg leading-8 text-white" data-aos="fade-left" data-aos-duration="1500">
-            {% trans "Profitability, serenity, and security are the foundations of our commitment to you. By choosing ANGKOR LUXE, you will experience the true essence of hospitality." %}
+          <p
+            class="mt-6 text-lg leading-8 text-white"
+            data-aos="fade-left"
+            data-aos-duration="1500"
+          >
+            {% trans "Profitability, serenity, and security are the foundations
+            of our commitment to you. By choosing ANGKOR LUXE, you will
+            experience the true essence of hospitality." %}
           </p>
-          <div class="mt-10 flex items-center justify-center gap-x-6" data-aos="fade-left" data-aos-duration="2000">
-            <a href="#" class="inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-yellow-500 to-orange-500 px-4 py-3 text-sm leading-tight text-black shadow-md transition duration-150 ease-in-out hover:shadow-outline hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 font-semibold ">
+          <div
+            class="mt-10 flex items-center justify-center gap-x-6"
+            data-aos="fade-left"
+            data-aos-duration="2000"
+          >
+            <a
+              href="#"
+              class="inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-yellow-500 to-orange-500 px-4 py-3 text-sm leading-tight text-black shadow-md transition duration-150 ease-in-out hover:shadow-outline hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 font-semibold"
+            >
               {% trans "Get Started" %}
             </a>
 
-            <a href="#" class="rounded-md border border-white px-2 py-2 text-sm font-semibold leading-6 text-white transition-all ease-in-out duration-300 hover:bg-black hover:text-white" aria-label="Learn More">
+            <a
+              href="#"
+              class="rounded-md border border-white px-2 py-2 text-sm font-semibold leading-6 text-white transition-all ease-in-out duration-300 hover:bg-black hover:text-white"
+              aria-label="Learn More"
+            >
               {% trans "Learn More" %} <span aria-hidden="true">→</span>
             </a>
           </div>
@@ -32,6 +57,3 @@
     </div>
   </div>
 </section>
-
-
-
