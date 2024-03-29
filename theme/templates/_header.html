@@ -29,18 +29,16 @@
       class="sm:flex flex-col sm:flex-row justify-between items-center bg-black text-lg"
     >
       <li class="text-center p-4">
-        <a href="#" class="hover:text-yellow-500">accueil</a>
+        <a href="{% url 'our_values' %}" class="hover:text-yellow-500">{% trans "Our Values" %}</a>
       </li>
       <li class="text-center p-4">
-        <a href="#" class="hover:text-yellow-500">boutique</a>
+        <a href="{% url 'services' %}" class="hover:text-yellow-500">{% trans "Our Offers" %}</a>
       </li>
       <li class="text-center p-4">
-        <a href="#" class="hover:text-yellow-500">blog</a>
+        <a href="#" class="hover:text-yellow-500">{% trans "Contact Us" %}</a>
       </li>
     </ul>
-    {% comment %}
-    <div id="icons" class="hidden"></div>
-    {% endcomment %}
+   
     <button id="menu-btn" class="sm:hidden">
       <span class="material-symbols-outlined text-white">menu</span>
       <span class="material-symbols-outlined text-white hidden">close</span>
@@ -72,37 +70,3 @@
   });
 </script>
 
-{% comment %}
-<script>
-  const links = document.querySelectorAll("nav li");
-
-  icons.addEventListener("click", () => {
-    nav.classList.toggle("active");
-  });
-
-  links.forEach((link) => {
-    link.addEventListener("click", () => {
-      nav.classList.remove("active");
-    });
-  });
-</script>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    // Sélectionne le bouton pour afficher le menu et le conteneur du menu
-    const nav = document.getElementById("nav");
-    const menu = nav.querySelector("ul");
-
-    // Fonction pour ajuster le 'top' du menu en fonction de la hauteur de la barre de navigation
-    function adjustMenuTop() {
-      const navHeight = nav.offsetHeight; // Obtient la hauteur actuelle de la barre de navigation
-      menu.style.top = `${navHeight}px`; // Ajuste le 'top' du menu pour qu'il apparaisse juste en dessous de la barre de navigation
-    }
-
-    // Appelle adjustMenuTop à chaque fois que la taille de la fenêtre change
-    window.addEventListener("resize", adjustMenuTop);
-
-    // Appelle adjustMenuTop une fois au chargement initial
-    adjustMenuTop();
-  });
-</script>
-{% endcomment %}

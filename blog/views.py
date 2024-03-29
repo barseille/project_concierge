@@ -71,6 +71,16 @@ def our_values(request):
     }
     return render(request, 'our_values.html', context)
 
+def services(request):
+    services = Service.objects.all()
+    site_info = SiteInformation.objects.first()
+    
+    context = {
+        'services': services,
+        'site_info': site_info,
+        
+    }
+    return render(request, 'services.html', context)
 
 
 class ServiceDetailView(DetailView):

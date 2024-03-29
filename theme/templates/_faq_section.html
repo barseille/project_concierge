@@ -8,15 +8,15 @@ Asked Questions" heading="Find Answers to Your Queries" %} {% endcomment %}
 <!-- Section accordion -->
 <section>
   <div class="mx-auto max-w-2xl rounded-lg bg-black p-8 shadow-lg">
-    <div id="accordion">
+    <div id="accordion-{{ unique_id }}">
       {% for faq in faqs %}
       <!-- Question -->
-      <h2 id="accordion-heading-{{ forloop.counter }}">
+      <h2 id="accordion-heading-{{ unique_id }}-{{ forloop.counter }}">
         <button
           type="button"
           class="accordion-button flex w-full items-center justify-between rounded-lg border border-gray-300 bg-black px-6 py-4 text-white hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-opacity-50"
           aria-expanded="false"
-          aria-controls="accordion-body-{{ forloop.counter }}"
+          aria-controls="accordion-body-{{ unique_id }}-{{ forloop.counter }}"
         >
           <span class="flex-grow">{{ faq.question }}</span>
           <i
@@ -25,7 +25,7 @@ Asked Questions" heading="Find Answers to Your Queries" %} {% endcomment %}
         </button>
       </h2>
       <div
-        id="accordion-body-{{ forloop.counter }}"
+        id="accordion-body-{{ unique_id }}-{{ forloop.counter }}"
         class="mt-2 hidden rounded-lg border border-gray-300 bg-black px-6 py-4 transition-opacity duration-500 ease-out"
         aria-labelledby="accordion-heading-{{ forloop.counter }}"
       >
