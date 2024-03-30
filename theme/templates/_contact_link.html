@@ -1,0 +1,16 @@
+<!-- theme/templates/_contact_prompt.html -->
+{% load i18n %}
+
+<section class="py-10 px-4 bg-transparent text-center">
+  <div class="container mx-auto max-w-4xl">
+    <h2 class="text-xl font-semibold text-white mb-4" data-aos="fade-up" data-aos-duration="1000">
+      {{ small_title }}
+    </h2>
+    <p class="text-lg text-white mb-6" data-aos="fade-up" data-aos-duration="1500">
+      {{ prompt_text }}
+    </p>
+    <a href="{% url 'contact' %}" class="inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-yellow-500 to-orange-500 px-6 py-3 text-sm uppercase leading-tight text-black shadow-md transition duration-150 ease-in-out hover:shadow-outline hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 font-semibold">
+      {% trans "Contact Us" %}
+    </a>
+  </div>
+</section>

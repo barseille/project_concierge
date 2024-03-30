@@ -9,6 +9,7 @@
 {% include '_values_section.html' %}
 {% include '_testimonials_section.html' %}
 {% include '_faq_section.html' with faqs=general_faqs %}
-{% include '_contact.html' %}
+{% comment %} {% include '_contact.html' %} {% endcomment %}
+{% include '_contact_link.html' with small_title="Titre spécifique à la page" prompt_text="Phrase d'accroche encourageant à prendre contact." %}
 
 {% endblock %}

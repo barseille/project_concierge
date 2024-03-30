@@ -4,10 +4,10 @@ from .forms import ContactForm
 from django.utils.translation import gettext_lazy as _
 from django.core.mail import send_mail
 from django.conf import settings
-from .models import Service, Testimonial,FAQ, SiteInformation
+from .models import Service, Testimonial,FAQ, SiteInformation,HomePageSection
 from django.views.generic import DetailView
 
-
+# Page d'accueil
 def home(request):
     form = ContactForm()
     service = Service.objects.all()
@@ -15,6 +15,7 @@ def home(request):
     faqs = FAQ.objects.all()
     site_info = SiteInformation.objects.first()
     general_faqs = FAQ.objects.filter(is_general=True)
+    homepage_section = HomePageSection.objects.first()
     
     context = {
         'form': form,
@@ -22,6 +23,7 @@ def home(request):
         'testimonials': testimonial,
         'general_faqs': general_faqs,
         'site_info': site_info,
+        'homepage_section': homepage_section,
         
     }
     return render(request, 'home.html', context)
@@ -51,7 +53,7 @@ def contact_view(request):
                 messages.error(request, _('An error occurred while sending your message.'))
     else:
         form = ContactForm()
-    return render(request, '_contact.html', {'form': form})
+    return render(request, 'contact.html', {'form': form})
 
 
 def thanks(request):
@@ -71,18 +73,22 @@ def our_values(request):
     }
     return render(request, 'our_values.html', context)
 
+# Détails de l'ensemble des services
 def services(request):
     services = Service.objects.all()
     site_info = SiteInformation.objects.first()
+    form = ContactForm()
     
     context = {
         'services': services,
         'site_info': site_info,
+        'form': form,
         
     }
     return render(request, 'services.html', context)
 
 
+# Détails de chaque service
 class ServiceDetailView(DetailView):
     model = Service
     template_name = 'service_detail.html'
@@ -100,7 +106,8 @@ class ServiceDetailView(DetailView):
         context['testimonials'] = Testimonial.objects.all()
         context['site_info'] = SiteInformation.objects.first()
         return context
-   
+
+
 
 # from django.core.mail import send_mail
 # from django.http import HttpResponse

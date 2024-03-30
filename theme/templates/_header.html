@@ -46,7 +46,7 @@
           >
         </li>
         <li class="text-center p-4">
-          <a href="#" class="hover:text-yellow-500 whitespace-nowrap"
+          <a href="{% url 'contact' %}" class="hover:text-yellow-500 whitespace-nowrap"
             >{% trans "Contact Us" %}</a
           >
         </li>
@@ -68,9 +68,9 @@
           name="language"
           onchange="this.form.submit()"
           id="languageSelector"
-          class="bg-black text-white rounded-sm text-xs border-none py-1 px-2"
+          class="bg-black text-white rounded-md text-xs border py-1 px-2 font-semibold"
         >
-          <option value="en">EN</option>
+          <option value="en" class="font-semibold">EN</option>
           <option value="fr">FR</option>
           <option value="km">KM</option>
         </select>

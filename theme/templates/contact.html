@@ -1,10 +1,14 @@
-{% comment %} {% load i18n %}
+{% extends 'base.html' %} {% load static i18n %} {% block content %}
+
+<div class="pt-[90px]"></div>
+
+{% include '_custom_section_title.html' with h1_text="Discover our tailor-made formulas, adapted to all your rental management needs." p_text="Whether you are a demanding owner in search of excellence, a real estate investor in search of maximum return, or in search of serenity and tranquility, ANGKOR LUXE offers three unique solutions." %}
 
 {% include "_section_title.html" with subheading="contact us" heading="let's discuss your project together" %}
 
+<p>nouvelle page contact</p>
 
-
-<div class="container mx-auto flex items-center justify-center ">
+<div class="container mx-auto flex items-center justify-center px-4">
   <form
     method="post"
     id="contactForm"
@@ -38,6 +42,7 @@
     </button>
   </form>
 </div>
+{% endblock %}
 
 <!-- Chargement de jQuery s'il n'est pas déjà chargé -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -111,5 +116,3 @@
     });
   });
 </script>
-
- {% endcomment %}

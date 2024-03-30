@@ -1,48 +1,53 @@
-{% extends "base.html" %}
-{% load static i18n %}
+{% extends "base.html" %} {% load static i18n %} {% block content %}
 
-{% block content %}
 <div class="pt-[90px]"></div>
 
+
+{% include '_custom_section_title.html' with h1_text="Discover our tailor-made formulas, adapted to all your rental management needs." p_text="Whether you are a demanding owner in search of excellence, a real estate investor in search of maximum return, or in search of serenity and tranquility, ANGKOR LUXE offers three unique solutions." %}
+
+<!-- Les services proposés -->
 {% for service in services %}
-    <img src="{{ service.image.url }}" alt="{{ service.title }}" class="w-full h-auto object-cover" loading="lazy"/>
-    {% include "_section_title.html" with subheading="Package" heading=service.title %}
+<img
+  src="{{ service.image.url }}"
+  alt="{{ service.title }}"
+  class="w-full h-auto object-cover"
+  loading="lazy"
+/>
+{% include "_section_title.html" with subheading="Package" heading=service.title %}
 
-    <div class="container mx-auto px-4 text-white text-center">
-        <p>{{ service.description }}</p>
-        {% if service.link %}
-        <a href="{{ service.link }}" class="text-blue-500 hover:text-blue-700">{% trans "Learn more" %}</a>
-        {% endif %}
-    </div>
+<div class="container mx-auto px-4 text-white text-center">
+  <p>{{ service.description }}</p>
+  {% if service.link %}
+  <a href="{{ service.link }}" class="text-blue-500 hover:text-blue-700"
+    >{% trans "Learn more" %}</a
+  >
+  {% endif %}
+</div>
 
-    <!-- Section pour afficher les offres liées au service -->
-    {% if service.offerings.exists %}
-        {% include "_section_title.html" with subheading="Offers" heading="INCLUDED" %}
-        <div class="text-white">
-            <ul>
-                {% for offering in service.offerings.all %}
-                    <li class="p-4 flex flex-col items-center uppercase">
-                        {{ offering.text }}
-                        <span class="block bg-gray-500 h-[2px] w-20 mt-6"></span> <!-- Élément pour le soulignement -->
-                    </li>
-                {% endfor %}
-            </ul>
-        </div>
-    {% endif %}
-    
-    <!-- Section FAQ pour le service -->
-    {% if service.faqs.exists %}
+<!-- Section pour afficher les offres liées au service -->
+{% if service.offerings.exists %} {% include "_section_title.html" with
+subheading="Offers" heading="INCLUDED" %}
+<div class="text-white">
+  <ul>
+    {% for offering in service.offerings.all %}
+    <li class="p-4 flex flex-col items-center uppercase">
+      {{ offering.text }}
+      <span class="block bg-gray-500 h-[2px] w-20 mt-6"></span>
+      <!-- Élément pour le soulignement -->
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
 
-        {% include '_faq_section.html' with faqs=service.faqs.all unique_id=forloop.counter %}
-    {% endif %}
-
-    
-
-{% endfor %}
+<!-- Section FAQ pour le service -->
+{% if service.faqs.exists %} {% include '_faq_section.html' with faqs=service.faqs.all unique_id=forloop.counter %} {% endif %} {% endfor %}
 
 <!-- Ici, vous pouvez ajouter les sections pour les témoignages ou les informations générales si nécessaire -->
 <div class="container mx-auto px-4">
-    <!-- Section pour les témoignages, les informations générales, etc. -->
+  <!-- Section pour les témoignages, les informations générales, etc. -->
 </div>
+
+{% include '_contact.html' %}
 
 {% endblock %}

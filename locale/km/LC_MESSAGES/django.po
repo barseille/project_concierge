@@ -190,3 +190,16 @@ msgstr "តម្លៃរបស់យើង"
 
 msgid "Included in this package:"
 msgstr "រួមបញ្ចូលក្នុងកញ្ចប់នេះ៖"
+
+msgid "Discover our tailor-made formulas, adapted to all your rental management needs."
+msgstr "ស្វែងរករូបមន្តដែលកាត់តាមរបស់យើង សម្របតាមតម្រូវការគ្រប់គ្រងការជួលរបស់អ្នកទាំងអស់។"
+
+msgid "Whether you are a demanding owner in search of excellence, a real estate investor in search of maximum return, or in search of serenity and tranquility, ANGKOR LUXE offers three unique solutions."
+msgstr "មិនថាអ្នកគឺជាម្ចាស់ដែលមានតម្រូវការក្នុងការស្វែងរកឧត្តមភាព អ្នកវិនិយោគអចលនទ្រព្យក្នុងការស្វែងរកការត្រឡប់មកវិញអតិបរមា ឬក្នុងការស្វែងរកភាពស្ងប់ស្ងាត់និងភាពស្ងប់ស្ងាត់នោះទេ ANGKOR LUXE ផ្តល់ជូននូវដំណោះស្រាយពិសេសចំនួនបី។"
+
+
+msgid "Transform Your Real Estate Management into an Exceptional Experience."
+msgstr "ផ្លាស់ប្តូរការគ្រប់គ្រងអចលនទ្រព្យរបស់អ្នកទៅជាបទពិសោធន៍ពិសេស។"
+
+msgid "At ANGKOR LUXE, we are committed to transforming every aspect of rental management into a worry-free experience for you. Take advantage of our expertise in high-end concierge services and discover how we can maximize the profitability of your properties while ensuring total satisfaction for your tenants. Contact us now to shape the future of your real estate investment."
+msgstr "នៅ ANGKOR LUXE យើងប្តេជ្ញាផ្លាស់ប្តូរគ្រប់ទិដ្ឋភាពនៃការគ្រប់គ្រងការជួលទៅជាបទពិសោធន៍ដែលគ្មានកង្វល់សម្រាប់អ្នក។ ទាញយកអត្ថប្រយោជន៍ពីជំនាញរបស់យើងក្នុងសេវាកម្ម concierge លំដាប់ខ្ពស់ និងស្វែងយល់ពីរបៀបដែលយើងអាចបង្កើនប្រាក់ចំណេញនៃអចលនទ្រព្យរបស់អ្នក ខណៈពេលដែលធានាបាននូវការពេញចិត្តសរុបសម្រាប់អ្នកជួលរបស់អ្នក។ ទាក់ទងមកយើងឥឡូវនេះ ដើម្បីរៀបចំអនាគតនៃការវិនិយោគអចលនទ្រព្យរបស់អ្នក។"

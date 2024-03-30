@@ -34,3 +34,8 @@
   border-color: transparent;
   box-shadow: 0 0 0 2px #fbbf24; /* Couleur yellow-500 de Tailwind */
 }
+
+#contact {
+  margin-top: -100px; /* Ajustez cette valeur en fonction de la hauteur de votre en-tête */
+  padding-top: 100px; /* Ajustez cette valeur pour compenser le décalage négatif */
+}

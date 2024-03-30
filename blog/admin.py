@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Contact, Service, Testimonial, FAQ, SiteInformation, Offering
+from .models import Contact, Service, Testimonial, FAQ, SiteInformation, Offering, HomePageSection
 
 
 @admin.register(Contact)
@@ -38,6 +38,12 @@ class SiteInformationAdmin(admin.ModelAdmin):
 class OfferingAdmin(admin.ModelAdmin):
     list_display = ('text', 'service')
     list_filter = ('service',)
+
+
+@admin.register(HomePageSection)
+class HomePageSectionAdmin(admin.ModelAdmin):
+    list_display = ('title',)
+    
 
 # admin.site.register(Contact, ContactAdmin)
 # admin.site.register(Service)
