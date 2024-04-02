@@ -1,43 +1,46 @@
-{% comment %} {% extends "base.html" %}
-{% load static i18n %}
+{% comment %} {% extends "base.html" %} {% load static i18n %} {% block content %}
 
-{% block content %}
 
+
+<!-- Page individuelle de formule (premium, investisseur, sérénité) -->
 <div class="pt-[90px]"></div>
 
-<img src="{{ service.image.url }}" alt="{{ service.title }}" class="w-full h-auto object-cover" loading="lazy"/>
+<img
+  src="{{ service.image.url }}"
+  alt="{{ service.title }}"
+  class="w-full h-auto object-cover"
+  loading="lazy"
+/>
 
 {% include "_section_title.html" with subheading="Package" heading=service.title %}
 
 <div class="container mx-auto px-4 text-white text-center">
-    <div class="">
+  <div class="">
+    <p>{{ service.description }}</p>
+    {% if service.link %}
+    <a href="{{ service.link }}" class="text-blue-500 hover:text-blue-700"
+      >{% trans "Learn more" %}</a
+    >
+    {% endif %}
+  </div>
 
-        <p>{{ service.description }}</p>
-        {% if service.link %}
-        <a href="{{ service.link }}" class="text-blue-500 hover:text-blue-700">{% trans "Learn more" %}</a>
-        {% endif %}
-    </div>
+  {% include "_section_title.html" with subheading="Offers" heading="INCLUDED"
+  %}
 
-    {% include "_section_title.html" with subheading="Offers" heading="INCLUDED" %}
-
-    <!-- Section pour afficher les offres liées au service -->
-    <div class="">
-        <ul>
-            {% for offering in service.offerings.all %}
-                <li class="p-4 flex flex-col items-center uppercase">
-                    {{ offering.text }}
-                    <!-- Élément pour le soulignement -->
-                    <span class="block bg-gray-500 h-[2px] w-20 mt-6"></span>
-                </li>
-            {% endfor %}
-        </ul>
-    </div>
-    
+  <!-- Section pour afficher les offres liées au service -->
+  <div class="">
+    <ul>
+      {% for offering in service.offerings.all %}
+      <li class="p-4 flex flex-col items-center uppercase">
+        {{ offering.text }}
+        <!-- Élément pour le soulignement -->
+        <span class="block bg-gray-500 h-[2px] w-20 mt-6"></span>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
 </div>
 
 <!-- Section question/réponses pour les formules proposées -->
-{% include '_faq_section.html' with faqs=service.faqs.all %}
-
-{% include '_contact.html' %}
-
-{% endblock %} {% endcomment %}
+{% include '_faq_section.html' with faqs=service.faqs.all %} {% include
+'_contact.html' %} {% endblock %} {% endcomment %}

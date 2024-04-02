@@ -1,4 +1,6 @@
-{% load static i18n %}
+{% comment %} {% load static i18n %}
+
+<!-- Liens de chaques formules depuis la page home -->
 
 {% include "_section_title.html" with subheading="services" heading="concierge offers" %}
 
@@ -25,14 +27,6 @@
 
 
 
-
-<img 
-  src="{% static 'images/6.webp' %}" 
-  alt="" 
-  class="w-full h-[700px] object-cover object-center" 
-  loading="lazy">
-
-
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     // Vérifie la largeur de l'écran
@@ -46,4 +40,4 @@
     }
   });
   </script>
-  
+   {% endcomment %}

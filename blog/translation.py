@@ -7,7 +7,7 @@ class ServiceTranslationOptions(TranslationOptions):
     
 @register(Offering)
 class OfferingTranslationOptions(TranslationOptions):
-    fields = ('text',)
+    fields = ('title', 'description',)
 
 
 @register(Testimonial)

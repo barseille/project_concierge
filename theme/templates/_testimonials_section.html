@@ -1,12 +1,16 @@
 {% load i18n %}
 
+<!-- Section de Témoignages en forme de carrousel -->
+
+
 {% include "_section_title.html" with subheading="testimonials" heading="our owners wanted to share their experiences" %}
 
 
   
   <!-- Carrousel -->
-<section class="container mx-auto mt-10 text-center text-white">
+<section class="container mx-auto m-10 text-center text-white">
     <div id="default-carousel" class="relative w-full" data-carousel="slide">
+      
       <!-- Carrousel items -->
       <div class="relative h-auto min-h-[10rem] overflow-hidden rounded-lg px-20">
         {% for testimonial in testimonials %}

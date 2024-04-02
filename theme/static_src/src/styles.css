@@ -39,3 +39,41 @@
   margin-top: -100px; /* Ajustez cette valeur en fonction de la hauteur de votre en-tête */
   padding-top: 100px; /* Ajustez cette valeur pour compenser le décalage négatif */
 }
+
+/*Couleur de chaque option de la formule*/
+.custom-bg-color {
+  background-color: rgb(22, 22, 22, 0.7);
+}
+
+
+
+/* Animation de gauche à droite */
+.fade-in-left {
+  /* durée de l'animation par défaut */
+  animation: fadeInLeft 1s forwards;
+}
+
+@keyframes fadeInLeft {
+  from {
+    transform: translateX(-300px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Animation d'apparition */
+.fade-in {
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -9,7 +9,13 @@ class ContactAdmin(admin.ModelAdmin):
 
 @admin.register(Service)
 class ServiceAdmin(admin.ModelAdmin):
-    list_display = ('title', 'link')
+    list_display = ('title',)
+    
+
+@admin.register(Offering)
+class OfferingAdmin(admin.ModelAdmin):
+    list_display = ('title', 'service',)
+    list_filter = ('service',)
  
 
 @admin.register(Testimonial) 
@@ -34,10 +40,6 @@ class SiteInformationAdmin(admin.ModelAdmin):
     list_display = ('concierge_description',)
     
 
-@admin.register(Offering)
-class OfferingAdmin(admin.ModelAdmin):
-    list_display = ('text', 'service')
-    list_filter = ('service',)
 
 
 @admin.register(HomePageSection)

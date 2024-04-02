@@ -53,7 +53,14 @@ def contact_view(request):
                 messages.error(request, _('An error occurred while sending your message.'))
     else:
         form = ContactForm()
-    return render(request, 'contact.html', {'form': form})
+    
+    # Récupération du texte <p> du footer   
+    site_info = SiteInformation.objects.first()  
+    context = {
+        'form': form,
+        'site_info': site_info,
+    }
+    return render(request, 'contact.html', context)
 
 
 def thanks(request):
@@ -64,48 +71,52 @@ def our_values(request):
     form = ContactForm()
     testimonial = Testimonial.objects.all()
     site_info = SiteInformation.objects.first()
-    # Ajoutez ici d'autres données que vous pourriez vouloir passer au template, si nécessaire
+    
     context = {
         'form': form,
         'testimonials': testimonial,
         'site_info': site_info,
-        # Ajoutez d'autres contextes au besoin
     }
     return render(request, 'our_values.html', context)
 
-# Détails de l'ensemble des services
+
+
+# Vues pour les services
 def services(request):
-    services = Service.objects.all()
+    try:
+        # Récupère la première instance de Service
+        service = Service.objects.first()  
+    except Service.DoesNotExist:
+        service = None
+
     site_info = SiteInformation.objects.first()
-    form = ContactForm()
     
     context = {
-        'services': services,
+        'service': service,
         'site_info': site_info,
-        'form': form,
-        
     }
     return render(request, 'services.html', context)
 
 
+
 # Détails de chaque service
-class ServiceDetailView(DetailView):
-    model = Service
-    template_name = 'service_detail.html'
-    context_object_name = 'service'
+# class ServiceDetailView(DetailView):
+#     model = Service
+#     template_name = 'service_detail.html'
+#     context_object_name = 'service'
     
     
-    def get_context_data(self, **kwargs):
-        # Appel de la méthode de base pour obtenir le contexte
-        context = super().get_context_data(**kwargs)
+#     def get_context_data(self, **kwargs):
+#         # Appel de la méthode de base pour obtenir le contexte
+#         context = super().get_context_data(**kwargs)
         
-        # Ajout de données supplémentaires au contexte
-        context['service_faqs'] = self.object.faqs.all()
-        context['general_faqs'] = FAQ.objects.filter(is_general=True)
-        context['form'] = ContactForm()
-        context['testimonials'] = Testimonial.objects.all()
-        context['site_info'] = SiteInformation.objects.first()
-        return context
+#         # Ajout de données supplémentaires au contexte
+#         context['service_faqs'] = self.object.faqs.all()
+#         context['general_faqs'] = FAQ.objects.filter(is_general=True)
+#         context['form'] = ContactForm()
+#         context['testimonials'] = Testimonial.objects.all()
+#         context['site_info'] = SiteInformation.objects.first()
+#         return context
 
 
 

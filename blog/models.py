@@ -16,9 +16,7 @@ class Contact(models.Model):
 
 class Service(models.Model):
     title = models.CharField(max_length=200)
-    image = models.ImageField(upload_to='images/')
     description = models.TextField()
-    link = models.URLField(blank=True, null=True)
     
     def __str__(self):
         return self.title
@@ -27,10 +25,11 @@ class Service(models.Model):
 # Section liste offres proposées par service
 class Offering(models.Model):
     service = models.ForeignKey(Service, on_delete=models.CASCADE, related_name='offerings')
-    text = models.CharField(max_length=500)
+    title = models.CharField(max_length=500)
+    description = models.TextField()
     
     def __str__(self):
-        return self.text
+        return f'{self.title} - {self.service.title}'
 
 # Section témoignages
 class Testimonial(models.Model):
@@ -47,7 +46,7 @@ class Testimonial(models.Model):
         return self.name
 
 
-#  Section questions/réponses
+# Section questions/réponses
 class FAQ(models.Model):
     service = models.ForeignKey(Service, on_delete=models.CASCADE, related_name='faqs', null=True, blank=True)
     question = models.CharField(_("Question"), max_length=255)

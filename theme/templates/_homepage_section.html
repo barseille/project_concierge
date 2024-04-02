@@ -1,6 +1,7 @@
 {% load static i18n %}
 
-<!-- _homepage_section.html -->
+<!-- Image de page d'accueil avec titre, texte et deux boutons -->
+
 <section class="pt-20">
   <div class="relative min-h-screen">
     <!-- Image avec positionnement absolu pour couvrir le conteneur -->
@@ -12,45 +13,42 @@
     />
 
     <!-- Contenu superposé sur l'image -->
-    <div class="relative px-6 pt-14 lg:px-8">
-      <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-        <div class="text-center">
-          <h1
-            class="text-3xl font-bold tracking-tight text-white sm:text-6xl"
-            data-aos="fade-left"
-            data-aos-duration="1000"
-          >
-          {{ homepage_section.title }}
-            
-          </h1>
-          <p
-            class="mt-6 text-lg leading-8 text-white"
-            data-aos="fade-left"
-            data-aos-duration="1500"
-          >
-          {{ homepage_section.subtitle }}
-          </p>
-          <div
-            class="mt-10 flex items-center justify-center gap-x-6"
-            data-aos="fade-left"
-            data-aos-duration="2000"
-          >
-            <a
-              href="#"
-              class="inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-yellow-500 to-orange-500 px-4 py-3 text-sm leading-tight text-black shadow-md transition duration-150 ease-in-out hover:shadow-outline hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 font-semibold"
-            >
-            {{ homepage_section.first_button_text }}
-            </a>
+    <div
+      class="relative mx-auto max-w-2xl pt-[200px] sm:pt-[300px] text-center flex flex-col gap-10 px-4"
+    >
 
-            <a
-              href="{% url 'services' %}"
-              class="rounded-md border border-white px-2 py-2 text-sm font-semibold leading-6 text-white transition-all ease-in-out duration-300 hover:bg-black hover:text-white"
-              aria-label="Learn More"
-            >
-            {{ homepage_section.second_button_text }} <span aria-hidden="true">→</span>
-            </a>
-          </div>
-        </div>
+      <!-- L'animation commencera à la valeur de data-delay après le chargement du dom  -->
+      <h1
+        class=" text-3xl font-bold tracking-tight text-white sm:text-5xl" data-animation="fadeInLeft"
+        data-delay="0.3s"
+      >
+        {{ homepage_section.title }}
+      </h1>
+      <p
+        class=" text-2xl leading-8 text-white font-semibold" data-animation="fadeInLeft"
+        data-delay="0.6s"
+      >
+        {{ homepage_section.subtitle }}
+      </p>
+      <div
+        class=" flex items-center justify-center gap-x-6" data-animation="fadeInLeft"
+        data-delay="0.9s"
+      >
+        <a
+          href="#"
+          class="inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-yellow-500 to-orange-500 px-4 py-3 text-sm leading-tight text-black shadow-md transition duration-150 ease-in-out hover:shadow-outline hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 font-semibold"
+        >
+          {{ homepage_section.first_button_text }}
+        </a>
+
+        <a
+          href="{% url 'services' %}"
+          class="rounded-md border border-white px-2 py-2 text-sm font-semibold leading-6 text-white transition-all ease-in-out duration-300 hover:bg-black hover:text-white"
+          aria-label="Learn More"
+        >
+          {{ homepage_section.second_button_text }}
+          <span aria-hidden="true">→</span>
+        </a>
       </div>
     </div>
   </div>

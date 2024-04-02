@@ -203,3 +203,42 @@ msgstr "ផ្លាស់ប្តូរការគ្រប់គ្រងអ
 
 msgid "At ANGKOR LUXE, we are committed to transforming every aspect of rental management into a worry-free experience for you. Take advantage of our expertise in high-end concierge services and discover how we can maximize the profitability of your properties while ensuring total satisfaction for your tenants. Contact us now to shape the future of your real estate investment."
 msgstr "នៅ ANGKOR LUXE យើងប្តេជ្ញាផ្លាស់ប្តូរគ្រប់ទិដ្ឋភាពនៃការគ្រប់គ្រងការជួលទៅជាបទពិសោធន៍ដែលគ្មានកង្វល់សម្រាប់អ្នក។ ទាញយកអត្ថប្រយោជន៍ពីជំនាញរបស់យើងក្នុងសេវាកម្ម concierge លំដាប់ខ្ពស់ និងស្វែងយល់ពីរបៀបដែលយើងអាចបង្កើនប្រាក់ចំណេញនៃអចលនទ្រព្យរបស់អ្នក ខណៈពេលដែលធានាបាននូវការពេញចិត្តសរុបសម្រាប់អ្នកជួលរបស់អ្នក។ ទាក់ទងមកយើងឥឡូវនេះ ដើម្បីរៀបចំអនាគតនៃការវិនិយោគអចលនទ្រព្យរបស់អ្នក។"
+
+msgid "Launch Your Real Estate Project With Us"
+msgstr "បើកដំណើរការគម្រោងអចលនទ្រព្យរបស់អ្នកជាមួយយើង"
+
+msgid "Join the ANGKOR LUXE adventure and transform your rental management into an exceptional experience. Our team of experts is ready to support you towards success. Take the first step now!"
+msgstr "ចូលរួមការផ្សងព្រេង ANGKOR LUXE និងផ្លាស់ប្តូរការគ្រប់គ្រងការជួលរបស់អ្នកទៅជាបទពិសោធន៍ពិសេស។ ក្រុមអ្នកជំនាញរបស់យើងត្រៀមខ្លួនជាស្រេចដើម្បីជួយអ្នកឆ្ពោះទៅរកភាពជោគជ័យ។ បោះជំហានដំបូងឥឡូវនេះ!"
+
+msgid "Our Values: At the Heart of Our Commitment"
+msgstr "តម្លៃរបស់យើង៖ ជាបេះដូងនៃការប្តេជ្ញាចិត្តរបស់យើង។"
+
+msgid "Excellence, Integrity and Innovation at the Service of Your Real Estate Assets: Discover How Our Fundamental Values ​​Guide Us in Every Aspect of Our Work, Ensuring Not Only the Total Satisfaction of Our Clients but Also the Valorization and Protection of Theirs Long Term Investment."
+msgstr "ឧត្តមភាព សុចរិតភាព និងការច្នៃប្រឌិតនៅសេវាកម្មនៃទ្រព្យសម្បត្តិអចលនទ្រព្យរបស់អ្នក៖ ស្វែងយល់ពីរបៀបដែលតម្លៃមូលដ្ឋានរបស់យើងណែនាំយើងក្នុងគ្រប់ទិដ្ឋភាពនៃការងាររបស់យើង ធានាមិនត្រឹមតែការពេញចិត្តសរុបរបស់អតិថិជនរបស់យើងប៉ុណ្ណោះទេ ប៉ុន្តែថែមទាំងផ្តល់តម្លៃ និងការការពារការវិនិយោគរយៈពេលវែងរបស់ពួកគេផងដែរ។ ."
+
+msgid "Launch Your Real Estate Project With ANGKOR LUXE"
+msgstr "បើកដំណើរការគម្រោងអចលនទ្រព្យរបស់អ្នកជាមួយ ANGKOR LUXE"
+
+msgid "Whether it is maximizing the profitability of your properties, seeking excellence in rental management, or simply freeing you from daily hassles, our team is ready to listen to your needs and offer you tailor-made solutions. Fill out the form below so we can start bringing your vision to life."
+msgstr "ថាតើវាកំពុងបង្កើនផលចំណេញនៃអចលនទ្រព្យរបស់អ្នក ស្វែងរកភាពល្អឥតខ្ចោះក្នុងការគ្រប់គ្រងការជួល ឬគ្រាន់តែដោះលែងអ្នកពីបញ្ហាប្រចាំថ្ងៃក៏ដោយ ក្រុមការងាររបស់យើងបានត្រៀមខ្លួនរួចរាល់ហើយដើម្បីស្តាប់តម្រូវការរបស់អ្នក និងផ្តល់ជូនអ្នកនូវដំណោះស្រាយតាមតម្រូវការរបស់អ្នក។ បំពេញទម្រង់បែបបទខាងក្រោម ដើម្បីយើងអាចចាប់ផ្តើមនាំយកចក្ខុវិស័យរបស់អ្នកមកជីវិត។"
+
+msgid "The Pillars of Our Excellence"
+msgstr "សសរស្តម្ភនៃឧត្តមភាពរបស់យើង។"
+
+msgid "Transparency"
+msgstr "តម្លាភាព"
+
+msgid "Every intervention on your property, reported in complete clarity."
+msgstr "រាល់ការអន្តរាគមន៍លើទ្រព្យសម្បត្តិរបស់អ្នក រាយការណ៍ដោយភាពច្បាស់លាស់ពេញលេញ។"
+
+msgid "Trust"
+msgstr "ទុកចិត្ត"
+
+msgid "Entrust us with your property, we take care of everything, as if it were ours."
+msgstr "ប្រគល់​ទ្រព្យ​សម្បត្តិ​របស់​អ្នក​មក​យើង យើង​ថែរក្សា​គ្រប់​យ៉ាង ដូច​ជា​របស់​យើង"
+
+msgid "Availability"
+msgstr "ភាពអាចរកបាន"
+
+msgid "Our concierge service available 7/7, for uninterrupted management."
+msgstr "សេវាកម្ម concierge របស់យើងមាន 7/7 សម្រាប់ការគ្រប់គ្រងដោយមិនមានការរំខាន។"

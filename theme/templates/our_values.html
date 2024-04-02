@@ -2,10 +2,12 @@
 {% load static i18n %} 
 
 
+<!-- Page Nos valeurs -->
+
 {% block content %}
 <div class="pt-[90px]"></div>
 
-{% include '_custom_section_title.html' with h1_text="Discover our tailor-made formulas, adapted to all your rental management needs." p_text="Whether you are a demanding owner in search of excellence, a real estate investor in search of maximum return, or in search of serenity and tranquility, ANGKOR LUXE offers three unique solutions." %}
+{% include '_custom_section_title.html' with h1_text="Our Values: At the Heart of Our Commitment" p_text="Excellence, Integrity and Innovation at the Service of Your Real Estate Assets: Discover How Our Fundamental Values ​​Guide Us in Every Aspect of Our Work, Ensuring Not Only the Total Satisfaction of Our Clients but Also the Valorization and Protection of Theirs Long Term Investment." %}
 
 
 <img 
@@ -67,8 +69,9 @@
   <!-- Ajoutez d'autres valeurs ici -->
 </section>
 
-{% include '_testimonials_section.html' %} {% include "_contact.html" %} 
+{% include '_testimonials_section.html' %} 
 
-
+<!-- Lien de page contact -->
+{% include '_contact_link.html' with small_title="Launch Your Real Estate Project With Us" prompt_text="Join the ANGKOR LUXE adventure and transform your rental management into an exceptional experience. Our team of experts is ready to support you towards success. Take the first step now!" button_url="contact" button_text="Contact Us" %}
 
 {% endblock %}
