@@ -2,105 +2,37 @@
 
 <!-- Section de liste d'éléments avec animations -->
 <section>
-  <div
-    class="container mx-auto flex flex-col items-center text-center text-white gap-10 px-4 mb-6"
-  >
-    <!-- Premier élément avec animation -->
-    <!-- Utilise data-animation pour spécifier le type d'animation et data-delay pour le délai avant l'animation -->
-    <div class="flex flex-col gap-3">
-      <h3
-        class="font-bold uppercase text-yellow-500"
-        data-animation="fadeInLeft"
-        data-delay="0.3s"
-      >
+  <div class="container mx-auto flex flex-col items-center text-center text-white gap-10 px-4 mb-6">
+    <!-- Premier élément avec animation fade-up -->
+    <div class="flex flex-col gap-3" data-aos="fade-up" data-aos-delay="100">
+      <h3 class="font-bold uppercase text-yellow-500 text-lg">
         {% trans under_title1 %}
       </h3>
-      <p data-animation="fadeInLeft" data-delay="0.6s">
-        {% trans small_sentences1 %}
-      </p>
-      <!-- Séparateur visuel -->
-      <div class="mx-auto w-10 border-b border-stone-500 py-1 pt-5"></div>
-    </div>
-
-    <!-- Deuxième élément avec animation -->
-    <div class="flex flex-col gap-3">
-      <h3
-        class="font-bold uppercase text-yellow-500"
-        data-animation="fadeInLeft"
-        data-delay="0.9s"
-      >
-        {% trans under_title2 %}
-      </h3>
-      <p data-animation="fadeInLeft" data-delay="1.2s">
-        {% trans small_sentences2 %}
-      </p>
-      <!-- Séparateur visuel -->
-      <div class="mx-auto w-10 border-b border-stone-500 py-1 pt-5"></div>
-    </div>
-
-    <!-- Troisième élément avec animation -->
-    <div class="flex flex-col gap-3">
-      <h3
-        class="font-bold uppercase text-yellow-500"
-        data-animation="fadeInLeft"
-        data-delay="1.5s"
-      >
-        {% trans under_title3 %}
-      </h3>
-      <p data-animation="fadeInLeft" data-delay="1.8s">
-        {% trans small_sentences3 %}
-      </p>
-    </div>
-  </div>
-</section>
-
-{% comment %} {% load i18n %}
-
-<!-- section de liste d'élément -->
-<section>
-  <div
-    class="container mx-auto flex flex-col items-center text-center text-white gap-10 px-4 mb-6"
-  >
-    <div class="flex flex-col gap-3">
-      <h3
-        class="font-bold uppercase text-yellow-500"
-        data-animation="fadeInLeft"
-        data-delay="0.3s"
-      >
-        {% trans under_title1 %}
-      </h3>
-      <p class="" data-animation="fadeInLeft" data-delay="0.3s">
+      <p class="text-base">
         {% trans small_sentences1 %}
       </p>
       <div class="mx-auto w-10 border-b border-stone-500 py-1 pt-5"></div>
     </div>
 
-    <div class="flex flex-col gap-3">
-      <h3
-        class="font-bold uppercase text-yellow-500"
-        data-animation="fadeInLeft"
-        data-delay="0.6s"
-      >
+    <!-- Deuxième élément avec animation fade-up -->
+    <div class="flex flex-col gap-3" data-aos="fade-up" data-aos-delay="300">
+      <h3 class="font-bold uppercase text-yellow-500 text-lg">
         {% trans under_title2 %}
       </h3>
-      <p class="" data-animation="fadeInLeft" data-delay="0.6s">
+      <p class="text-base">
         {% trans small_sentences2 %}
       </p>
       <div class="mx-auto w-10 border-b border-stone-500 py-1 pt-5"></div>
     </div>
 
-    <div class="flex flex-col gap-3">
-      <h3
-        class="font-bold uppercase text-yellow-500"
-        data-animation="fadeInLeft"
-        data-delay="0.9s"
-      >
+    <!-- Troisième élément avec animation fade-up -->
+    <div class="flex flex-col gap-3" data-aos="fade-up" data-aos-delay="500">
+      <h3 class="font-bold uppercase text-yellow-500 text-lg">
         {% trans under_title3 %}
       </h3>
-      <p class="" data-animation="fadeInLeft" data-delay="0.9s">
+      <p class="text-base">
         {% trans small_sentences3 %}
       </p>
     </div>
   </div>
 </section>
-{% endcomment %}

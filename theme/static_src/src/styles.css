@@ -32,7 +32,7 @@
 #languageSelector:focus {
   outline: none;
   border-color: transparent;
-  box-shadow: 0 0 0 2px #fbbf24; /* Couleur yellow-500 de Tailwind */
+  box-shadow: 0 0 0 2px #fbbf24;
 }
 
 #contact {
@@ -40,40 +40,9 @@
   padding-top: 100px; /* Ajustez cette valeur pour compenser le décalage négatif */
 }
 
-/*Couleur de chaque option de la formule*/
+/*Couleur et transparence de chaque option de la formule dans service.html*/
 .custom-bg-color {
   background-color: rgb(22, 22, 22, 0.7);
 }
 
 
-
-/* Animation de gauche à droite */
-.fade-in-left {
-  /* durée de l'animation par défaut */
-  animation: fadeInLeft 1s forwards;
-}
-
-@keyframes fadeInLeft {
-  from {
-    transform: translateX(-300px);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-/* Animation d'apparition */
-.fade-in {
-  animation: fadeIn 1s forwards;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}

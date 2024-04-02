@@ -26,16 +26,14 @@
       src="https://kit.fontawesome.com/33a775bcdb.js"
       crossorigin="anonymous"
     ></script>
-    
 
-    {% comment %} <link
+    <link
       href="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css"
       rel="stylesheet"
     />
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script> {% endcomment %}
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js"></script>
 
-
-     {% tailwind_css %}
+    {% tailwind_css %}
   </head>
   <body class="bg-black">
     {% include '_header.html' %}
@@ -56,13 +54,16 @@
           var selectedLanguage = "{{ request.LANGUAGE_CODE }}";
           languageSelector.value = selectedLanguage;
         }
-    
+
         // Fonction pour sauvegarder la position de défilement et soumettre le formulaire
-        window.saveScrollPositionAndSubmitForm = function(selectElement) {
-          localStorage.setItem("scrollPosition", window.pageYOffset || document.documentElement.scrollTop);
+        window.saveScrollPositionAndSubmitForm = function (selectElement) {
+          localStorage.setItem(
+            "scrollPosition",
+            window.pageYOffset || document.documentElement.scrollTop
+          );
           selectElement.form.submit();
         };
-    
+
         // Restaurer la position de défilement précédemment sauvegardée après rechargement
         var scrollPosition = localStorage.getItem("scrollPosition");
         if (scrollPosition) {
@@ -72,65 +73,8 @@
       });
     </script>
 
-    {% comment %} <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        // Sélectionne tous les éléments destinés à être animés avec un délai
-        const elementsWithDelay = document.querySelectorAll('[data-delay]');
-      
-        // Applique l'animation à chaque élément en tenant compte du délai
-        elementsWithDelay.forEach(element => {
-          // Récupère le délai défini dans l'attribut data-delay
-          const animationDelay = element.getAttribute('data-delay');
-      
-          // Applique le délai d'animation
-          element.style.animationDelay = animationDelay;
-      
-          // Détermine le type d'animation à appliquer
-          if (element.classList.contains('fade-in-left')) {
-            // 1 seconde est le temps total de l'animation
-            element.style.animation = `fadeInLeft 1s ease-out ${animationDelay} forwards`;
-          } else if (element.classList.contains('fade-in')) {
-            // Ajoute l'animation fade-in avec le délai spécifié
-            element.style.animation = `fadeIn 1s ease-out ${animationDelay} forwards`;
-          }
-        });
-      });
-    </script> {% endcomment %}
-
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        // Fonction pour ajouter l'animation aux éléments observés
-        const addAnimation = (element) => {
-          const animationDelay = element.getAttribute('data-delay') || '0s';
-          const animationType = element.dataset.animation; // Utilisez un attribut data-animation pour spécifier le type
-    
-          // Applique l'animation avec le délai
-          element.style.animation = `${animationType} 1s ease-out ${animationDelay} forwards`;
-        };
-    
-        // Options de l'observer
-        const observerOptions = {
-          root: null, // null signifie viewport
-          rootMargin: '0px',
-          threshold: 0.1 // Se déclenche lorsque 10% de l'élément est visible
-        };
-    
-        // Création de l'observer
-        const observer = new IntersectionObserver((entries, observer) => {
-          entries.forEach(entry => {
-            // Vérifie si l'élément est visible
-            if (entry.isIntersecting) {
-              addAnimation(entry.target); // Ajoute l'animation
-              observer.unobserve(entry.target); // Arrête d'observer l'élément
-            }
-          });
-        }, observerOptions);
-    
-        // Sélectionne tous les éléments à animer et les observe
-        document.querySelectorAll('[data-animation]').forEach(el => observer.observe(el));
-      });
+      AOS.init();
     </script>
-    
-    
   </body>
 </html>

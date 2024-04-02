@@ -1,21 +1,46 @@
 {% load i18n %}
 
-<!-- Titre et phrase d'accroche pour début de page -->
+<!-- Section pour le titre et la phrase d'accroche de la page -->
 <section>
   <div class="container mx-auto max-w-2xl text-center py-10 px-4">
     <h1
       class="text-3xl font-bold tracking-tight text-white sm:text-5xl"
-      data-aos="fade-left"
-      data-aos-duration="1000"
+      data-aos="fade-right"
+      data-aos-delay="500" data-aos-duration="1000"
     >
       {% trans h1_text %}
     </h1>
+
     <p
       class="mt-6 text-lg leading-8 text-white"
-      data-aos="fade-left"
-      data-aos-duration="1500"
+      data-aos="fade-right"
+      data-aos-delay="800" data-aos-duration="1000"
     >
       {% trans p_text %}
     </p>
   </div>
 </section>
+
+{% comment %} {% load i18n %}
+
+<!-- Section pour le titre et la phrase d'accroche de la page -->
+<section>
+  <div class="container mx-auto max-w-2xl text-center py-10 px-4">
+    <h1
+      class="text-3xl font-bold tracking-tight text-white sm:text-5xl"
+      data-animation="fadeInLeft"
+      data-delay="0.3s"
+    >
+      {% trans h1_text %}
+    </h1>
+
+    <p
+      class="mt-6 text-lg leading-8 text-white"
+      data-animation="fadeInLeft"
+      data-delay="0.6s"
+    >
+      {% trans p_text %}
+    </p>
+  </div>
+</section>
+{% endcomment %}
