@@ -66,8 +66,8 @@ def contact_view(request):
 def thanks(request):
     return render(request, 'thanks.html')
 
-
-def our_values(request):
+# Section Nos valeurs
+def values(request):
     form = ContactForm()
     testimonial = Testimonial.objects.all()
     site_info = SiteInformation.objects.first()
@@ -77,7 +77,7 @@ def our_values(request):
         'testimonials': testimonial,
         'site_info': site_info,
     }
-    return render(request, 'our_values.html', context)
+    return render(request, 'values.html', context)
 
 
 

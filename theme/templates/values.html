@@ -1,0 +1,67 @@
+{% extends 'base.html' %} {% load static i18n %}
+
+<!-- Page Nos valeurs -->
+
+{% block content %}
+<div class="pt-[90px]"></div>
+
+{% include '_custom_section_title.html' with h1_text="Our Values: At the Heart of Our Commitment" p_text="Excellence, Integrity and Innovation at the Service of Your Real Estate Assets: Discover How Our Fundamental Values ​​Guide Us in Every Aspect of Our Work, Ensuring Not Only the Total Satisfaction of Our Clients but Also the Valorization and Protection of Theirs Long Term Investment." %}
+
+<img
+  src="{% static 'images/poignee_de_main.svg' %}"
+  alt="Une poignée de main symbolisant l'intégrité et la coopération"
+  class="w-full sm:h-[500px] md:object-cover object-scale-down"
+  loading="lazy"
+/>
+
+{% include "_section_title.html" with subheading="Les Principes Qui Nous Guident" heading="Our Values" %}
+
+<!-- Section Nos Valeurs -->
+<section class=" text-white py-10">
+  <div class="container mx-auto px-4">
+   
+    <p class="text-lg mb-6 text-center">
+      {% trans "Au cœur d'ANGKOR LUXE, trois piliers fondamentaux inspirent notre quotidien et façonnent notre relation avec chaque propriétaire. Ils incarnent notre engagement envers une gestion locative transparente, fiable et attentive." %}
+    </p>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 text-center mt-10"  data-aos="fade-up">
+      <!-- Transparence -->
+      <div class="px-6 py-4 " >
+        <h3 class="text-xl font-semibold mb-4 text-yellow-600">
+          {% trans "Transparence Absolue" %}
+        </h3>
+        <p>
+          {% trans "Nous nous engageons à une communication ouverte et honnête, vous tenant informé des moindres détails. Votre tranquillité d'esprit commence avec la clarté de nos actions et décisions." %}
+        </p>
+      </div>
+
+      <!-- Confiance -->
+      <div class="px-6 py-4">
+        <h3 class="text-xl font-semibold mb-4 text-yellow-600">
+          {% trans "Une Confiance Partagée" %}
+        </h3>
+        <p>
+          {% trans "La confiance est la pierre angulaire de notre relation. En nous confiant votre bien, vous bénéficiez d'une gestion prudente et attentionnée, car nous chérissons chaque propriété comme si elle était nôtre." %}
+        </p>
+      </div>
+
+      <!-- Disponibilité -->
+      <div class="px-6 py-4">
+        <h3 class="text-xl font-semibold mb-4 text-yellow-600">
+          {% trans "Toujours à Votre Service" %}
+        </h3>
+        <p>
+          {% trans "Notre équipe dévouée est à votre disposition tous les jours de la semaine, assurant une gestion continue et réactive. Votre bien ne connaîtra jamais de temps mort avec ANGKOR LUXE." %}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% include '_testimonials_section.html' %}
+
+<!-- Lien de page contact -->
+{% include '_contact_link.html' with small_title="Launch Your Real Estate Project With Us" prompt_text="Join the ANGKOR LUXE adventure and transform your rental management into an exceptional experience. Our team of experts is ready to support you towards success. Take the first step now!" button_url="contact" button_text="Contact Us" %}
+
+
+{% endblock %}

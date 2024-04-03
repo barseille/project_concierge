@@ -5,7 +5,7 @@
 <div class="pt-[90px]"></div>
 
 <!-- Titre et sous titre-->
-{% if service %} {% include "_custom_section_title.html" with h1_text=service.title p_text=service.description %} {% endif %}
+{% include "_custom_section_title.html" with h1_text=service.title p_text=service.description %}
 
 <img
   src="{% static 'images/26.png' %}"
@@ -16,29 +16,90 @@
 
 {% include "_section_title.html" with subheading="Inclus" heading="Notre formule" %}
 
-<!-- Affichage des offres liées à l'offre unique -->
-<div class="container mx-auto py-4 px-4 lg:max-w-5xl">
+<p class="container mx-auto mb-8 px-4 lg:max-w-5xl text-white text-center">Découvrez la simplicité de la gestion locative avec ANGKOR LUXE, où notre service exclusif libère les propriétaires des contraintes quotidiennes liées à la location. Nous nous chargeons de l'ensemble du processus, assurant ainsi que votre bien génère des revenus de manière efficace. Profitez d'une occupation optimisée et d'une rentabilité accrue, le tout en bénéficiant d'une tranquillité d'esprit. Chez ANGKOR LUXE, votre satisfaction en tant que propriétaire est notre priorité.</p>
 
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
+<!-- Affichage liste des offres -->
+<div class="container mx-auto py-4 px-4 lg:max-w-5xl text-white">
+
+
+
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
     {% for offering in service.offerings.all %}
 
-    <div class="custom-bg-color p-4 rounded-lg shadow-md" data-aos="fade-up">
+    <div class="custom-bg-color p-2 rounded-lg shadow-md" data-aos="fade-up">
+      <h3
+        class="flex items-center font-semibold uppercase text-yellow-500 mb-2 border-b py-1"
+      >
+        <span class="material-symbols-outlined p-1"> check </span>{{ offering.title }}
+      </h3>
 
-      <h3 class="flex items-center font-semibold uppercase text-yellow-500 mb-2 border-b py-2">
-        
-        <span class="material-symbols-outlined p-1">
-        check
-        </span>{{ offering.title }}</h3>
-
-      <p class="text-white ">{{ offering.description }}</p>
-
+      <p class="text-white">{{ offering.description }}</p>
     </div>
     {% endfor %}
-
   </div>
 </div>
 
+
+<img
+  src="{% static 'images/28.png' %}"
+  alt=""
+  class="w-full h-[700px] object-cover object-center pt-10"
+  loading="lazy"
+/>
+
+
+
+<!-- Section Critères d'Acceptation -->
+<section class="text-white pt-[100px] flex items-center flex-col gap-10">
+  <div class="container mx-auto px-4 max-w-4xl text-center">
+    <h2 class="text-center text-2xl font-bold mb-8 uppercase">
+      {% trans "Quels sont nos Critères d'Acceptation ?" %}
+    </h2>
+
+    <p class="">
+      {% trans "Pour assurer une collaboration réussie et fructueuse, nous avons établi 3 critères d'acceptation. Veuillez vous assurer que votre propriété répond aux exigences suivantes avant de soumettre votre demande." %}
+    </p>
+  </div>
+
+  {% include "_custom_selection_section.html" with under_title1="1. Localisation" small_sentences1="La propriété doit être située à Siem Reap, Cambodge." under_title2="2. Type de Propriété" small_sentences2="Nous concentrons nos services sur les maisons et villas, excluant les appartements pour le moment."  under_title3="3. État Fonctionnel" small_sentences3="Tous les équipements essentiels (électricité, plomberie, etc.) doivent être en état de marche." %}
+</section>
+
+
+<img
+  src="{% static 'images/27.png' %}"
+  alt=""
+  class="w-full h-[700px] object-cover object-center pt-10"
+  loading="lazy"
+/>
+
+
+<!-- Section Processus d'Inscription -->
+<section class=" text-white pt-[100px] flex items-center flex-col gap-10">
+  <div class="container mx-auto px-4 max-w-4xl text-center">
+    <h2 class="text-center text-2xl font-bold mb-8 uppercase">
+      {% trans "Découvrez le Processus Simple pour Commencer avec ANGKOR LUXE" %}
+    </h2>
+
+   
+
+    {% include "_custom_selection_section.html" with under_title1="1. Premier Contact : Soumettez Votre Demande" small_sentences1="Tout commence par votre initiative. Utilisez notre formulaire en ligne pour nous faire part de votre intérêt.Assurez-vous de consulter nos critères d'acceptation avant de soumettre votre demande." under_title2="2. Vérification sur Place : Rencontre et Évaluation" small_sentences2="Une fois votre demande reçue et pré-approuvée, nous organiserons un rendez-vous sur place. Cela nous permet de vérifier la conformité de votre propriété avec nos standards de qualité et d'assurer qu'elle répond à nos critères d'acceptation. C'est également l'occasion pour vous de rencontrer notre équipe et de discuter de vos attentes."  under_title3="3. Signature du Contrat : Officialisation du Partenariat" small_sentences3="Si tout est conforme et que vos attentes s'alignent avec nos services, l'étape suivante est la signature d'un contrat. Ce document détaille nos engagements mutuels et marque le début de notre collaboration fructueuse. Dès cet instant, vous pouvez vous détendre et nous laisser prendre soin de votre bien, en transformant votre propriété en une source de revenus attractifs." %}
+
+    <div class="pt-[100px]">
+    <!-- Lien de page contact -->
+    {% include '_contact_link.html' with small_title="Launch Your Real Estate Project With Us" prompt_text="Join the ANGKOR LUXE adventure and transform your rental management into an exceptional experience. Our team of experts is ready to support you towards success. Take the first step now!" button_url="contact" button_text="Contact Us" %}
+
+
+    </div>
+
+
+
+  </div>
+</section>
+
 <!-- Section FAQ pour le service -->
 {% if service.faqs.exists %} {% include '_faq_section.html' with
-faqs=service.faqs.all unique_id=forloop.counter %} {% endif %} {% endblock %}
+faqs=service.faqs.all unique_id=forloop.counter %} {% endif %}
+
+{% endblock %}
