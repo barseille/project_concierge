@@ -31,7 +31,7 @@
     <!-- Conteneur pour le menu de navigation et le sélecteur de langue -->
     <div class="nav-selector flex justify-between items-center">
       <ul
-        class="sm:flex flex-col sm:flex-row justify-between items-center bg-black sm:text-base lg:ml-60"
+        class="md:flex flex-col md:flex-row justify-between items-center bg-black sm:text-base lg:ml-60"
       >
         <li class="text-center p-4 uppercase">
           <a
@@ -44,7 +44,7 @@
           <a
             href="{% url 'services' %}"
             class="hover:text-yellow-500 whitespace-nowrap"
-            >{% trans "Our Offers" %}</a
+            >{% trans "Notre Offre" %}</a
           >
         </li>
         <li class="text-center p-4 uppercase">
@@ -55,7 +55,7 @@
       </ul>
 
       <!-- Bouton de menu pour les formats mobiles -->
-      <button id="menu-btn" class="sm:hidden">
+      <button id="menu-btn" class="md:hidden">
         <span class="material-symbols-outlined text-white p-2">menu</span>
         <span class="material-symbols-outlined text-white hidden p-2"
           >close</span

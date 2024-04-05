@@ -1,11 +1,76 @@
 {% load i18n %}
 
+<!-- Model pour "QUELS SONT NOS CRITÈRES D'ACCEPTATION ?"-->
+<!-- Titre, phrase, icones, textes-->
+
+<section>
+  <div class="container mx-auto flex flex-col items-center text-center text-white gap-10 px-4 mb-6">
+    
+
+    <div class="flex flex-col gap-3 items-center" data-aos="fade-up" data-aos-delay="100">
+      <div class="flex items-center gap-2 font-semibold uppercase text-yellow-500 text-lg">
+        {% if icon1 %}
+          <span class="material-symbols-outlined">{{ icon1 }}</span>
+        {% endif %}
+        {{ title1 }}
+      </div>
+      <p class="text-base">
+        {{ sentence1 }}
+      </p>
+      <div class="mx-auto w-10 border-b border-stone-500 py-1 pt-5"></div>
+    </div>
+  
+
+    <div class="flex flex-col gap-3 items-center" data-aos="fade-up" data-aos-delay="100">
+      <div class="flex items-center gap-2 font-semibold uppercase text-yellow-500 text-lg">
+        {% if icon2 %}
+          <span class="material-symbols-outlined">{{ icon2 }}</span>
+        {% endif %}
+        {{ title2 }}
+      </div>
+      <p class="text-base">
+        {{ sentence2 }}
+      </p>
+      <div class="mx-auto w-10 border-b border-stone-500 py-1 pt-5"></div>
+    </div>
+
+    <div class="flex flex-col gap-3 items-center" data-aos="fade-up" data-aos-delay="100">
+      <div class="flex items-center gap-2 font-semibold uppercase text-yellow-500 text-lg">
+        {% if icon3 %}
+          <span class="material-symbols-outlined">{{ icon3 }}</span>
+        {% endif %}
+        {{ title3 }}
+      </div>
+      <p class="text-base">
+        {{ sentence3 }}
+      </p>
+      
+    </div>
+
+
+
+
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+{% comment %} {% load i18n %}
+
 <!-- Section de liste d'éléments avec animations -->
 <section>
   <div class="container mx-auto flex flex-col items-center text-center text-white gap-10 px-4 mb-6">
     <!-- Premier élément avec animation fade-up -->
     <div class="flex flex-col gap-3" data-aos="fade-up" data-aos-delay="100">
-      <h3 class="font-bold uppercase text-yellow-500 text-lg">
+      <h3 class="font-semibold uppercase text-yellow-500 text-lg">
         {% trans under_title1 %}
       </h3>
       <p class="text-base">
@@ -16,7 +81,7 @@
 
     <!-- Deuxième élément avec animation fade-up -->
     <div class="flex flex-col gap-3" data-aos="fade-up" data-aos-delay="300">
-      <h3 class="font-bold uppercase text-yellow-500 text-lg">
+      <h3 class="font-semibold uppercase text-yellow-500 text-lg">
         {% trans under_title2 %}
       </h3>
       <p class="text-base">
@@ -27,7 +92,7 @@
 
     <!-- Troisième élément avec animation fade-up -->
     <div class="flex flex-col gap-3" data-aos="fade-up" data-aos-delay="500">
-      <h3 class="font-bold uppercase text-yellow-500 text-lg">
+      <h3 class="font-semibold uppercase text-yellow-500 text-lg">
         {% trans under_title3 %}
       </h3>
       <p class="text-base">
@@ -35,4 +100,4 @@
       </p>
     </div>
   </div>
-</section>
+</section> {% endcomment %}

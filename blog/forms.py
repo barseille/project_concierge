@@ -19,32 +19,37 @@ phone_validator = RegexValidator(
 class ContactForm(forms.ModelForm):
     first_name = forms.CharField(
         validators=[name_validator],
-        widget=forms.TextInput(attrs={'class': 'rounded-md border-gray-300 focus:border-yellow-500 focus:ring focus:ring-yellow-500 focus:ring-opacity-50'}),
-        label=_("First Name"),
+        # widget=forms.TextInput(attrs={'class': 'rounded-md border-gray-300 focus:border-yellow-500 focus:ring focus:ring-yellow-500 focus:ring-opacity-50'}),
+        widget=forms.TextInput(attrs={'class': 'input-style', 'placeholder': _('First Name*')}),
+        label='',
     )
     last_name = forms.CharField(
         validators=[name_validator],
-        widget=forms.TextInput(attrs={'class': 'rounded-md border-gray-300 focus:border-yellow-500 focus:ring focus:ring-yellow-500 focus:ring-opacity-50'}),
-        label=_("Last Name"),
+        widget=forms.TextInput(attrs={'class': 'input-style', 'placeholder': _('Last Name*')}),
+        label='',
     )
     email = forms.EmailField(
-        label=_("Email"), 
+        label='', 
         error_messages={
             'invalid': _("Please enter a valid email address."),
             'required': _("This field is required."),
         },
-        widget=forms.EmailInput(attrs={'class': 'rounded-md border-gray-300 focus:border-yellow-500 focus:ring focus:ring-yellow-500 focus:ring-opacity-50'}),
+        widget=forms.EmailInput(attrs={'class': 'input-style', 'placeholder': _('Email*')}),
     )
     phone = forms.CharField(
         validators=[phone_validator],
-        widget=forms.TextInput(attrs={'class': 'rounded-md border-gray-300 focus:border-yellow-500 focus:ring focus:ring-yellow-500 focus:ring-opacity-50'}),
-        label=_("Phone"),
+        widget=forms.TextInput(attrs={'class': 'input-style', 'placeholder': _('Phone')}),
+        label='',
         required=False,
     )
     message = forms.CharField(
+        widget=forms.Textarea(attrs={
+            'class': 'input-style-message rounded-md',
+            'rows': 10, 
+            'maxlength': '1000'}),
        
-        widget=forms.Textarea(attrs={'class': 'rounded-md border-gray-300 focus:border-yellow-500 focus:ring focus:ring-yellow-500 focus:ring-opacity-50 text-red', 'maxlength': '1000'}),
-        label=_("Message"),
+        # widget=forms.Textarea(attrs={'class': 'rounded-md border-gray-300 focus:border-yellow-500 focus:ring focus:ring-yellow-500 focus:ring-opacity-50 text-red', 'maxlength': '1000'}),
+        label=_("Message*"),
     )
     
     class Meta:

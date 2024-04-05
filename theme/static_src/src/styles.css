@@ -9,7 +9,7 @@
   }
 }
 /* Animation du défilement du menu burger dans navbar */
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   nav ul {
     position: fixed;
     left: -100%;
@@ -42,10 +42,43 @@
 
 /*Couleur et transparence de chaque option de la formule dans service.html*/
 .custom-bg-color {
-  background-color: rgb(22, 22, 22, 0.7);
+  background: linear-gradient(to right, #2c2c2c 0%, #686868 50%, #2c2c2c 100%);
 }
 
-.detail-section {
-  background-color: #2D2D2D;
+/* .detail-section {
+  background-color: #4b4b4b;
+} */
+
+
+/* style des champs du formulaire de contact */
+.input-style {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #818181;
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.input-style:focus {
+  outline: none;
+  /* border-bottom: 2px solid #FFD700; */
+}
+
+.input-style-message {
+  background-color: transparent;
+  border: 2px solid #818181;
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 20px;
+  padding: 10px;
+  width: 100%;
+}
+
+.input-style-message:focus {
+  outline: none;
+  /* border-bottom: 2px solid #FFD700; */
 }
 

@@ -5,10 +5,10 @@
 {% block content %}
 <div class="pt-[90px]"></div>
 
-{% include '_custom_section_title.html' with h1_text="Our Values: At the Heart of Our Commitment" p_text="Excellence, Integrity and Innovation at the Service of Your Real Estate Assets: Discover How Our Fundamental Values ​​Guide Us in Every Aspect of Our Work, Ensuring Not Only the Total Satisfaction of Our Clients but Also the Valorization and Protection of Theirs Long Term Investment." %}
+{% include '_custom_section_title.html' with h1_text="Une Gestion Locative Rentable et Sans Souci" p_text="Optez pour ANGKOR LUXE et bénéficiez d'une gestion locative simplifiée et rentable. Nous prenons en charge tous les aspects de la location, vous assurant ainsi des revenus optimisés et une tranquillité d'esprit inégalée. Notre expertise transforme votre propriété en une source de revenus attractive, sans que vous ayez à vous préoccuper des détails. Découvrez la facilité d'une gestion locative qui travaille pour vous." %}
 
 <img
-  src="{% static 'images/poignee_de_main.svg' %}"
+  src="{% static 'images/poignee-main1.png' %}"
   alt="Une poignée de main symbolisant l'intégrité et la coopération"
   class="w-full sm:h-[500px] md:object-cover object-scale-down"
   loading="lazy"
@@ -16,18 +16,20 @@
 
 {% include "_section_title.html" with subheading="Les Principes Qui Nous Guident" heading="Our Values" %}
 
+
+
 <!-- Section Nos Valeurs -->
-<section class=" text-white py-10">
+<section class=" text-white ">
   <div class="container mx-auto px-4">
    
-    <p class="text-lg mb-6 text-center">
+    <p class=" mb-6 text-center max-w-3xl mx-auto">
       {% trans "Au cœur d'ANGKOR LUXE, trois piliers fondamentaux inspirent notre quotidien et façonnent notre relation avec chaque propriétaire. Ils incarnent notre engagement envers une gestion locative transparente, fiable et attentive." %}
     </p>
 
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 text-center mt-10"  data-aos="fade-up">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 text-center mt-14">
       <!-- Transparence -->
-      <div class="px-6 py-4 " >
-        <h3 class="text-xl font-semibold mb-4 text-yellow-600">
+      <div class="px-6 py-4" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-xl font-semibold mb-4 text-yellow-600 uppercase">
           {% trans "Transparence Absolue" %}
         </h3>
         <p>
@@ -36,8 +38,8 @@
       </div>
 
       <!-- Confiance -->
-      <div class="px-6 py-4">
-        <h3 class="text-xl font-semibold mb-4 text-yellow-600">
+      <div class="px-6 py-4" data-aos="fade-up" data-aos-delay="300">
+        <h3 class="text-xl font-semibold mb-4 text-yellow-600 uppercase">
           {% trans "Une Confiance Partagée" %}
         </h3>
         <p>
@@ -46,8 +48,8 @@
       </div>
 
       <!-- Disponibilité -->
-      <div class="px-6 py-4">
-        <h3 class="text-xl font-semibold mb-4 text-yellow-600">
+      <div class="px-6 py-4" data-aos="fade-up" data-aos-delay="500">
+        <h3 class="text-xl font-semibold mb-4 text-yellow-600 uppercase">
           {% trans "Toujours à Votre Service" %}
         </h3>
         <p>
@@ -58,7 +60,81 @@
   </div>
 </section>
 
-{% include '_testimonials_section.html' %}
+<img
+  src="{% static 'images/29.png' %}"
+  alt=""
+  class="w-full h-[700px] object-cover object-center py-20"
+  loading="lazy"
+/>
+
+
+<!-- Section: Notre Histoire -->
+<section class="text-white py-12">
+  <div class="container mx-auto px-4 max-w-3xl">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-semibold mb-4 uppercase">{% trans "Notre Héritage: Une Expertise au Service du Cambodge" %}</h2>
+      <p class="text-xl py-4">{% trans "D'une conciergerie à la gestion locative." %}</p>
+    </div>
+
+    <p class="mb-6 text-center max-w-4xl mx-auto px-4">
+      {% trans "Avec une histoire riche en collaborations, de la gestion événementielle pour personnalités à des gestions locatives, les fondateurs d'ANGKOR LUXE ont toujours placé l'excellence et l'adaptabilité au cœur de leur métier. Notre expertise couvre un large éventail, de la conciergerie de luxe à la gestion locative sophistiquée, pour une clientèle internationale." %}
+    </p>
+
+    <p class="mb-6 text-center max-w-4xl mx-auto px-4">
+      {% trans "C'est avec cette riche expérience que nous avons décidé de relever un nouveau défi : transposer notre savoir-faire en conciergerie de luxe et en gestion locative au Cambodge. Nous avons choisi Siem Reap, non seulement pour son potentiel inexploré dans la gestion locative. C'est dans cet esprit que ANGKOR LUXE a été conçu : pour offrir une grande qualité de service, appuyée par notre expérience passée." %}
+    </p>
+
+    <p class="mb-6 text-center max-w-4xl mx-auto px-4">
+      {% trans "ANGKOR LUXE est donc le fruit de cette ambition : offrir aux propriétaires cambodgiens et internationaux une gestion locative sans égale, enrichie par notre expérience internationale et notre attention aux détails. Rejoignez-nous dans cette aventure." %}
+    </p>
+  </div>
+</section>
+
+
+
+
+<!-- Lien vers la page de l'offre -->
+{% include '_contact_link.html' with small_title="Découvrez Comment Maximiser Votre Revenu Locatif" prompt_text="Explorez notre formule unique de gestion locative et voyez comment nous pouvons transformer votre bien en une source de revenus sans tracas." button_url="services" button_text="Explorez Notre Offre" %}
+
+
+
+
+<img
+  src="{% static 'images/25.png' %}"
+  alt="Une poignée de main symbolisant l'intégrité et la coopération"
+  class="w-full sm:h-[500px] md:object-cover object-scale-down my-10"
+  loading="lazy"
+/>
+
+
+{% include "_section_title.html" with subheading="Notre Engagement" heading="Votre Sérénité" %}
+
+<!-- Section: Sérénité et Engagement ANGKOR LUXE -->
+<section class=" text-white pb-20 ">
+  <div class="container mx-auto px-4 text-center max-w-3xl">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-semibold mb-4 uppercase">{% trans "Découvrez comment ANGKOR LUXE se dédie à la réussite de votre projet locatif" %}</h2> 
+    
+    </div>
+    
+    <!-- Nos Engagements -->
+    <div class="flex flex-col gap-8 text-center mt-14">
+      <div class="px-6 py-4" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-xl font-semibold mb-4 text-yellow-600 uppercase">{% trans "Une Gestion Locative Harmonieuse" %}</h3>
+        <p>{% trans "Chez ANGKOR LUXE, nous transformons la gestion de votre propriété en une expérience fluide et enrichissante. De la sélection minutieuse de locataires respectueux, à une gestion transparente des arrivées et départs, et jusqu’à l’entretien soigné de votre bien, nous veillons à maximiser votre tranquillité et votre rendement locatif." %}</p>
+      </div>
+
+      <div class="px-6 py-4" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-xl font-semibold mb-4 text-yellow-600 uppercase">{% trans "Responsabilité et Sérénité" %}</h3>
+        <p>{% trans "Tous les coûts associés à la consommation d'énergie et d'eau, ainsi que les responsabilités en cas de dommages, sont clairement attribués aux locataires, garantissant que votre propriété reste protégée et entretenue sans coûts supplémentaires pour vous. Chez ANGKOR LUXE, nous veillons à maintenir une gestion locative équilibrée et juste, pour votre tranquillité d’esprit." %}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
 
 <!-- Lien de page contact -->
 {% include '_contact_link.html' with small_title="Launch Your Real Estate Project With Us" prompt_text="Join the ANGKOR LUXE adventure and transform your rental management into an exceptional experience. Our team of experts is ready to support you towards success. Take the first step now!" button_url="contact" button_text="Contact Us" %}

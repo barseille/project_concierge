@@ -76,5 +76,79 @@
     <script>
       AOS.init();
     </script>
+
+<!-- Chargement de jQuery s'il n'est pas déjà chargé -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    // Définition des expressions régulières pour la validation des champs
+    var nameRegex = /^[a-zA-Z\s]+$/; // Lettres et espaces uniquement pour les noms
+    var phoneRegex = /^[0-9\s\-\(\)]+$/; // Chiffres, espaces, tirets et parenthèses pour les numéros de téléphone
+    var maxChars = 1000; // Nombre maximum de caractères autorisés pour le message
+
+    // Fonction pour valider les champs du formulaire
+    function validateField(fieldId, regex, errorMsgId, errorMsg) {
+      $(fieldId).blur(function () {
+        var fieldValue = $(this).val();
+        if (fieldValue && !regex.test(fieldValue)) {
+          $(errorMsgId).text(errorMsg).show(); // Affiche le message d'erreur si la valeur du champ n'est pas valide
+        } else {
+          $(errorMsgId).hide(); // Cache le message d'erreur si la valeur du champ est valide
+        }
+      });
+    }
+
+    // Application de la validation pour chaque champ
+    validateField(
+      "#id_email",
+      /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+      "#error_email",
+      '{% trans "Please enter a valid email address." %}'
+    );
+
+    validateField(
+      "#id_first_name",
+      nameRegex,
+      "#error_first_name",
+      '{% trans "Please enter a valid name with letters only." %}'
+    );
+
+    validateField(
+      "#id_last_name",
+      nameRegex,
+      "#error_last_name",
+      '{% trans "Please enter a valid name with letters only." %}'
+    );
+
+    validateField(
+      "#id_phone",
+      phoneRegex,
+      "#error_phone",
+      '{% trans "Please enter a valid phone number with digits only." %}'
+    );
+
+    // Gestion du compteur de caractères pour le champ de message
+    $("#id_message").on("input", function () {
+      var currentLength = $(this).val().length;
+      $("#char_count").text(currentLength + "/" + maxChars); // Mise à jour du compteur
+
+      // Changement de couleur du compteur selon la longueur du message
+      if (currentLength >= maxChars) {
+        $("#char_count").css("color", "red"); // Rouge si le maximum est atteint ou dépassé
+      } else if (currentLength > 900) {
+        $("#char_count").css("color", "orange"); // Orange si proche du maximum
+      } else {
+        $("#char_count").css("color", "white"); // Blanc par défaut
+      }
+
+      // Empêche l'ajout de caractères au-delà du maximum autorisé
+      if (currentLength > maxChars) {
+        $(this).val($(this).val().substr(0, maxChars));
+      }
+    });
+  });
+</script>
+
   </body>
 </html>

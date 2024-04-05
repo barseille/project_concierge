@@ -3,6 +3,9 @@
 
 {% block content %}
 
+
+
+
 <!-- Image de présentation -->
 {% include '_homepage_section.html' %}
 
@@ -12,7 +15,10 @@
 {% include "_section_title.html" with subheading="Our Values" heading="The Pillars of Our Excellence" %}
 
 <!-- Liste de "Nos valeurs" -->
-{% include "_custom_selection_section.html" with under_title1="Transparency" small_sentences1="Every intervention on your property, reported in complete clarity." under_title2="Trust" small_sentences2="Entrust us with your property, we take care of everything, as if it were ours."  under_title3="Availability" small_sentences3="Our concierge service available 7/7, for uninterrupted management." %}
+{% comment %} {% include "_custom_selection_section.html" with under_title1="Transparency" small_sentences1="Every intervention on your property, reported in complete clarity." under_title2="Trust" small_sentences2="Entrust us with your property, we take care of everything, as if it were ours." under_title3="Availability" small_sentences3="Our concierge service available 7/7, for uninterrupted management." %} {% endcomment %}
+
+{% include "_custom_selection_section.html" with title1="Transparency" sentence1="Every intervention on your property, reported in complete clarity." title2="Trust" sentence2="Entrust us with your property, we take care of everything, as if it were ours." title3="Availability" sentence3="Our concierge service available 7/7, for uninterrupted management." %}
+
 
 
 <!-- Section Notre formule-->
@@ -22,10 +28,61 @@
   class="w-full h-[800px] object-cover object-center pt-10" 
   loading="lazy">
 
-{% include "_section_title.html" with subheading="sangoku" heading="Notre formule" %}
 
-{% include "_custom_selection_section.html" with small_icon1="fa-solid fa-sack-dollar" under_title1="PROFITABILITY1" small_sentences1="Optimized income" small_icon2="fa-solid fa-sack-dollar" under_title2="PROFITABILITY2" small_sentences2="Optimized income" small_icon2="fa-solid fa-sack-dollar" under_title3="PROFITABILITY3" small_sentences3="Optimized income" %}
 
+<!-- Section: Simplifiez Votre Gestion Locative avec ANGKOR LUXE -->
+<section class="bg-gray-800 text-white py-12">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold mb-4">{% trans "Simplifiez Votre Gestion Locative" %}</h2>
+      <p class="text-xl mb-8">{% trans "Laissez ANGKOR LUXE prendre en charge la gestion quotidienne de votre propriété." %}</p>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div>
+        <h3 class="text-2xl font-semibold mb-4">{% trans "Vos Besoins" %}</h3>
+        <ul class="list-disc pl-5 space-y-3">
+          <li>{% trans "Trouver des locataires sans effort." %}</li>
+          <li>{% trans "Déléguer les check-in/check-out pour gagner du temps." %}</li>
+          <li>{% trans "Éviter la gestion directe des clients difficiles." %}</li>
+          <li>{% trans "S'affranchir de la corvée du ménage après chaque location." %}</li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-2xl font-semibold mb-4">{% trans "Nos Engagements" %}</h3>
+        <ul class="list-disc pl-5 space-y-3">
+          <li>{% trans "Nous trouvons pour vous des locataires fiables et respectueux." %}</li>
+          <li>{% trans "Nous gérons les arrivées et départs, quelle que soit l'heure, vous n'avez plus à vous en préoccuper." %}</li>
+          <li>{% trans "Nous intervenons en cas de besoin pour gérer les situations avec les locataires, vous garantissant tranquillité et satisfaction." %}</li>
+          <li>{% trans "Nous assurons la propreté impeccable de votre bien avec notre service de ménage professionnel après chaque location." %}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Section: Gestion des Incidents -->
+<section class="bg-gray-700 text-white py-12">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold mb-4">{% trans "Gestion des Incidents" %}</h2>
+      <p class="text-xl mb-8">{% trans "Comment nous assurons la protection de votre bien." %}</p>
+    </div>
+    <div>
+      <h3 class="text-3xl font-semibold mb-4">{% trans "Que se passe-t-il si un client cause des dommages à ma propriété ?" %}</h3>
+      <p>
+        {% trans "Nous comprenons l'importance de protéger votre bien. En cas de dommages causés par un locataire, soyez assuré que les frais de réparation ou de remplacement seront à sa charge. Nous facilitons la communication et la résolution de ces incidents pour garantir que votre propriété soit maintenue dans un état impeccable, sans inconvénient financier pour vous." %}
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+{% include "_advantage_section.html" %}
+
+<!-- Lien vers la page de l'offre -->
+{% include '_contact_link.html' with small_title="Découvrez Comment Maximiser Votre Revenu Locatif" prompt_text="Explorez notre formule unique de gestion locative et voyez comment nous pouvons transformer votre bien en une source de revenus sans tracas." button_url="services" button_text="Explorez Notre Offre" %}
 
 
 <img 

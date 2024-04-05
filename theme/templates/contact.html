@@ -1,5 +1,8 @@
-{% extends 'base.html' %} {% load static i18n %} {% block content %}
+{% extends 'base.html' %} 
+{% load static i18n %} {% block content %}
 
+
+<!-- Page Formulaire -->
 <div class="pt-[90px]"></div>
 
 {% include '_custom_section_title.html' with h1_text="Launch Your Real Estate Project With ANGKOR LUXE" p_text="Whether it is maximizing the profitability of your properties, seeking excellence in rental management, or simply freeing you from daily hassles, our team is ready to listen to your needs and offer you tailor-made solutions. Fill out the form below so we can start bringing your vision to life." %}
@@ -16,16 +19,27 @@
     class="mx-auto w-full max-w-[550px]"
   >
     {% csrf_token %} {% for message in messages %}
+
     <div class="alert {{ message.tags }}">{{ message }}</div>
-    {% endfor %} {% for field in form %}
+
+    {% endfor %} 
+    
+    {% for field in form %}
+
     <div class="flex flex-col mb-2">
-      <label for="{{ field.id_for_label }}" class="text-white mb-2"
-        >{{ field.label }}</label
-      >
+
+      <label for="{{ field.id_for_label }}"class="text-gray-500 mb-2">
+        {{ field.label }}
+      </label>
+
       {{ field }} {% if field.name == "message" %}
-      <div id="char_count" class="text-white mt-2">0/1000</div>
+
       <!-- Compteur de caractères pour le message -->
+      <div id="char_count" class="text-gray-500">0/1000</div>
+
+      
       {% endif %}
+
       <div
         id="error_{{ field.name }}"
         class="text-red-500 text-sm mt-1"
@@ -34,12 +48,19 @@
       <!-- Zone d'affichage des erreurs -->
     </div>
     {% endfor %}
+
+    <!-- Ajout du texte explicatif pour l'étoile (*) -->
+    <div class="text-gray-500 text-sm my-10">
+      <span class="text-gray-500">*</span> {% trans "Champ requis" %}
+    </div>
+
     <button
       type="submit"
       class="inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-yellow-500 to-orange-500 px-6 py-3 text-sm uppercase leading-tight text-black shadow-md transition duration-150 ease-in-out hover:shadow-outline hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 font-semibold"
     >
       {% trans "SEND" %}
     </button>
+    
   </form>
 </div>
 {% endblock %}
@@ -47,7 +68,7 @@
 <!-- Chargement de jQuery s'il n'est pas déjà chargé -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-<script>
+{% comment %} <script>
   $(document).ready(function () {
     // Définition des expressions régulières pour la validation des champs
     var nameRegex = /^[a-zA-Z\s]+$/; // Lettres et espaces uniquement pour les noms
@@ -115,4 +136,4 @@
       }
     });
   });
-</script>
+</script> {% endcomment %}

@@ -9,11 +9,9 @@ class ServiceTranslationOptions(TranslationOptions):
 class OfferingTranslationOptions(TranslationOptions):
     fields = ('title', 'description',)
 
-
 @register(Testimonial)
 class TestimonialTranslationOptions(TranslationOptions):
     fields = ('role', 'message',)
-
  
 @register(FAQ)
 class FAQTranslationOptions(TranslationOptions):
