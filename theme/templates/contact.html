@@ -1,5 +1,6 @@
 {% extends 'base.html' %} 
-{% load static i18n %} {% block content %}
+{% load static i18n %} 
+{% block content %}
 
 
 <!-- Page Formulaire -->
@@ -9,7 +10,6 @@
 
 {% include "_section_title.html" with subheading="contact us" heading="let's discuss your project together" %}
 
-<p>nouvelle page contact</p>
 
 <div class="container mx-auto flex items-center justify-center px-4">
   <form
@@ -35,7 +35,15 @@
       {{ field }} {% if field.name == "message" %}
 
       <!-- Compteur de caractères pour le message -->
-      <div id="char_count" class="text-gray-500">0/1000</div>
+      
+      <div class="flex justify-between items-center my-4">
+        <div id="char_count" class="text-gray-500">0/1000</div>
+
+        <!-- Ajout du texte explicatif pour l'étoile (*) -->
+        <div class="text-gray-500 text-sm">
+          <span class="text-gray-500">*</span> {% trans "Champ requis" %}
+        </div>
+      </div>
 
       
       {% endif %}
@@ -49,10 +57,7 @@
     </div>
     {% endfor %}
 
-    <!-- Ajout du texte explicatif pour l'étoile (*) -->
-    <div class="text-gray-500 text-sm my-10">
-      <span class="text-gray-500">*</span> {% trans "Champ requis" %}
-    </div>
+  
 
     <button
       type="submit"
