@@ -11,19 +11,19 @@
     <div>
       <a
         href="{% url 'home' %}"
-        class="flex flex-col items-center"
+        class="flex flex-col items-center gap-1"
         aria-label="Home page"
       >
         <img
           src="{% static 'images/logo.png' %}"
-          alt="Logo de ANGKOR LUXE"
+          alt="Logo de ANGKOR MANAGEMENT"
           class="hidden md:block h-auto w-8 sm:w-10"
         />
         <h1
           id="title"
           class="text-sm font-semibold uppercase bg-clip-text text-transparent bg-gradient-to-r from-yellow-600 via-yellow-300 to-yellow-600 whitespace-nowrap"
         >
-          ANGKOR LUXE
+          ANGKOR MANAGEMENT
         </h1>
       </a>
     </div>
@@ -44,7 +44,7 @@
           <a
             href="{% url 'services' %}"
             class="hover:text-yellow-500 whitespace-nowrap"
-            >{% trans "Notre Offre" %}</a
+            >{% trans "Our Offer" %}</a
           >
         </li>
         <li class="text-center p-4 uppercase">
@@ -74,7 +74,6 @@
         >
           <option value="en" class="font-semibold">EN</option>
           <option value="fr">FR</option>
-          <option value="km">KM</option>
         </select>
       </form>
     </div>

@@ -7,9 +7,6 @@ load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
-# SECRET_KEY = "django-insecure-i6vg$+x0#&z*(=nq&5nc%%*x$1@u3*rcm5*s@-p^5)9na#em9x"
-
 # DEBUG = True
 
 # Accéder à une variable d'environnement
@@ -138,7 +135,6 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
 LANGUAGES = [
     ('en', 'en'),
     ('fr', 'fr'),
-    ('km', 'km'),
 ]
 
 LOCALE_PATHS = (

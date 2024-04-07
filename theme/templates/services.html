@@ -14,9 +14,9 @@
   loading="lazy"
 />
 
-{% include "_section_title.html" with subheading="Inclus" heading="Notre formule" %}
+{% include "_section_title.html" with subheading="Included" heading="Our Offer" %}
 
-<p class="container mx-auto mb-8 px-4 lg:max-w-4xl text-white text-center">Découvrez la simplicité de la gestion locative avec ANGKOR LUXE, où notre service exclusif libère les propriétaires des contraintes quotidiennes liées à la location. Nous nous chargeons de l'ensemble du processus, assurant ainsi que votre bien génère des revenus de manière efficace. Profitez d'une occupation optimisée et d'une rentabilité accrue, le tout en bénéficiant d'une tranquillité d'esprit. Chez ANGKOR LUXE, votre satisfaction en tant que propriétaire est notre priorité.</p>
+<p class="container mx-auto mb-8 px-4 lg:max-w-4xl text-white text-center">{% trans "Discover the simplicity of rental management with ANGKOR MANAGEMENT, where our exclusive service frees owners from the daily constraints of rental. We take care of the entire process, ensuring that your property generates income efficiently. Enjoy optimized occupancy and increased profitability, all with peace of mind. At ANGKOR MANAGEMENT, your satisfaction as an owner is our priority." %}</p>
 
 
 <!-- Affichage liste des offres -->
@@ -47,32 +47,25 @@
 />
 
 
-
 <!-- Section Critères d'Acceptation -->
-<section id="critères-dacceptation" class="text-white pt-[100px] flex items-center flex-col gap-10">
+<section id="acceptance-criteria" class="text-white pt-[100px] flex items-center flex-col gap-10">
   <div class="container mx-auto px-4 max-w-3xl text-center">
     <h2 class="text-center text-3xl font-semibold mb-8 uppercase">
-      {% trans "Quels sont nos Critères d'Acceptation ?" %}
+      {% trans "What are our Acceptance Criteria?" %}
     </h2>
 
-    <p class="">
-      {% trans "Pour assurer une collaboration réussie et fructueuse, nous avons établi 3 critères d'acceptation. Veuillez vous assurer que votre propriété répond aux exigences suivantes avant de soumettre votre demande." %}
+    <p>
+      {% trans "To ensure a successful and fruitful collaboration, we have established 3 acceptance criteria. Please ensure your property meets the following requirements before submitting your application." %}
     </p>
   </div>
 
-{% comment %} {% include "_custom_selection_section.html" with under_title1="<span class='material-symbols-outlined'>location_on</span> Localisation" small_sentences1="La propriété doit être située à Siem Reap, Cambodge." under_title2="<span class='material-symbols-outlined'>home_app_logo</span> Type de Propriété" small_sentences2="Nous concentrons nos services sur les maisons et villas, excluant les appartements pour le moment."  under_title3="<span class='material-symbols-outlined'>local_laundry_service</span> Equipements Fonctionnels" small_sentences3="Tous les équipements essentiels (électricité, plomberie, etc.) doivent être en état de marche." %} {% endcomment %}
-
-{% include "_custom_selection_section.html" with icon1="location_on" title1="Localisation" sentence1="La propriété doit être située à Siem Reap, Cambodge." icon2="home_app_logo" title2="Type de Propriété" sentence2="Nous concentrons nos services sur les maisons et villas, excluant les appartements pour le moment." icon3="local_laundry_service" title3="Équipements Fonctionnels" sentence3="Tous les équipements essentiels (électricité, plomberie, etc.) doivent être en état de marche." %}
-
-
-
+    {% include "_custom_selection_section.html" with icon1="location_on" title1="Location" sentence1="The property must be located in Siem Reap, Cambodia." icon2="home_app_logo" title2="Property Type" sentence2="We focus our services on houses and villas, excluding apartments for the moment." icon3="local_laundry_service" title3="Functional Equipment" sentence3="All essential equipment (electricity, plumbing, etc.) must be in working order." %}
 </section>
-
 
 <img
   src="{% static 'images/27.png' %}"
   alt=""
-  class="w-full h-[700px] object-cover object-center pt-10"
+  class="w-full h-[700px] object-cover object-center py-20"
   loading="lazy"
 />
 
@@ -81,26 +74,18 @@
 <section class=" text-white pt-[100px] flex items-center flex-col gap-10">
   <div class="container mx-auto px-4 max-w-3xl text-center">
     <h2 class="text-center text-3xl font-semibold mb-20 uppercase">
-      {% trans "Découvrez le Processus Simple pour Commencer avec ANGKOR LUXE" %}
+      {% trans "Discover the Simple Process to Get Started with ANGKOR MANAGEMENT" %}
     </h2>
 
-   
 
-    {% comment %} {% include "_custom_selection_section.html" with under_title1="1. Premier Contact : Soumettez Votre Demande" small_sentences1="Tout commence par votre initiative. Utilisez notre formulaire en ligne pour nous faire part de votre intérêt.Assurez-vous de consulter nos <a href='#critères-dacceptation' class='text-yellow-500 hover:text-yellow-400'>critères d'acceptation</a> avant de soumettre votre demande." under_title2="2. Vérification sur Place : Rencontre et Évaluation" small_sentences2="Une fois votre demande reçue et pré-approuvée, nous organiserons un rendez-vous sur place. Cela nous permet de vérifier la conformité de votre propriété avec nos standards de qualité et d'assurer qu'elle répond à nos critères d'acceptation. C'est également l'occasion pour vous de rencontrer notre équipe et de discuter de vos attentes."  under_title3="3. Signature du Contrat : Officialisation du Partenariat" small_sentences3="Si tout est conforme et que vos attentes s'alignent avec nos services, l'étape suivante est la signature d'un contrat. Ce document détaille nos engagements mutuels et marque le début de notre collaboration fructueuse. Dès cet instant, vous pouvez vous détendre et nous laisser prendre soin de votre bien, en transformant votre propriété en une source de revenus attractifs." %} {% endcomment %}
-
-
-    {% include "_custom_selection_section.html" with title1="Premier Contact : Soumettez Votre Demande" sentence1="Tout commence par votre initiative. Utilisez notre formulaire en ligne pour nous faire part de votre intérêt. Assurez-vous de consulter nos <a href='#critères-dacceptation' class='text-yellow-500 hover:text-yellow-400'>critères d'acceptation</a> avant de soumettre votre demande." title2="Vérification sur Place : Rencontre et Évaluation" sentence2="Une fois votre demande reçue et pré-approuvée, nous organiserons un rendez-vous sur place. Cela nous permet de vérifier la conformité de votre propriété avec nos standards de qualité et d'assurer qu'elle répond à nos critères d'acceptation. C'est également l'occasion pour vous de rencontrer notre équipe et de discuter de vos attentes." title3="Signature du Contrat : Officialisation du Partenariat" sentence3="Si tout est conforme et que vos attentes s'alignent avec nos services, l'étape suivante est la signature d'un contrat. Ce document détaille nos engagements mutuels et marque le début de notre collaboration fructueuse. Dès cet instant, vous pouvez vous détendre et nous laisser prendre soin de votre bien, en transformant votre propriété en une source de revenus attractifs." %}
+    {% include "_custom_selection_section.html" with title1="First Contact: Submit Your Request" sentence1="It all starts with your initiative. Use our online form to let us know your interest. Be sure to check out our <a href='#acceptance-criteria' class='text-yellow-500 hover:text-yellow-400'>Acceptance criteria</a> before submitting your request." title2="On-Site Verification: Meeting and Assessment" sentence2="Once your request is received and pre-approved, we will arrange an on-site appointment. This allows us to verify your property's compliance with our quality standards and ensure that it meets our acceptance criteria. This is also an opportunity for you to meet our team and discuss your expectations." title3="Signature of the Contract: Formalization of the Partnership" sentence3="If everything is compliant and your expectations align with our services, the next step is signing a contract. This document details our mutual commitments and marks the start of our fruitful collaboration. From this moment, you can relax and let us take care of your property, transforming your property into an attractive source of income." %}
 
 
     <div class="pt-[100px]">
     <!-- Lien de page contact -->
-    {% include '_contact_link.html' with small_title="Launch Your Real Estate Project With Us" prompt_text="Join the ANGKOR LUXE adventure and transform your rental management into an exceptional experience. Our team of experts is ready to support you towards success. Take the first step now!" button_url="contact" button_text="Contact Us" %}
-
+    {% include '_contact_link.html' with small_title="Launch Your Real Estate Project With Us" prompt_text="Join the ANGKOR MANAGEMENT adventure and transform your rental management into an exceptional experience. Our team of experts is ready to support you towards success. Take the first step now!" button_url="contact" button_text="Contact Us" %}
 
     </div>
-
-
-
   </div>
 </section>
 

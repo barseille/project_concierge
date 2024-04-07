@@ -39,7 +39,7 @@
         <!-- Premier bouton -->
         <a
           href="{% url 'values' %}"
-          class="inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-yellow-500 to-orange-500 px-4 py-3 text-sm leading-tight text-black shadow-md transition duration-150 ease-in-out hover:shadow-outline hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 font-semibold"
+          class="inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-yellow-500 to-orange-500 px-4 py-3 text-sm leading-tight text-black shadow-md transition duration-150 ease-in-out hover:shadow-outline hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 font-semibold uppercase"
         >
           {{ homepage_section.first_button_text }}
         </a>
@@ -47,8 +47,8 @@
         <!-- Second bouton -->
         <a
           href="{% url 'services' %}"
-          class="rounded-md border border-white px-2 py-2 text-sm font-semibold leading-6 text-white transition-all ease-in-out duration-300 hover:bg-black hover:text-white"
-          aria-label="Découvrez notre offre"
+          class="rounded-md border border-white px-2 py-2 text-sm font-semibold leading-6 text-white transition-all ease-in-out duration-300 hover:bg-black hover:text-white uppercase"
+          aria-label="Discover our offer"
         >
           {{ homepage_section.second_button_text }}
           <span aria-hidden="true">→</span>

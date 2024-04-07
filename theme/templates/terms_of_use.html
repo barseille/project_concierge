@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% load i18n %}
+
+{% block content %}
+
+<div class="pt-[120px] bg-black text-white ">
+    <div class="container mx-auto p-5 space-y-20 max-w-4xl">
+        <section>
+            <h1 class="text-3xl font-semibold mb-4">{% trans "Terms of Use & Legal Information" %}</h1>
+            <p>{% trans "ANGKOR MANAGEMENT, situated in Siem Reap, specializes in high-end concierge services. This document provides our terms of use and legal information related to our website and services." %}</p>
+        </section>
+        <section>
+            <h2 class="font-semibold mb-2">{% trans "Notice" %}</h2>
+            <p>{% trans "The information on the ANGKOR MANAGEMENT website is for general information purposes and is non-contractual. We strive to keep the information up-to-date and correct but make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability with respect to the website or the information, products, services, or related graphics contained on the website for any purpose." %}</p>
+        </section>
+        <section>
+            <h2 class="font-semibold mb-2">{% trans "Liability" %}</h2>
+            <p>{% trans "ANGKOR MANAGEMENT is not liable for any inaccuracies, errors, or omissions in the information provided. We also cannot be held responsible for any intrusion or virus that may affect your computer equipment as a result of using our website." %}</p>
+        </section>
+        <section>
+            <h2 class="font-semibold mb-2">{% trans "Intellectual Property" %}</h2>
+            <p>{% trans "The content, including texts, images, and graphics, on our website is protected by intellectual property rights and is the exclusive property of ANGKOR MANAGEMENT. Any reproduction, distribution, or use of this content for commercial purposes without prior written consent is strictly prohibited." %}</p>
+        </section>
+        <section>
+            <h2 class="font-semibold mb-2">{% trans "Modifications" %}</h2>
+            <p>{% trans "ANGKOR MANAGEMENT reserves the right to modify these terms of use and legal information at any time. Changes will be effective immediately upon posting on the website. We encourage users to regularly review this document to stay informed." %}</p>
+        </section>
+        <section>
+            <h2 class="font-semibold mb-2">{% trans "Contact Information" %}</h2>
+            <p>
+                <p>
+                    {% trans "For inquiries," %}
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=angkormanagement1@gmail.com" class="text-blue-500 hover:text-blue-700" target="_blank" rel="noopener noreferrer">
+                        {% trans "contact us" %}
+                    </a>.
+                </p>
+                
+                
+            </p>
+            <p>{% trans "Address: 17251 Preah Sihanouk Ave, Krong Siem Reap" %}</p>
+        </section>
+    </div>
+</div>
+
+{% endblock %}
+

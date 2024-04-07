@@ -1,70 +1,98 @@
 {% load static i18n %}
 
-<!-- Section "Pourquoi Choisir ANGKOR LUXE..."  -->
+<!-- Section "Pourquoi Choisir ANGKOR MANAGEMENT..." utilisée dans la page d'accueil  -->
 <!-- Titre + 8 blocs -->
 
 <section class=" text-white py-12 bg-black">
+
     <div class="container mx-auto px-4 max-w-5xl">
 
-      <h2 class="text-center text-3xl font-semibold mb-20 uppercase">Pourquoi Choisir ANGKOR LUXE pour Votre Gestion Locative ?</h2>
-
+      <h2 class="text-center text-3xl font-semibold mb-20 uppercase">
+        {% trans "Why Choose ANGKOR MANAGEMENT for Your Rental Management?" %}
+      </h2>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         
         <!-- Augmentation de Votre Rendement Locatif -->
-        <div class="p-3  rounded-lg " data-aos="fade-up">
-          <h3 class="text-yellow-500 font-semibold mb-2 border-b border-stone-500 py-1 uppercase">Augmentation de Votre Rendement Locatif</h3>
-          <p class="">Boostez le rendement financier de votre bien grâce à notre maîtrise de la gestion locative. Chaque aspect est minutieusement ajusté pour assurer une performance optimale et convertir votre propriété en une source de revenus stable et séduisante.</p>
+        <div class="p-3 rounded-lg " data-aos="fade-up">
+          <h3 class="text-yellow-500 font-semibold mb-2 border-b border-stone-500 py-1 uppercase">
+            {% trans "Increase in your rental yield" %}
+          </h3>
+          <p>
+            {% trans "Boost the financial performance of your property thanks to our expertise in rental management. Every aspect is carefully adjusted to ensure optimal performance and convert your property into a stable and attractive source of income." %}
+          </p>
         </div>
         
         <!-- Gestion Sereine de Votre Bien -->
-        <div class="p-3  rounded-lg" data-aos="fade-up">
-          <h3 class="text-yellow-500 font-semibold mb-2 border-b border-stone-500 py-1 uppercase">Gestion Sereine de Votre Bien</h3>
-          <p class="">Remettez-nous les clés de votre propriété et détendez-vous. Nous prenons en charge toutes les facettes de la location pour vous, garantissant non seulement la sécurité de votre investissement mais aussi votre tranquillité d'esprit complète.</p>
+        <div class="p-3 rounded-lg" data-aos="fade-up">
+          <h3 class="text-yellow-500 font-semibold mb-2 border-b border-stone-500 py-1 uppercase">
+            {% trans "Peaceful management of your property" %}
+          </h3>
+          <p>
+            {% trans "Give us the keys to your property and relax. We take care of all facets of rental for you, ensuring not only the security of your investment but also your complete peace of mind." %}
+          </p>
         </div>
         
-
-        
         <!-- Services Sur Mesure -->
-        <div class="p-3  rounded-lg" data-aos="fade-up">
-          <h3 class="text-yellow-500 font-semibold mb-2 border-b border-stone-500 py-1 uppercase">Services Sur Mesure</h3>
-          <p class="">Nous reconnaissons que chaque bien possède ses propres caractéristiques. C'est dans cet esprit que notre offre est conçue pour répondre de manière ciblée à vos exigences spécifiques, garantissant une gestion sur mesure et performante.</p>
+        <div class="p-3 rounded-lg" data-aos="fade-up">
+          <h3 class="text-yellow-500 font-semibold mb-2 border-b border-stone-500 py-1 uppercase">
+            {% trans "Customized Services" %}
+          </h3>
+          <p>
+            {% trans "We recognize that each property has its own characteristics. It is in this spirit that our offer is designed to respond in a targeted manner to your specific requirements, guaranteeing tailor-made and efficient management." %}
+          </p>
         </div>
         
         <!-- Transparence Garantie -->
         <div class="p-3  rounded-lg" data-aos="fade-up">
-          <h3 class="text-yellow-500 font-semibold mb-2 border-b border-stone-500 py-1 uppercase">Transparence Garantie</h3>
-          <p class="">Nous nous engageons à une transparence sans faille, favorisant une communication claire et établissant une confiance mutuelle pour une gestion efficace de votre bien.</p>
+          <h3 class="text-yellow-500 font-semibold mb-2 border-b border-stone-500 py-1 uppercase">
+            {% trans "Guaranteed transparency" %}
+          </h3>
+          <p>
+            {% trans "We are committed to flawless transparency, promoting clear communication and establishing mutual trust for the effective management of your property." %}
+          </p>
         </div>
         
-
-        
         <!-- Satisfaction des Hôtes -->
-        <div class="p-3  rounded-lg" data-aos="fade-up">
-          <h3 class="text-yellow-500 font-semibold mb-2 border-b border-stone-500 py-1 uppercase">Satisfaction des Hôtes</h3>
-          <p class="">Nous veillons au bien-être de vos invités, assurant leur satisfaction totale et transformant chaque séjour en une expérience inoubliable qui renforce l'attrait de votre bien.</p>
+        <div class="p-3 rounded-lg" data-aos="fade-up">
+          <h3 class="text-yellow-500 font-semibold mb-2 border-b border-stone-500 py-1 uppercase">
+            {% trans "Guest Satisfaction" %}
+          </h3>
+          <p>
+            {% trans "We look after the well-being of your guests, ensuring their total satisfaction and transforming each stay into an unforgettable experience that enhances the appeal of your property." %}
+          </p>
         </div>
         
         <!-- Gestion Intégrale -->
-        <div class="p-3  rounded-lg" data-aos="fade-up">
-          <h3 class="text-yellow-500 font-semibold mb-2 border-b border-stone-500 py-1 uppercase">Gestion Intégrale</h3>
-          <p class="">Bénéficiez d'une gestion exhaustive couvrant tous les aspects de la location, assurant ainsi efficacité, qualité et sérénité.</p>
+        <div class="p-3 rounded-lg" data-aos="fade-up">
+          <h3 class="text-yellow-500 font-semibold mb-2 border-b border-stone-500 py-1 uppercase">
+            {% trans "Integral Management" %}
+          </h3>
+          <p>
+            {% trans "Benefit from comprehensive management covering all aspects of rental, ensuring efficiency, quality and peace of mind." %}
+          </p>
         </div>
 
         <!-- Connaissance Approfondie du Marché Cambodgien -->
-        <div class="p-3  rounded-lg" data-aos="fade-up">
-            <h3 class="text-yellow-500 font-semibold mb-2 border-b border-stone-500 py-1 uppercase">Connaissance Approfondie du Marché Cambodgien</h3>
-            <p class="">Notre expertise du marché local au Cambodge nous permet d'optimiser le positionnement de votre bien.</p>
-          </div>
+        <div class="p-3 rounded-lg" data-aos="fade-up">
+            <h3 class="text-yellow-500 font-semibold mb-2 border-b border-stone-500 py-1 uppercase">
+              {% trans "In-depth knowledge of the Cambodian Market" %}
+            </h3>
+            <p>
+              {% trans "Our expertise in the local market in Cambodia allows us to optimize the positioning of your property." %}
+            </p>
+        </div>
 
         <!-- Expertise en Valorisation Immobilière -->
-        <div class="p-3  rounded-lg" data-aos="fade-up">
-            <h3 class="text-yellow-500 font-semibold mb-2 border-b border-stone-500 py-1 uppercase">Expertise en Valorisation Immobilière</h3>
-            <p class="">Notre savoir-faire en valorisation immobilière met en avant votre propriété, augmentant ainsi son attrait et ses revenus potentiels.</p>
+        <div class="p-3 rounded-lg" data-aos="fade-up">
+            <h3 class="text-yellow-500 font-semibold mb-2 border-b border-stone-500 py-1 uppercase">
+              {% trans "Expertise in Real Estate Valuation" %}
+            </h3>
+            <p>
+              {% trans "Our expertise in real estate valuation highlights your property, thus increasing its appeal and potential income." %}
+            </p>
         </div>
-        
 
-        
       </div>
     </div>
   </section>

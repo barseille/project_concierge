@@ -26,18 +26,16 @@ msgstr "Veuillez entrer un nom valide composé uniquement de lettres."
 msgid "Please enter a valid phone number with digits only."
 msgstr "Veuillez entrer un numéro de téléphone valide composé uniquement de chiffres."
 
-#: .\blog\forms.py:23 .\blog\models.py:20
-msgid "First Name"
-msgstr "Prénom"
-
+msgid "First Name*"
+msgstr "Prénom*"
 
 #: .\blog\forms.py:28 .\blog\models.py:21
-msgid "Last Name"
-msgstr "Nom de famille"
+msgid "Last Name*"
+msgstr "Nom de famille*"
 
 #: .\blog\forms.py:31 .\blog\models.py:22
-msgid "Email"
-msgstr "Courriel"
+msgid "Email*"
+msgstr "Courriel*"
 
 #: .\blog\forms.py:33 .\theme\templates\_contact.html:65
 msgid "Please enter a valid email address."
@@ -52,8 +50,8 @@ msgid "Phone"
 msgstr "Téléphone"
 
 #: .\blog\forms.py:47 .\blog\models.py:24
-msgid "Message"
-msgstr "Message"
+msgid "Message*"
+msgstr "Message*"
 
 #: .\blog\views.py:17
 msgid "Your message has been successfully sent!"
@@ -99,8 +97,8 @@ msgid "About"
 msgstr "À Propos"
 
 #: .\theme\templates\base.html:156
-msgid "Our Offers"
-msgstr "Nos Offres"
+msgid "Our Offer"
+msgstr "Notre Offre"
 
 #: .\theme\templates\base.html:161
 msgid "Contact Us"
@@ -149,8 +147,8 @@ msgstr "offres de conciergerie"
 msgid "Enjoy hassle-free property management, with the guarantee of optimized profitability for your rentals"
 msgstr "Profitez d'une gestion locative sans souci, avec la garantie d'une rentabilité optimisée pour vos locations."
 
-msgid "Profitability, serenity, and security are the foundations of our commitment to you. By choosing ANGKOR LUXE, you will experience the true essence of hospitality."
-msgstr "La rentabilité, la sérénité, et la sécurité constituent les fondements de notre dévouement envers vous. En choisissant ANGKOR LUXE, vous expérimenterez la véritable essence de l'hospitalité."
+msgid "Profitability, serenity, and security are the foundations of our commitment to you. By choosing ANGKOR MANAGEMENT, you will experience the true essence of hospitality."
+msgstr "La rentabilité, la sérénité, et la sécurité constituent les fondements de notre dévouement envers vous. En choisissant ANGKOR MANAGEMENT, vous expérimenterez la véritable essence de l'hospitalité."
 
 msgid "our values"
 msgstr "nos valeurs"
@@ -185,21 +183,21 @@ msgstr "Inclus dans cette formule :"
 msgid "Discover our tailor-made formulas, adapted to all your rental management needs."
 msgstr "Découvrez nos formules sur mesure, adaptées à tous vos besoins en gestion locative."
 
-msgid "Whether you are a demanding owner in search of excellence, a real estate investor in search of maximum return, or in search of serenity and tranquility, ANGKOR LUXE offers three unique solutions."
-msgstr "Que vous soyez un propriétaire exigeant en quête d'excellence, un investisseur immobilier à la recherche de rendement maximal, ou en quête de sérénité et tranquillité, ANGKOR LUXE offre trois solutions uniques."
+msgid "Whether you are a demanding owner in search of excellence, a real estate investor in search of maximum return, or in search of serenity and tranquility, ANGKOR MANAGEMENT offers three unique solutions."
+msgstr "Que vous soyez un propriétaire exigeant en quête d'excellence, un investisseur immobilier à la recherche de rendement maximal, ou en quête de sérénité et tranquillité, ANGKOR MANAGEMENT offre trois solutions uniques."
 
 
 msgid "Transform Your Real Estate Management into an Exceptional Experience."
 msgstr "Transformez Votre Gestion Immobilière en Expérience Exceptionnelle."
 
-msgid "At ANGKOR LUXE, we are committed to transforming every aspect of rental management into a worry-free experience for you. Take advantage of our expertise in high-end concierge services and discover how we can maximize the profitability of your properties while ensuring total satisfaction for your tenants. Contact us now to shape the future of your real estate investment."
-msgstr "Chez ANGKOR LUXE, nous nous engageons à transformer chaque aspect de la gestion locative en une expérience sans souci pour vous. Profitez de notre expertise en conciergerie haut de gamme et découvrez comment nous pouvons maximiser la rentabilité de vos biens tout en assurant une satisfaction totale pour vos locataires. Contactez-nous dès maintenant pour forger l'avenir de votre investissement immobilier."
+msgid "At ANGKOR MANAGEMENT, we are committed to transforming every aspect of rental management into a worry-free experience for you. Take advantage of our expertise in high-end concierge services and discover how we can maximize the profitability of your properties while ensuring total satisfaction for your tenants. Contact us now to shape the future of your real estate investment."
+msgstr "Chez ANGKOR MANAGEMENT, nous nous engageons à transformer chaque aspect de la gestion locative en une expérience sans souci pour vous. Profitez de notre expertise en conciergerie haut de gamme et découvrez comment nous pouvons maximiser la rentabilité de vos biens tout en assurant une satisfaction totale pour vos locataires. Contactez-nous dès maintenant pour forger l'avenir de votre investissement immobilier."
 
 msgid "Launch Your Real Estate Project With Us"
 msgstr "Lancez Votre Projet Immobilier Avec Nous"
 
-msgid "Join the ANGKOR LUXE adventure and transform your rental management into an exceptional experience. Our team of experts is ready to support you towards success. Take the first step now!"
-msgstr "Rejoignez l'aventure ANGKOR LUXE et transformez votre gestion locative en une expérience exceptionnelle. Notre équipe d'experts est prête à vous accompagner vers le succès. Prenez le premier pas dès maintenant !"
+msgid "Join the ANGKOR MANAGEMENT adventure and transform your rental management into an exceptional experience. Our team of experts is ready to support you towards success. Take the first step now!"
+msgstr "Rejoignez l'aventure ANGKOR MANAGEMENT et transformez votre gestion locative en une expérience exceptionnelle. Notre équipe d'experts est prête à vous accompagner vers le succès. Prenez le premier pas dès maintenant !"
 
 msgid "Our Values: At the Heart of Our Commitment"
 msgstr "Nos Valeurs : Au Cœur de Notre Engagement"
@@ -207,8 +205,8 @@ msgstr "Nos Valeurs : Au Cœur de Notre Engagement"
 msgid "Excellence, Integrity and Innovation at the Service of Your Real Estate Assets: Discover How Our Fundamental Values ​​Guide Us in Every Aspect of Our Work, Ensuring Not Only the Total Satisfaction of Our Clients but Also the Valorization and Protection of Theirs Long Term Investment."
 msgstr "L'Excellence, l'Intégrité et l'Innovation au Service de Votre Patrimoine Immobilier : Découvrez Comment Nos Valeurs Fondamentales Nous Guident dans Chaque Aspect de Notre Travail, Assurant Non Seulement la Satisfaction Totale de Nos Clients mais Également la Valorisation et la Protection de Leur Investissement à Long Terme."
 
-msgid "Launch Your Real Estate Project With ANGKOR LUXE"
-msgstr "Lancez Votre Projet Immobilier Avec ANGKOR LUXE"
+msgid "Launch Your Real Estate Project With ANGKOR MANAGEMENT"
+msgstr "Lancez Votre Projet Immobilier Avec ANGKOR MANAGEMENT"
 
 msgid "Whether it is maximizing the profitability of your properties, seeking excellence in rental management, or simply freeing you from daily hassles, our team is ready to listen to your needs and offer you tailor-made solutions. Fill out the form below so we can start bringing your vision to life."
 msgstr "Qu'il s'agisse de maximiser la rentabilité de vos biens, de rechercher l'excellence dans la gestion locative, ou simplement de vous libérer des tracas quotidiens, notre équipe est prête à écouter vos besoins et à vous proposer des solutions sur mesure. Remplissez le formulaire ci-dessous pour que nous puissions commencer à concrétiser votre vision."
@@ -233,3 +231,325 @@ msgstr "Disponibilité"
 
 msgid "Our concierge service available 7/7, for uninterrupted management."
 msgstr "Notre service de conciergerie disponible 7/7, pour une gestion sans interruption."
+
+msgid "Are you looking for worry-free rental management in Cambodia?"
+msgstr "Vous cherchez une gestion locative sans souci au Cambodge ?"
+
+msgid "Welcome to ANGKOR MANAGEMENT, your trusted ally for turnkey rental management that maximizes your profitability while offering an unforgettable experience to your guests."
+msgstr "Bienvenue chez ANGKOR MANAGEMENT, votre allié de confiance pour une gestion locative clé en main qui maximise votre rentabilité tout en offrant une expérience inoubliable à vos invités."
+
+msgid "Discover how our exclusive rental management expertise can turn your property into a lucrative source of income, without the usual hassle."
+msgstr "Découvrez comment notre expertise exclusive en gestion locative peut transformer votre propriété en une source de revenus lucrative, sans les tracas habituels."
+
+msgid "Explore our offer"
+msgstr "Explorez notre offre"
+
+msgid "Why choose ANGKOR MANAGEMENT?"
+msgstr "Pourquoi choisir ANGKOR MANAGEMENT ?"
+
+msgid "Why Choose ANGKOR MANAGEMENT for Your Rental Management?"
+msgstr "Pourquoi Choisir ANGKOR MANAGEMENT pour Votre Gestion Locative ?"
+
+msgid "Increase in your rental yield"
+msgstr "Augmentation de Votre Rendement Locatif"
+
+msgid "Boost the financial performance of your property thanks to our expertise in rental management. Every aspect is carefully adjusted to ensure optimal performance and convert your property into a stable and attractive source of income."
+msgstr "Boostez le rendement financier de votre bien grâce à notre maîtrise de la gestion locative. Chaque aspect est minutieusement ajusté pour assurer une performance optimale et convertir votre propriété en une source de revenus stable et séduisante."
+
+msgid "Peaceful management of your property"
+msgstr "Gestion Sereine de Votre Bien"
+
+msgid "Give us the keys to your property and relax. We take care of all facets of rental for you, ensuring not only the security of your investment but also your complete peace of mind."
+msgstr "Remettez-nous les clés de votre propriété et détendez-vous. Nous prenons en charge toutes les facettes de la location pour vous, garantissant non seulement la sécurité de votre investissement mais aussi votre tranquillité d'esprit complète."
+
+msgid "Customized Services"
+msgstr "Services Sur Mesure"
+
+msgid "We recognize that each property has its own characteristics. It is in this spirit that our offer is designed to respond in a targeted manner to your specific requirements, guaranteeing tailor-made and efficient management."
+msgstr "Nous reconnaissons que chaque bien possède ses propres caractéristiques. C'est dans cet esprit que notre offre est conçue pour répondre de manière ciblée à vos exigences spécifiques, garantissant une gestion sur mesure et performante."
+
+msgid "Guaranteed transparency"
+msgstr "Transparence Garantie"
+
+msgid "We are committed to flawless transparency, promoting clear communication and establishing mutual trust for the effective management of your property."
+msgstr "Nous nous engageons à une transparence sans faille, favorisant une communication claire et établissant une confiance mutuelle pour une gestion efficace de votre bien."
+
+msgid "Guest Satisfaction"
+msgstr "Satisfaction des Hôtes"
+
+msgid "We look after the well-being of your guests, ensuring their total satisfaction and transforming each stay into an unforgettable experience that enhances the appeal of your property."
+msgstr "Nous veillons au bien-être de vos invités, veillons à leur totale satisfaction et transformons chaque séjour en une expérience inoubliable qui rehausse l'attractivité de votre propriété."
+
+msgid "Integral Management"
+msgstr "Gestion Intégrale"
+
+msgid "Benefit from comprehensive management covering all aspects of rental, ensuring efficiency, quality and peace of mind."
+msgstr "Bénéficiez d'une gestion exhaustive couvrant tous les aspects de la location, assurant ainsi efficacité, qualité et sérénité."
+
+msgid "In-depth knowledge of the Cambodian Market"
+msgstr "Connaissance Approfondie du Marché Cambodgien"
+
+msgid "Our expertise in the local market in Cambodia allows us to optimize the positioning of your property."
+msgstr "Notre expertise du marché local au Cambodge nous permet d'optimiser le positionnement de votre bien."
+
+msgid "Expertise in Real Estate Valuation"
+msgstr "Expertise en Valorisation Immobilière"
+
+msgid "Our expertise in real estate valuation highlights your property, thus increasing its appeal and potential income."
+msgstr "Notre savoir-faire en valorisation immobilière met en avant votre propriété, augmentant ainsi son attrait et ses revenus potentiels."
+
+msgid "Discover How to Maximize Your Rental Income"
+msgstr "Découvrez Comment Maximiser Votre Revenu Locatif"
+
+msgid "Explore our unique rental management package and see how we can transform your property into a hassle-free source of income."
+msgstr "Explorez notre formule unique de gestion locative et voyez comment nous pouvons transformer votre bien en une source de revenus sans tracas."
+
+msgid "Explore Our Offer"
+msgstr "Explorez Notre Offre"
+
+msgid "Profitable and Worry-Free Rental Management"
+msgstr "Une Gestion Locative Rentable et Sans Souci"
+
+msgid "Opt for ANGKOR MANAGEMENT and benefit from simplified and profitable rental management. We take care of all aspects of rental, ensuring you maximized revenue and unrivaled peace of mind. Our expertise transforms your property into an attractive source of income, without you having to worry about the details. Discover the ease of rental management that works for you."
+msgstr "Optez pour ANGKOR MANAGEMENT et bénéficiez d'une gestion locative simplifiée et rentable. Nous nous occupons de tous les aspects de la location, vous assurant des revenus maximisés et une tranquillité d'esprit inégalée. Notre expertise transforme votre propriété en une source de revenus attractive, sans que vous ayez à vous soucier des détails. Découvrez la facilité de gestion locative qui vous convient."
+
+msgid "The Principles That Guide Us"
+msgstr "Les Principes Qui Nous Guident"
+
+msgid "At the heart of ANGKOR MANAGEMENT, three fundamental pillars inspire our daily life and shape our relationship with each owner. They embody our commitment to transparent, reliable and attentive rental management."
+msgstr "Au cœur d'ANGKOR MANAGEMENT, trois piliers fondamentaux inspirent notre quotidien et façonnent notre relation avec chaque propriétaire. Ils incarnent notre engagement envers une gestion locative transparente, fiable et attentive."
+
+msgid "Absolute Transparency"
+msgstr "Transparence Absolue"
+
+msgid "We are committed to open and honest communication, keeping you informed of every detail. Your peace of mind begins with clarity in our actions and decisions."
+msgstr "Nous nous engageons à une communication ouverte et honnête, vous tenant informé des moindres détails. Votre tranquillité d'esprit commence avec la clarté de nos actions et décisions."
+
+msgid "A Shared Trust"
+msgstr "Une Confiance Partagée"
+
+msgid "Trust is the cornerstone of our relationship. By entrusting us with your property, you benefit from prudent and attentive management, because we take care of each property as if it were our own."
+msgstr "La confiance est la pierre angulaire de notre relation. En nous confiant votre bien, vous bénéficiez d'une gestion prudente et attentionnée, car nous prenons soin de chaque propriété comme si elle était la nôtre."
+
+msgid "Always at your service"
+msgstr "Toujours à Votre Service"
+
+msgid "Our dedicated team is at your disposal every day of the week, ensuring continuous and responsive management. Your property will never experience downtime with ANGKOR MANAGEMENT."
+msgstr "Notre équipe dévouée est à votre disposition tous les jours de la semaine, assurant une gestion continue et réactive. Votre bien ne connaîtra jamais de temps mort avec ANGKOR MANAGEMENT."
+
+msgid "Our Heritage: Expertise in the Service of Cambodia"
+msgstr "Notre Héritage: Une Expertise au Service du Cambodge"
+
+msgid "From a concierge service to rental management."
+msgstr "D'une conciergerie à la gestion locative."
+
+msgid "With a history rich in collaborations, from event management for personalities to rental management, the founders of ANGKOR MANAGEMENT have always placed excellence and adaptability at the heart of their profession. Our expertise covers a wide range, from luxury concierge services to sophisticated rental management, for international clients."
+msgstr "Avec une histoire riche en collaborations, de la gestion événementielle pour personnalités à des gestions locatives, les fondateurs d'ANGKOR MANAGEMENT ont toujours placé l'excellence et l'adaptabilité au cœur de leur métier. Notre expertise couvre un large éventail, de la conciergerie de luxe à la gestion locative sophistiquée, pour une clientèle internationale."
+
+msgid "It is with this rich experience that we decided to take on a new challenge: transposing our know-how in luxury concierge and rental management in Cambodia. We chose Siem Reap not only for its unexplored potential in rental management. It is in this spirit that ANGKOR MANAGEMENT was designed: to offer a high quality of service, supported by our past experience."
+msgstr "C'est avec cette riche expérience que nous avons décidé de relever un nouveau défi : transposer notre savoir-faire en conciergerie de luxe et en gestion locative au Cambodge. Nous avons choisi Siem Reap, non seulement pour son potentiel inexploré dans la gestion locative. C'est dans cet esprit que ANGKOR MANAGEMENT a été conçu : pour offrir une grande qualité de service, appuyée par notre expérience passée."
+
+msgid "ANGKOR MANAGEMENT is therefore the fruit of this ambition: to offer Cambodian and international owners unrivaled rental management, enriched by our international experience and our attention to detail. Join us on this adventure."
+msgstr "ANGKOR MANAGEMENT est donc le fruit de cette ambition : offrir aux propriétaires cambodgiens et internationaux une gestion locative sans égale, enrichie par notre expérience internationale et notre attention aux détails. Rejoignez-nous dans cette aventure."
+
+msgid "Our engagement"
+msgstr "Notre Engagement"
+
+msgid "Your Serenity"
+msgstr "Votre Sérénité"
+
+msgid "Discover how ANGKOR MANAGEMENT is dedicated to the success of your rental project"
+msgstr "Découvrez comment ANGKOR MANAGEMENT se dédie à la réussite de votre projet locatif"
+
+msgid "Harmonious Rental Management"
+msgstr "Une Gestion Locative Harmonieuse"
+
+msgid "At ANGKOR MANAGEMENT, we transform the management of your property into a smooth and rewarding experience. From the careful selection of respectful tenants, to transparent management of arrivals and departures, and up to the careful maintenance of your property, we strive to maximize your peace of mind and your rental yield."
+msgstr "Chez ANGKOR MANAGEMENT, nous transformons la gestion de votre propriété en une expérience fluide et enrichissante. De la sélection minutieuse de locataires respectueux, à une gestion transparente des arrivées et départs, et jusqu’à l’entretien soigné de votre bien, nous veillons à maximiser votre tranquillité et votre rendement locatif."
+
+msgid "Responsibility and Serenity"
+msgstr "Responsabilité et Sérénité"
+
+msgid "At ANGKOR MANAGEMENT, we understand the importance of maintaining your property in impeccable condition. We do everything we can to ensure balanced and efficient rental management, minimizing your charges and maximizing your peace of mind. In the event of damage, we ensure that responsibilities are clearly defined and taken care of in accordance with the terms of the rental agreement, ensuring your investment is protected without unexpected additional costs."
+msgstr "Chez ANGKOR MANAGEMENT, nous comprenons l'importance de maintenir votre propriété dans un état impeccable. Nous mettons tout en œuvre pour assurer une gestion locative équilibrée et efficiente, minimisant vos charges et maximisant votre tranquillité d'esprit. En cas de dommages, nous assurons que les responsabilités soient clairement définies et prises en charge conformément aux termes du contrat de location, garantissant ainsi la protection de votre investissement sans coûts supplémentaires inattendus."
+
+msgid "Terms of Use"
+msgstr "Mentions légales"
+
+msgid "Required field"
+msgstr "Champs requis"
+
+msgid "Discover the simplicity of rental management with ANGKOR MANAGEMENT, where our exclusive service frees owners from the daily constraints of rental. We take care of the entire process, ensuring that your property generates income efficiently. Enjoy optimized occupancy and increased profitability, all with peace of mind. At ANGKOR MANAGEMENT, your satisfaction as an owner is our priority."
+msgstr "Découvrez la simplicité de la gestion locative avec ANGKOR MANAGEMENT, où notre service exclusif libère les propriétaires des contraintes quotidiennes de la location. Nous nous occupons de l’ensemble du processus, garantissant que votre propriété génère efficacement des revenus. Bénéficiez d’une occupation optimisée et d’une rentabilité accrue, le tout en toute sérénité. Chez ANGKOR MANAGEMENT, votre satisfaction en tant que propriétaire est notre priorité."
+
+msgid "What are our Acceptance Criteria?"
+msgstr "Quels sont nos critères d'acceptation ?"
+
+msgid "To ensure a successful and fruitful collaboration, we have established 3 acceptance criteria. Please ensure your property meets the following requirements before submitting your application."
+msgstr "Pour garantir une collaboration réussie et fructueuse, nous avons établi 3 critères d’acceptation. Veuillez vous assurer que votre propriété répond aux exigences suivantes avant de soumettre votre demande."
+
+msgid "Location"
+msgstr "Emplacement"
+
+msgid "The property must be located in Siem Reap, Cambodia."
+msgstr "La propriété doit être située à Siem Reap, au Cambodge."
+
+msgid "Property Type"
+msgstr "Type de propriété"
+
+msgid "We focus our services on houses and villas, excluding apartments for the moment."
+msgstr "Nous concentrons nos services sur les maisons et villas, hors appartements pour le moment."
+
+msgid "Functional Equipment"
+msgstr "Équipement fonctionnel"
+
+msgid "All essential equipment (electricity, plumbing, etc.) must be in working order."
+msgstr "Tous les équipements essentiels (électricité, plomberie, etc.) doivent être en état de marche."
+
+msgid "Discover the Simple Process to Get Started with ANGKOR MANAGEMENT"
+msgstr "Découvrez le processus simple pour démarrer avec ANGKOR MANAGEMENT"
+
+msgid "First Contact: Submit Your Request"
+msgstr "Premier contact : soumettez votre demande"
+
+msgid "It all starts with your initiative. Use our online form to let us know your interest. Be sure to check out our <a href='#acceptance-criteria' class='text-yellow-500 hover:text-yellow-400'>Acceptance criteria</a> before submitting your request."
+msgstr "Tout commence par votre initiative. Utilisez notre formulaire en ligne pour nous faire part de votre intérêt. Assurez-vous de consulter nos <a href='#acceptance-criteria' class='text-yellow-500 hover:text-yellow-400'>critères d'acceptation</a> avant de soumettre votre demande."
+
+
+msgid "On-Site Verification: Meeting and Assessment"
+msgstr "Vérification sur site : Rencontre et évaluation"
+
+msgid "Once your request is received and pre-approved, we will arrange an on-site appointment. This allows us to verify your property's compliance with our quality standards and ensure that it meets our acceptance criteria. This is also an opportunity for you to meet our team and discuss your expectations."
+msgstr "Une fois votre demande reçue et pré-approuvée, nous organiserons un rendez-vous sur place. Cela nous permet de vérifier que votre propriété respecte nos normes de qualité et répond à nos critères d'acceptation. C'est également l'occasion pour vous de rencontrer notre équipe et de discuter de vos attentes."
+
+msgid "Signature of the Contract: Formalization of the Partnership"
+msgstr "Signature du contrat : Formalisation du partenariat"
+
+msgid "If everything is compliant and your expectations align with our services, the next step is signing a contract. This document details our mutual commitments and marks the start of our fruitful collaboration. From this moment, you can relax and let us take care of your property, transforming your property into an attractive source of income."
+msgstr "Si tout est conforme et que vos attentes sont en adéquation avec nos services, l'étape suivante est la signature d'un contrat. Ce document détaille nos engagements mutuels et marque le début de notre collaboration fructueuse. Dès cet instant, vous pouvez vous détendre et nous laisser prendre soin de votre propriété, la transformant en une source de revenus attrayante."
+
+
+msgid "Privacy Policy of ANGKOR MANAGEMENT"
+msgstr "Politique de Confidentialité d'ANGKOR MANAGEMENT"
+
+msgid "At ANGKOR MANAGEMENT, the confidentiality and protection of our clients, prospects, and online users' data are our top priorities. We are committed to treating your personal data with the utmost respect, ensuring a high level of protection in accordance with the General Data Protection Regulation (GDPR) and applicable laws."
+msgstr "Chez ANGKOR MANAGEMENT, la confidentialité et la protection des données de nos clients, prospects et utilisateurs en ligne sont nos principales priorités. Nous nous engageons à traiter vos données personnelles avec le plus grand respect, en garantissant un niveau de protection élevé conformément au Règlement Général sur la Protection des Données (RGPD) et aux lois applicables."
+
+msgid "Introduction"
+msgstr "Introduction"
+
+msgid "This charter aims to inform you about:"
+msgstr "Cette charte vise à vous informer sur :"
+
+msgid "The personal data we collect and the reasons for its collection;"
+msgstr "Les données personnelles que nous collectons et les raisons de cette collecte ;"
+
+msgid "How we use your personal data;"
+msgstr "Comment nous utilisons vos données personnelles ;"
+
+msgid "Your rights regarding your personal data and how to exercise them."
+msgstr "Vos droits concernant vos données personnelles et comment les exercer."
+
+msgid "Who Are We?"
+msgstr "Qui sommes-nous ?"
+
+msgid "ANGKOR MANAGEMENT, a company specializing in high-end concierge services, is located in Siem Reap. For any questions related to the processing of your personal data, you can contact us:"
+msgstr "ANGKOR MANAGEMENT, une entreprise spécialisée dans les services de conciergerie haut de gamme, est située à Siem Reap. Pour toute question liée au traitement de vos données personnelles, vous pouvez nous contacter :"
+
+msgid "For inquiries,"
+msgstr "Pour toute demande,"
+
+msgid "Address: 17251 Preah Sihanouk Ave, Krong Siem Reap"
+msgstr "Adresse : 17251 Preah Sihanouk Ave, Krong Siem Reap"
+
+msgid "Why Do We Collect Your Personal Data?"
+msgstr "Pourquoi collectons-nous vos données personnelles ?"
+
+msgid "Your data is collected for various reasons, including to:"
+msgstr "Vos données sont collectées pour diverses raisons, notamment pour :"
+
+msgid "Ensure the execution of concierge contracts;"
+msgstr "Assurer l'exécution des contrats de conciergerie ;"
+
+msgid "Respond to your requests for personalized services;"
+msgstr "Répondre à vos demandes de services personnalisés ;"
+
+msgid "Improve the quality of our offerings;"
+msgstr "Améliorer la qualité de nos offres ;"
+
+msgid "Communicate about our services and promotional offers, with your consent."
+msgstr "Communiquer sur nos services et offres promotionnelles, avec votre consentement."
+
+msgid "What Personal Data Do We Collect?"
+msgstr "Quelles données personnelles collectons-nous ?"
+
+msgid "We may collect data such as your names, email and postal addresses, telephone number, as well as any other information necessary for the provision of our concierge services. We ensure that your data is only kept for the time necessary for the purposes for which it was collected."
+msgstr "Nous pouvons collecter des données telles que vos noms, adresses email et postale, numéro de téléphone, ainsi que toute autre information nécessaire à la fourniture de nos services de conciergerie. Nous veillons à ce que vos données ne soient conservées que le temps nécessaire aux fins pour lesquelles elles ont été collectées."
+
+msgid "Sharing of Personal Data"
+msgstr "Partage des Données Personnelles"
+
+msgid "Your data may be shared with third parties, only as necessary for the provision of our services (e.g., cleaning service providers or reservation platforms). We ensure that all our partners also comply with the legal framework for data protection."
+msgstr "Vos données peuvent être partagées avec des tiers, uniquement dans la mesure nécessaire à la fourniture de nos services (par exemple, prestataires de services de nettoyage ou plateformes de réservation). Nous veillons à ce que tous nos partenaires respectent également le cadre juridique en matière de protection des données."
+
+msgid "Your Rights"
+msgstr "Vos Droits"
+
+msgid "You have rights of access, rectification, erasure, restriction of processing, opposition to processing of your personal data, and the right to data portability. To exercise these rights, please contact us at the coordinates provided above."
+msgstr "Vous avez des droits d'accès, de rectification, de suppression, de limitation du traitement, d'opposition au traitement de vos données personnelles, ainsi que le droit à la portabilité des données. Pour exercer ces droits, veuillez nous contacter aux coordonnées fournies ci-dessus."
+
+msgid "Changes to the Privacy Policy"
+msgstr "Modifications de la Politique de Confidentialité"
+
+msgid "This privacy policy may be updated to reflect changes in our data processing practices or legal evolutions. We encourage you to regularly consult this page."
+msgstr "Cette politique de confidentialité peut être mise à jour pour refléter les changements dans nos pratiques de traitement des données ou les évolutions légales. Nous vous encourageons à consulter régulièrement cette page."
+
+msgid "Contact and Complaints"
+msgstr "Contact et Réclamations"
+
+msgid "If you have any questions or wish to make a complaint regarding the processing of your personal data, do not hesitate to contact us. If you believe that your data is not being processed in accordance with the regulations, you have the right to file a complaint with the competent authority."
+msgstr "Si vous avez des questions ou souhaitez faire une réclamation concernant le traitement de vos données personnelles, n'hésitez pas à nous contacter. Si vous estimez que vos données ne sont pas traitées conformément à la réglementation, vous avez le droit de déposer une plainte auprès de l'autorité compétente."
+
+
+msgid "Terms of Use & Legal Information"
+msgstr "Conditions d'Utilisation & Informations Légales"
+
+msgid "ANGKOR MANAGEMENT, situated in Siem Reap, specializes in high-end concierge services. This document provides our terms of use and legal information related to our website and services."
+msgstr "ANGKOR MANAGEMENT, située à Siem Reap, est spécialisée dans les services de conciergerie haut de gamme. Ce document fournit nos conditions d'utilisation et les informations légales liées à notre site Web et à nos services."
+
+msgid "Notice"
+msgstr "Avis"
+
+msgid "The information on the ANGKOR MANAGEMENT website is for general information purposes and is non-contractual. We strive to keep the information up-to-date and correct but make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability with respect to the website or the information, products, services, or related graphics contained on the website for any purpose."
+msgstr "Les informations sur le site Web d'ANGKOR MANAGEMENT sont à des fins d'information générale et ne sont pas contractuelles. Nous nous efforçons de maintenir les informations à jour et correctes, mais ne donnons aucune garantie, explicite ou implicite, quant à l'exhaustivité, la précision, la fiabilité, l'adéquation ou la disponibilité concernant le site Web ou les informations, produits, services ou graphiques connexes contenus sur le site Web à quelque fin que ce soit."
+
+msgid "Liability"
+msgstr "Responsabilité"
+
+msgid "ANGKOR MANAGEMENT is not liable for any inaccuracies, errors, or omissions in the information provided. We also cannot be held responsible for any intrusion or virus that may affect your computer equipment as a result of using our website."
+msgstr "ANGKOR MANAGEMENT n'est pas responsable des inexactitudes, erreurs ou omissions dans les informations fournies. Nous ne pouvons également être tenus responsables de toute intrusion ou virus qui pourrait affecter votre équipement informatique à la suite de l'utilisation de notre site Web."
+
+msgid "Intellectual Property"
+msgstr "Propriété Intellectuelle"
+
+msgid "The content, including texts, images, and graphics, on our website is protected by intellectual property rights and is the exclusive property of ANGKOR MANAGEMENT. Any reproduction, distribution, or use of this content for commercial purposes without prior written consent is strictly prohibited."
+msgstr "Le contenu, y compris les textes, images et graphiques, sur notre site Web est protégé par des droits de propriété intellectuelle et est la propriété exclusive d'ANGKOR MANAGEMENT. Toute reproduction, distribution ou utilisation de ce contenu à des fins commerciales sans consentement écrit préalable est strictement interdite."
+
+msgid "Modifications"
+msgstr "Modifications"
+
+msgid "ANGKOR MANAGEMENT reserves the right to modify these terms of use and legal information at any time. Changes will be effective immediately upon posting on the website. We encourage users to regularly review this document to stay informed."
+msgstr "ANGKOR MANAGEMENT se réserve le droit de modifier ces conditions d'utilisation et informations légales à tout moment. Les modifications seront effectives immédiatement après leur publication sur le site Web. Nous encourageons les utilisateurs à consulter régulièrement ce document pour rester informés."
+
+msgid "Contact Information"
+msgstr "Informations de Contact"
+
+
+
+
+
+
+
+
+
+

@@ -1,47 +1,48 @@
 {% load static i18n %}
 
 <footer class="text-white">
-  <div
-    class="container mx-auto mt-20 flex flex-col justify-center sm:justify-around gap-10 px-10 sm:flex-row sm:px-0"
-  >
+
+  <div class="container mx-auto mt-20 flex flex-col justify-center sm:justify-around gap-10 px-10 sm:flex-row sm:px-0">
+
     <div class="flex flex-col gap-y-4">
+
       <div class="flex justify-center items-end sm:justify-start">
         <img
           src="{% static 'images/logo.png' %}"
-          alt="Logo de ANGKOR LUXE"
+          alt="Logo de ANGKOR MANAGEMENT"
           class="mr-2 h-auto w-9 sm:mr-4"
         />
-        <h3
-          class="bg-gradient-to-r from-yellow-600 via-yellow-300 to-yellow-600 bg-clip-text font-montserrat text-base font-semibold uppercase text-transparent"
-        >
-          ANGKOR LUXE
+
+        <h3 class="bg-gradient-to-r from-yellow-600 via-yellow-300 to-yellow-600 bg-clip-text font-montserrat text-base font-semibold uppercase text-transparent">
+          ANGKOR MANAGEMENT
         </h3>
+
       </div>
 
-      <p class="max-w-[500px] text-white text-center sm:text-left">
+      <p class="max-w-[500px] text-white text-center sm:text-left text-sm">
         {{ site_info.concierge_description }}
       </p>
+
     </div>
 
-    <ul class="flex flex-col text-center sm:text-left gap-y-2">
+    <ul class="text-sm flex flex-col text-center sm:text-left gap-y-2">
       <li class="text-yellow-600 text-base font-semibold mb-2">
         {% trans "General Information" %}
       </li>
-
       <li>
         <a href="{% url 'values' %}" class="hover:text-yellow-600"
-          >{% trans "Our Values" %}</a
-        >
+          >{% trans "Our Values" %}
+        </a>
       </li>
       <li>
         <a href="{% url 'services' %}" class="hover:text-yellow-600"
-          >{% trans "Our Offers" %}</a
-        >
+          >{% trans "Our Offer" %}
+        </a>
       </li>
       <li>
         <a href="{% url 'contact' %}" class="hover:text-yellow-600"
-          >{% trans "Contact Us" %}</a
-        >
+          >{% trans "Contact Us" %}
+        </a>
       </li>
     </ul>
 
@@ -50,35 +51,38 @@
         {% trans "Legal Information" %}
       </li>
       <li>
-        <a href="#privacypolicy" class="hover:text-yellow-600"
-          >{% trans "Privacy Policy" %}</a
-        >
+        <a href="{% url 'privacy_policy' %}" class="hover:text-yellow-600">
+          {% trans "Privacy Policy" %}
+          </a>
       </li>
       <li>
-        <a href="#legalmentions" class="hover:text-yellow-600"
-          >{% trans "Legal Mentions" %}</a
-        >
-      </li>
-      <li>
-        <a href="#faqs" class="hover:text-yellow-600">{% trans "FAQs" %}</a>
+        <a href="{% url 'terms_of_use' %}" class="hover:text-yellow-600">
+          {% trans "Terms of Use" %}
+          </a>
       </li>
     </ul>
   </div>
 
-  <div class="mt-20 mb-4 flex justify-center px-4 text-white">
+  <div class="mt-20 mb-4 flex justify-center px-4 text-white text-sm">
     <p class="" id="copyright">
-      Copyright © <span id="year"></span> AngkorLuxe
+      Copyright © <span id="year"></span> AngkorManagement
     </p>
   </div>
+  
 </footer>
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
+
     // Mettre à jour l'année actuelle dans le pied de page
     const yearSpan = document.getElementById("year");
+
     if (yearSpan) {
-      const currentYear = new Date().getFullYear(); // Obtenir l'année courante
-      yearSpan.textContent = currentYear; // Mettre à jour le texte de l'élément avec l'année courante
+      // Obtenir l'année courante
+      const currentYear = new Date().getFullYear();
+
+      // Mettre à jour le texte de l'élément avec l'année courante
+      yearSpan.textContent = currentYear; 
     }
   });
 </script>

@@ -1,43 +1,34 @@
 {% extends 'base.html' %}
 {% load static i18n %}
 
+
+<!-- Page principale -->
 {% block content %}
-
-
-
 
 <!-- Image de présentation -->
 {% include '_homepage_section.html' %}
 
+<!-- Phrase de présentation -->
 {% include "_intro_section.html" %}
 
 <!-- Section Nos valeurs -->
-{% include "_section_title.html" with subheading="Our Values" heading="The Pillars of Our Excellence" %}
+{% include "_section_title.html" with subheading="our values" heading="The Pillars of Our Excellence" %}
 
 <!-- Liste de "Nos valeurs" -->
 {% include "_custom_selection_section.html" with title1="Transparency" sentence1="Every intervention on your property, reported in complete clarity." title2="Trust" sentence2="Entrust us with your property, we take care of everything, as if it were ours." title3="Availability" sentence3="Our concierge service available 7/7, for uninterrupted management." %}
 
 
-
-<!-- Section Notre formule-->
 <img 
   src="{% static 'images/14.png' %}" 
   alt="" 
-  class="w-full h-[800px] object-cover object-center pt-10" 
+  class="w-full h-[800px] object-cover object-center py-20" 
   loading="lazy">
 
-
-
-
-
-
-
-
+  <!-- Section Notre formule -->
 {% include "_advantage_section.html" %}
 
 <!-- Lien vers la page de l'offre -->
-{% include '_contact_link.html' with small_title="Découvrez Comment Maximiser Votre Revenu Locatif" prompt_text="Explorez notre formule unique de gestion locative et voyez comment nous pouvons transformer votre bien en une source de revenus sans tracas." button_url="services" button_text="Explorez Notre Offre" %}
-
+{% include '_contact_link.html' with small_title="Discover How to Maximize Your Rental Income" prompt_text="Explore our unique rental management package and see how we can transform your property into a hassle-free source of income." button_url="services" button_text="Explore Our Offer" %}
 
 <img 
   src="{% static 'images/22.png' %}" 
@@ -45,12 +36,11 @@
   class="w-full h-[700px] object-cover object-center pt-10" 
   loading="lazy">
 
-
+<!-- Section Témoignages -->
 {% include '_testimonials_section.html' %}
 
-<!-- Section questions/réponses pour page d'accueil -->
+<!-- Section FAQ -->
 {% include '_faq_section.html' with faqs=general_faqs %}
-
 
 <!-- Lien de page contact -->
 {% include '_contact_link.html' with small_title="Launch Your Real Estate Project With Us" prompt_text="Join the ANGKOR LUXE adventure and transform your rental management into an exceptional experience. Our team of experts is ready to support you towards success. Take the first step now!" button_url="contact" button_text="Contact Us" %}

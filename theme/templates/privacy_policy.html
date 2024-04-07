@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% load i18n %}
+
+{% block content %}
+
+<div class="pt-[120px]"></div>
+
+<div class="bg-black container mx-auto text-white p-5 space-y-20 max-w-4xl">
+    <section>
+        <h1 class="text-3xl font-semibold mb-4">{% trans "Privacy Policy of ANGKOR MANAGEMENT" %}</h1>
+        <p>{% trans "At ANGKOR MANAGEMENT, the confidentiality and protection of our clients, prospects, and online users' data are our top priorities. We are committed to treating your personal data with the utmost respect, ensuring a high level of protection in accordance with the General Data Protection Regulation (GDPR) and applicable laws." %}</p>
+    </section>
+    <section>
+        <h2 class="font-semibold mb-2">{% trans "Introduction" %}</h2>
+        <p>{% trans "This charter aims to inform you about:" %}</p>
+        <ul class="list-disc pl-8">
+            <li>{% trans "The personal data we collect and the reasons for its collection;" %}</li>
+            <li>{% trans "How we use your personal data;" %}</li>
+            <li>{% trans "Your rights regarding your personal data and how to exercise them." %}</li>
+        </ul>
+    </section>
+    <section>
+        <h2 class="font-semibold mb-2">{% trans "Who Are We?" %}</h2>
+        <p>{% trans "ANGKOR MANAGEMENT, a company specializing in high-end concierge services, is located in Siem Reap. For any questions related to the processing of your personal data, you can contact us:" %}</p>
+        <ul class="list-disc pl-8">
+            <li>
+                {% trans "For inquiries," %}
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=angkormanagement1@gmail.com" class="text-blue-500 hover:text-blue-700" target="_blank" rel="noopener noreferrer">
+                    {% trans "contact us" %}
+                </a>.
+            </li>
+            <li>{% trans "Address: 17251 Preah Sihanouk Ave, Krong Siem Reap" %}</li>
+        </ul>
+    </section>
+    <section>
+        <h2 class="font-semibold mb-2">{% trans "Why Do We Collect Your Personal Data?" %}</h2>
+        <p>{% trans "Your data is collected for various reasons, including to:" %}</p>
+        <ul class="list-disc pl-8">
+            <li>{% trans "Ensure the execution of concierge contracts;" %}</li>
+            <li>{% trans "Respond to your requests for personalized services;" %}</li>
+            <li>{% trans "Improve the quality of our offerings;" %}</li>
+            <li>{% trans "Communicate about our services and promotional offers, with your consent." %}</li>
+        </ul>
+    </section>
+    <section>
+        <h2 class="font-semibold mb-2">{% trans "What Personal Data Do We Collect?" %}</h2>
+        <p>{% trans "We may collect data such as your names, email and postal addresses, telephone number, as well as any other information necessary for the provision of our concierge services. We ensure that your data is only kept for the time necessary for the purposes for which it was collected." %}</p>
+    </section>
+    <section>
+        <h2 class="font-semibold mb-2">{% trans "Sharing of Personal Data" %}</h2>
+        <p>{% trans "Your data may be shared with third parties, only as necessary for the provision of our services (e.g., cleaning service providers or reservation platforms). We ensure that all our partners also comply with the legal framework for data protection." %}</p>
+    </section>
+    <section>
+        <h2 class="font-semibold mb-2">{% trans "Your Rights" %}</h2>
+        <p>{% trans "You have rights of access, rectification, erasure, restriction of processing, opposition to processing of your personal data, and the right to data portability. To exercise these rights, please contact us at the coordinates provided above." %}</p>
+    </section>
+    <section>
+        <h2 class="font-semibold mb-2">{% trans "Changes to the Privacy Policy" %}</h2>
+        <p>{% trans "This privacy policy may be updated to reflect changes in our data processing practices or legal evolutions. We encourage you to regularly consult this page." %}</p>
+    </section>
+    <section>
+        <h2 class="font-semibold mb-2">{% trans "Contact and Complaints" %}</h2>
+        <p>{% trans "If you have any questions or wish to make a complaint regarding the processing of your personal data, do not hesitate to contact us. If you believe that your data is not being processed in accordance with the regulations, you have the right to file a complaint with the competent authority." %}</p>
+    </section>
+</div>
+{% endblock %}
+

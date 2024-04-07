@@ -97,6 +97,20 @@ def services(request):
     }
     return render(request, 'services.html', context)
 
+def get_privacy_policy(request):
+    site_info = SiteInformation.objects.first()
+    context = {
+        'site_info': site_info,
+        }
+    return render(request, 'privacy_policy.html', context)
+
+def get_terms_of_use(request):
+    site_info = SiteInformation.objects.first()
+    context = {
+        'site_info': site_info,
+        }
+    return render(request, 'terms_of_use.html', context)
+
 
 
 # Détails de chaque service

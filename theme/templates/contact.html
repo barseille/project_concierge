@@ -2,14 +2,33 @@
 {% load static i18n %} 
 {% block content %}
 
-
 <!-- Page Formulaire -->
 <div class="pt-[90px]"></div>
 
-{% include '_custom_section_title.html' with h1_text="Launch Your Real Estate Project With ANGKOR LUXE" p_text="Whether it is maximizing the profitability of your properties, seeking excellence in rental management, or simply freeing you from daily hassles, our team is ready to listen to your needs and offer you tailor-made solutions. Fill out the form below so we can start bringing your vision to life." %}
+{% include '_custom_section_title.html' with h1_text="Launch Your Real Estate Project With ANGKOR MANAGEMENT" p_text="Whether it is maximizing the profitability of your properties, seeking excellence in rental management, or simply freeing you from daily hassles, our team is ready to listen to your needs and offer you tailor-made solutions. Fill out the form below so we can start bringing your vision to life." %}
 
+
+<!-- Section Critères d'Acceptation -->
+<section id="acceptance-criteria" class="text-white pt-[100px] flex items-center flex-col gap-10">
+  <div class="container mx-auto px-4 max-w-3xl text-center">
+    <h2 class="text-center text-3xl font-semibold mb-8 uppercase">
+      {% trans "What are our Acceptance Criteria?" %}
+    </h2>
+
+    <p>
+      {% trans "To ensure a successful and fruitful collaboration, we have established 3 acceptance criteria. Please ensure your property meets the following requirements before submitting your application." %}
+    </p>
+  </div>
+
+    {% include "_custom_selection_section.html" with icon1="location_on" title1="Location" sentence1="The property must be located in Siem Reap, Cambodia." icon2="home_app_logo" title2="Property Type" sentence2="We focus our services on houses and villas, excluding apartments for the moment." icon3="local_laundry_service" title3="Functional Equipment" sentence3="All essential equipment (electricity, plumbing, etc.) must be in working order." %}
+</section>
+
+
+
+
+
+<!-- Section formulaire de contact -->
 {% include "_section_title.html" with subheading="contact us" heading="let's discuss your project together" %}
-
 
 <div class="container mx-auto flex items-center justify-center px-4">
   <form
@@ -41,11 +60,10 @@
 
         <!-- Ajout du texte explicatif pour l'étoile (*) -->
         <div class="text-gray-500 text-sm">
-          <span class="text-gray-500">*</span> {% trans "Champ requis" %}
+          <span class="text-gray-500">*</span> {% trans "Required field" %}
         </div>
-      </div>
 
-      
+      </div>
       {% endif %}
 
       <div
@@ -57,88 +75,15 @@
     </div>
     {% endfor %}
 
-  
-
     <button
       type="submit"
       class="inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-yellow-500 to-orange-500 px-6 py-3 text-sm uppercase leading-tight text-black shadow-md transition duration-150 ease-in-out hover:shadow-outline hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 font-semibold"
     >
       {% trans "SEND" %}
     </button>
-    
   </form>
 </div>
 {% endblock %}
 
 <!-- Chargement de jQuery s'il n'est pas déjà chargé -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-{% comment %} <script>
-  $(document).ready(function () {
-    // Définition des expressions régulières pour la validation des champs
-    var nameRegex = /^[a-zA-Z\s]+$/; // Lettres et espaces uniquement pour les noms
-    var phoneRegex = /^[0-9\s\-\(\)]+$/; // Chiffres, espaces, tirets et parenthèses pour les numéros de téléphone
-    var maxChars = 1000; // Nombre maximum de caractères autorisés pour le message
-
-    // Fonction pour valider les champs du formulaire
-    function validateField(fieldId, regex, errorMsgId, errorMsg) {
-      $(fieldId).blur(function () {
-        var fieldValue = $(this).val();
-        if (fieldValue && !regex.test(fieldValue)) {
-          $(errorMsgId).text(errorMsg).show(); // Affiche le message d'erreur si la valeur du champ n'est pas valide
-        } else {
-          $(errorMsgId).hide(); // Cache le message d'erreur si la valeur du champ est valide
-        }
-      });
-    }
-
-    // Application de la validation pour chaque champ
-    validateField(
-      "#id_email",
-      /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-      "#error_email",
-      '{% trans "Please enter a valid email address." %}'
-    );
-
-    validateField(
-      "#id_first_name",
-      nameRegex,
-      "#error_first_name",
-      '{% trans "Please enter a valid name with letters only." %}'
-    );
-
-    validateField(
-      "#id_last_name",
-      nameRegex,
-      "#error_last_name",
-      '{% trans "Please enter a valid name with letters only." %}'
-    );
-
-    validateField(
-      "#id_phone",
-      phoneRegex,
-      "#error_phone",
-      '{% trans "Please enter a valid phone number with digits only." %}'
-    );
-
-    // Gestion du compteur de caractères pour le champ de message
-    $("#id_message").on("input", function () {
-      var currentLength = $(this).val().length;
-      $("#char_count").text(currentLength + "/" + maxChars); // Mise à jour du compteur
-
-      // Changement de couleur du compteur selon la longueur du message
-      if (currentLength >= maxChars) {
-        $("#char_count").css("color", "red"); // Rouge si le maximum est atteint ou dépassé
-      } else if (currentLength > 900) {
-        $("#char_count").css("color", "orange"); // Orange si proche du maximum
-      } else {
-        $("#char_count").css("color", "white"); // Blanc par défaut
-      }
-
-      // Empêche l'ajout de caractères au-delà du maximum autorisé
-      if (currentLength > maxChars) {
-        $(this).val($(this).val().substr(0, maxChars));
-      }
-    });
-  });
-</script> {% endcomment %}
