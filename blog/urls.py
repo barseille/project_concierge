@@ -1,6 +1,5 @@
 from django.urls import path
 from . import views
-# from .views import send_test_email
 
 urlpatterns = [
     path("", views.home, name="home"),
@@ -13,5 +12,4 @@ urlpatterns = [
 
     # path('services/<int:pk>/', views.ServiceDetailView.as_view(), name='service-detail'),
     # path('send-test-email/', send_test_email, name='send_test_email'),
-    # path('test/', views.test, name="test")
 ]

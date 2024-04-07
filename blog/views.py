@@ -80,7 +80,6 @@ def values(request):
     return render(request, 'values.html', context)
 
 
-
 # Vues pour les services
 def services(request):
     try:
@@ -111,8 +110,6 @@ def get_terms_of_use(request):
         }
     return render(request, 'terms_of_use.html', context)
 
-
-
 # Détails de chaque service
 # class ServiceDetailView(DetailView):
 #     model = Service
@@ -133,7 +130,6 @@ def get_terms_of_use(request):
 #         return context
 
 
-
 # from django.core.mail import send_mail
 # from django.http import HttpResponse
 
@@ -147,7 +143,3 @@ def get_terms_of_use(request):
 #     )
 #     return HttpResponse("Email envoyé avec succès !")
 
-
-# def test(request):
-#     contacts = Contact.objects.all()
-#     return render(request, "test.html", {"contacts": contacts})

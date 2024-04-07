@@ -19,7 +19,7 @@
           <img src="{{ testimonial.photo.url }}" alt="{{ testimonial.name }}" class="mx-auto h-24 w-24 rounded-full object-cover" loading="lazy" />
           {% endif %}
           <p class="py-4">“{{ testimonial.message }}”</p>
-          <p class="pt-2">- {{ testimonial.name }}</p>
+          <p class="pt-2">{{ testimonial.name }} ({{ testimonial.country }})</p>
         </div>
         {% endfor %}
       </div>
