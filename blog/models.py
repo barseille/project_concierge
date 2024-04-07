@@ -37,6 +37,7 @@ class Testimonial(models.Model):
     role = models.CharField(_("Role"), max_length=100, blank=True, null=True)
     message = models.TextField(_("Message"))
     photo = models.ImageField(upload_to='testimonials/', blank=True, null=True)
+    country = models.CharField(_("Country"), max_length=100, blank=True, null=True)
 
     class Meta:
         verbose_name = _("Testimonial")

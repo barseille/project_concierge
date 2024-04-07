@@ -27,8 +27,19 @@
 </main>
 {% include '_footer.html' %}
 
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js" defer></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+{% comment %} <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script> {% endcomment %}
+
+<script>
+    var errorMsgs = {
+        validEmail: "{% trans 'Please enter a valid email address.' %}",
+        validName: "{% trans 'Please enter a valid name with letters only.' %}",
+        validPhone: "{% trans 'Please enter a valid phone number with digits only.' %}"
+    };
+</script>
+
 
 <script defer>
     document.addEventListener("DOMContentLoaded", function () {
@@ -57,29 +68,26 @@
     });
 
     $(document).ready(function () {
-        // Validation des champs de formulaire
         var nameRegex = /^[a-zA-Z\s]+$/;
         var phoneRegex = /^[0-9\s\-\(\)]+$/;
         var maxChars = 1000;
         
-        function validateField(fieldId, regex, errorMsgId, errorMsg) {
+        function validateField(fieldId, regex, errorMsgId, errorMsgKey) {
             $(fieldId).blur(function () {
                 var fieldValue = $(this).val();
                 if (!regex.test(fieldValue)) {
-                    $(errorMsgId).text(errorMsg).show();
+                    $(errorMsgId).text(errorMsgs[errorMsgKey]).show();
                 } else {
                     $(errorMsgId).hide();
                 }
             });
         }
         
-        // Validation spécifique pour chaque champ
-        validateField("#id_email", /^[^\s@]+@[^\s@]+\.[^\s@]+$/, "#error_email", "Please enter a valid email address.");
-        validateField("#id_first_name", nameRegex, "#error_first_name", "Please enter a valid name with letters only.");
-        validateField("#id_last_name", nameRegex, "#error_last_name", "Please enter a valid name with letters only.");
-        validateField("#id_phone", phoneRegex, "#error_phone", "Please enter a valid phone number with digits only.");
+        validateField("#id_email", /^[^\s@]+@[^\s@]+\.[^\s@]+$/, "#error_email", "validEmail");
+        validateField("#id_first_name", nameRegex, "#error_first_name", "validName");
+        validateField("#id_last_name", nameRegex, "#error_last_name", "validName");
+        validateField("#id_phone", phoneRegex, "#error_phone", "validPhone");
         
-        // Gestion du compteur de caractères pour le champ de message
         $("#id_message").on("input", function () {
             var currentLength = $(this).val().length;
             $("#char_count").text(currentLength + "/" + maxChars);
