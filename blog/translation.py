@@ -1,6 +1,12 @@
 from modeltranslation.translator import register, TranslationOptions
 from .models import Service, Testimonial, FAQ, SiteInformation, Offering, HomePageSection
 
+""" 
+Options de traduction pour tous les modèles
+Permet la traduction des champs pour supporter 
+le multilangue dans l'application
+"""
+
 @register(Service)
 class ServiceTranslationOptions(TranslationOptions):
     fields = ('title', 'description',)

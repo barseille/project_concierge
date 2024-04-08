@@ -2,8 +2,11 @@ from django.db import models
 from django.utils.translation import gettext_lazy as _
 
 
-# Coordonnées des utilisateurs via le formulaire
 class Contact(models.Model):
+    """
+    Modèle représentant les coordonnées des utilisateurs soumises via le formulaire de contact.
+    Stocke le prénom, le nom, l'email, le téléphone et le message de l'utilisateur.
+    """
     first_name = models.CharField(_("First Name"), max_length=100)
     last_name = models.CharField(_("Last Name"), max_length=100)
     email = models.EmailField(_("Email"))
@@ -15,6 +18,10 @@ class Contact(models.Model):
 
 
 class Service(models.Model):
+    """
+    Modèle représentant un service offert par l'entreprise.
+    Contient un titre et une description du service.
+    """
     title = models.CharField(max_length=200)
     description = models.TextField()
     
@@ -22,8 +29,11 @@ class Service(models.Model):
         return self.title
 
 
-# Section liste offres proposées par service
 class Offering(models.Model):
+    """
+    Modèle représentant une offre spécifique liée à un service.
+    Chaque offre a un titre, une description et est liée à un service.
+    """
     service = models.ForeignKey(Service, on_delete=models.CASCADE, related_name='offerings')
     title = models.CharField(max_length=500)
     description = models.TextField()
@@ -31,8 +41,12 @@ class Offering(models.Model):
     def __str__(self):
         return f'{self.title} - {self.service.title}'
 
-# Section témoignages
+
 class Testimonial(models.Model):
+    """
+    Modèle pour stocker les témoignages des clients.
+    Inclut le nom du client, son rôle (optionnel), son message, une photo (optionnelle) et le pays.
+    """
     name = models.CharField(_("Name"), max_length=100)
     role = models.CharField(_("Role"), max_length=100, blank=True, null=True)
     message = models.TextField(_("Message"))
@@ -47,8 +61,11 @@ class Testimonial(models.Model):
         return self.name
 
 
-# Section questions/réponses
 class FAQ(models.Model):
+    """
+    Modèle pour les questions fréquentes liées à un service spécifique ou générales à tous les services.
+    Comprend la question, la réponse et un indicateur pour marquer comme FAQ générale.
+    """
     service = models.ForeignKey(Service, on_delete=models.CASCADE, related_name='faqs', null=True, blank=True)
     question = models.CharField(_("Question"), max_length=255)
     answer = models.TextField(_("Answer"))
@@ -61,16 +78,22 @@ class FAQ(models.Model):
     def __str__(self):
         return self.question
     
-# Texte du footer
+
 class SiteInformation(models.Model):
+    """
+    Modèle stockant les informations générales du site, comme la description des services de conciergerie.
+    """
     concierge_description = models.TextField(_("Concierge Company Description"), help_text=_("Description of the concierge company services."))
 
     def __str__(self):
         return "Site Information"
 
 
-# Section image de présentation de la page d'accueil
 class HomePageSection(models.Model):
+    """
+    Modèle pour les sections de la page d'accueil, incluant un titre, un sous-titre, une image,
+    et le texte pour jusqu'à deux boutons.
+    """
     title = models.CharField(_("Title"), max_length=200)
     subtitle = models.TextField(_("Subtitle"), blank=True, null=True)
     image = models.ImageField(_("Image"), upload_to='images/')

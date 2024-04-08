@@ -1,22 +1,29 @@
-
 from django import forms
 from django.core.validators import RegexValidator
 from django.utils.translation import gettext_lazy as _
 from .models import Contact
 
-# Définir un validateur pour les noms
-name_validator = RegexValidator(
-    regex=r'^[a-zA-ZÀ-ÿ\s-]+$',
-    message=_("Please enter a valid name with letters only."),
-)
-
-# Validator for phone numbers
-phone_validator = RegexValidator(
-    regex=r'^[\+]?[0-9\s]+$',
-    message=_("Please enter a valid phone number with digits only."),
-)
-
 class ContactForm(forms.ModelForm):
+    """
+    Formulaire pour la soumission de contact utilisé dans la page de contact.
+    
+    Utilise des validateurs personnalisés pour s'assurer que le nom ne contient que des lettres 
+    et que le numéro de téléphone est valide. Le formulaire est lié au modèle Contact pour 
+    enregistrer les soumissions directement dans la base de données.
+    """
+    
+    # Définir un validateur pour les noms
+    name_validator = RegexValidator(
+        regex=r'^[a-zA-ZÀ-ÿ\s-]+$',
+        message=_("Please enter a valid name with letters only."),
+    )
+
+    # Validateur pour les numéros de téléphone
+    phone_validator = RegexValidator(
+        regex=r'^[\+]?[0-9\s]+$',
+        message=_("Please enter a valid phone number with digits only."),
+    )
+
     first_name = forms.CharField(
         validators=[name_validator],
         widget=forms.TextInput(attrs={'class': 'input-style', 'placeholder': _('First Name*')}),
@@ -52,5 +59,8 @@ class ContactForm(forms.ModelForm):
     )
     
     class Meta:
+        """
+        Meta-classe pour spécifier le modèle lié et les champs à utiliser dans le formulaire.
+        """
         model = Contact
         fields = ['first_name', 'last_name', 'email', 'phone', 'message']

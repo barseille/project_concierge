@@ -27,10 +27,8 @@
 </main>
 {% include '_footer.html' %}
 
-
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.js" defer></script>
-{% comment %} <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script> {% endcomment %}
 
 <script>
     var errorMsgs = {
@@ -39,7 +37,6 @@
         validPhone: "{% trans 'Please enter a valid phone number with digits only.' %}"
     };
 </script>
-
 
 <script defer>
     document.addEventListener("DOMContentLoaded", function () {
@@ -97,5 +94,6 @@
         });
     });
 </script>
+
 </body>
 </html>

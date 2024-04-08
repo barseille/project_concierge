@@ -8,6 +8,7 @@
     font-family: "Montserrat", sans-serif;
   }
 }
+
 /* Animation du défilement du menu burger dans navbar */
 @media (max-width: 768px) {
   nav ul {
@@ -29,6 +30,7 @@
     flex-grow: 0; /* Empêche le formulaire de prendre trop de place */
   }
 }
+
 #languageSelector:focus {
   outline: none;
   border-color: transparent;
@@ -36,19 +38,14 @@
 }
 
 #contact {
-  margin-top: -100px; /* Ajustez cette valeur en fonction de la hauteur de votre en-tête */
-  padding-top: 100px; /* Ajustez cette valeur pour compenser le décalage négatif */
+  margin-top: -100px;
+  padding-top: 100px;
 }
 
 /*Couleur et transparence de chaque option de la formule dans service.html*/
 .custom-bg-color {
   background: linear-gradient(to right, #2c2c2c 0%, #686868 50%, #2c2c2c 100%);
 }
-
-/* .detail-section {
-  background-color: #4b4b4b;
-} */
-
 
 /* style des champs du formulaire de contact */
 .input-style {
@@ -64,7 +61,6 @@
 
 .input-style:focus {
   outline: none;
-  /* border-bottom: 2px solid #FFD700; */
 }
 
 .input-style-message {
@@ -79,6 +75,5 @@
 
 .input-style-message:focus {
   outline: none;
-  /* border-bottom: 2px solid #FFD700; */
 }
 

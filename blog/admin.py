@@ -34,7 +34,8 @@ class TestimonialAdmin(admin.ModelAdmin):
 class FAQAdmin(admin.ModelAdmin):
     list_display = ('question', 'service', 'is_general')
     list_filter = ('service', 'is_general')
-    
+
+   
 @admin.register(SiteInformation)
 class SiteInformationAdmin(admin.ModelAdmin):
     list_display = ('concierge_description',)

@@ -73,16 +73,20 @@ def test_contact_view_post_invalid(client):
     et que les utilisateurs reçoivent des feedbacks appropriés lorsqu'ils soumettent des formulaires incomplets.
     """
     url = reverse('contact')
-    response = client.post(url, {})  # Soumission d'un formulaire vide
-    assert response.status_code == 200  # Doit revenir à la page de contact avec des erreurs de formulaire
+    
+    # Soumission d'un formulaire vide
+    response = client.post(url, {})
+    
+    # Doit revenir à la page de contact avec des erreurs de formulaire
+    assert response.status_code == 200  
     assert 'form' in response.context
     form = response.context['form']
     assert form.is_valid() is False
-    # Vérifier que les champs requis ont des erreurs
+   
     assert 'first_name' in form.errors
     assert 'email' in form.errors
     assert 'message' in form.errors
-    # Vérifier que le message d'erreur attendu est présent pour au moins un champ
+    
     expected_error_message = "This field is required."
     assert any(expected_error_message in error for error in form.errors.values())
 
@@ -94,7 +98,7 @@ def test_thanks_view(client):
     Teste si la vue thanks renvoie un code de statut HTTP 200 (succès),
     et vérifie que le contenu de la réponse contient un message de remerciement spécifique.
     """
-    url = reverse('thanks')  # Assurez-vous que l'URL est nommée 'thanks' dans vos urls.py
+    url = reverse('thanks')
     response = client.get(url)
     assert response.status_code == 200
     assert 'Your message has been successfully sent. We will contact you soon.' in response.content.decode()
@@ -145,7 +149,7 @@ def test_get_privacy_policy_view(client):
     # Créer un objet SiteInformation pour le test
     SiteInformation.objects.create(concierge_description="Description de test pour politique de confidentialité")
 
-    url = reverse('privacy_policy')  # Remplacer 'privacy_policy' par le nom réel utilisé dans urls.py
+    url = reverse('privacy_policy')  
     response = client.get(url)
     assert response.status_code == 200
     assert 'site_info' in response.context
@@ -160,7 +164,7 @@ def test_get_terms_of_use_view(client):
     # Créer un objet SiteInformation pour le test
     SiteInformation.objects.create(concierge_description="Description de test pour conditions d'utilisation")
 
-    url = reverse('terms_of_use')  # Remplacer 'terms_of_use' par le nom réel utilisé dans urls.py
+    url = reverse('terms_of_use')  
     response = client.get(url)
     assert response.status_code == 200
     assert 'site_info' in response.context

@@ -5,10 +5,14 @@ from django.utils.translation import gettext_lazy as _
 from django.core.mail import send_mail
 from django.conf import settings
 from .models import Service, Testimonial,FAQ, SiteInformation,HomePageSection
-from django.views.generic import DetailView
+# from django.views.generic import DetailView
 
-# Page d'accueil
+
 def home(request):
+    """
+    Vue pour la page d'accueil. Affiche un formulaire de contact, les services disponibles,
+    les témoignages, les informations du site, les FAQs générales, et la section principale de la page d'accueil.
+    """
     form = ContactForm()
     service = Service.objects.all()
     testimonial = Testimonial.objects.all()
@@ -29,9 +33,15 @@ def home(request):
 
 
 def contact_view(request):
+    """
+    Traite les soumissions du formulaire de contact. En cas de succès, envoie un email avec les détails
+    du message et redirige vers la page de remerciement. En cas d'échec, affiche des messages d'erreur.
+    """
     if request.method == 'POST':
         form = ContactForm(request.POST)
+        
         if form.is_valid():
+            
             # Extraction des données nettoyées
             first_name = form.cleaned_data['first_name']
             email = form.cleaned_data['email']
@@ -48,12 +58,12 @@ def contact_view(request):
                 form.save()
                 messages.success(request, _('Your message has been successfully sent!'))
                 return redirect('thanks')
+            
             except Exception as e:
                 messages.error(request, _('An error occurred while sending your message.'))
     else:
         form = ContactForm()
-    
-    # Récupération du texte <p> du footer   
+      
     site_info = SiteInformation.objects.first()  
     context = {
         'form': form,
@@ -63,10 +73,16 @@ def contact_view(request):
 
 
 def thanks(request):
+    """
+    Affiche une page de remerciement après l'envoi réussi d'un formulaire de contact.
+    """
     return render(request, 'thanks.html')
 
-# Section Nos valeurs
+
 def values(request):
+    """
+    Vue pour la page 'Nos valeurs'. Affiche des témoignages et des informations sur l'entreprise.
+    """
     form = ContactForm()
     testimonial = Testimonial.objects.all()
     site_info = SiteInformation.objects.first()
@@ -79,10 +95,11 @@ def values(request):
     return render(request, 'values.html', context)
 
 
-# Vues pour les services
 def services(request):
+    """
+    Affiche une liste des services offerts par l'entreprise.
+    """
     try:
-        # Récupère la première instance de Service
         service = Service.objects.first()  
     except Service.DoesNotExist:
         service = None
@@ -95,50 +112,24 @@ def services(request):
     }
     return render(request, 'services.html', context)
 
+
 def get_privacy_policy(request):
+    """
+    Affiche la politique de confidentialité du site.
+    """
     site_info = SiteInformation.objects.first()
     context = {
         'site_info': site_info,
         }
     return render(request, 'privacy_policy.html', context)
 
+
 def get_terms_of_use(request):
+    """
+    Affiche les termes et conditions d'utilisation du site.
+    """
     site_info = SiteInformation.objects.first()
     context = {
         'site_info': site_info,
         }
     return render(request, 'terms_of_use.html', context)
-
-# Détails de chaque service
-# class ServiceDetailView(DetailView):
-#     model = Service
-#     template_name = 'service_detail.html'
-#     context_object_name = 'service'
-    
-    
-#     def get_context_data(self, **kwargs):
-#         # Appel de la méthode de base pour obtenir le contexte
-#         context = super().get_context_data(**kwargs)
-        
-#         # Ajout de données supplémentaires au contexte
-#         context['service_faqs'] = self.object.faqs.all()
-#         context['general_faqs'] = FAQ.objects.filter(is_general=True)
-#         context['form'] = ContactForm()
-#         context['testimonials'] = Testimonial.objects.all()
-#         context['site_info'] = SiteInformation.objects.first()
-#         return context
-
-
-# from django.core.mail import send_mail
-# from django.http import HttpResponse
-
-# def send_test_email(request):
-#     send_mail(
-#         'Sujet de test',
-#         'Voici le message.',
-#         'from@example.com',
-#         ['to@example.com'],
-#         fail_silently=False,
-#     )
-#     return HttpResponse("Email envoyé avec succès !")
-
