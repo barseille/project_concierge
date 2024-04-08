@@ -12,7 +12,6 @@ def home(request):
     form = ContactForm()
     service = Service.objects.all()
     testimonial = Testimonial.objects.all()
-    faqs = FAQ.objects.all()
     site_info = SiteInformation.objects.first()
     general_faqs = FAQ.objects.filter(is_general=True)
     homepage_section = HomePageSection.objects.first()

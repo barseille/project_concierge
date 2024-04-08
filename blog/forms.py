@@ -19,14 +19,15 @@ phone_validator = RegexValidator(
 class ContactForm(forms.ModelForm):
     first_name = forms.CharField(
         validators=[name_validator],
-        # widget=forms.TextInput(attrs={'class': 'rounded-md border-gray-300 focus:border-yellow-500 focus:ring focus:ring-yellow-500 focus:ring-opacity-50'}),
         widget=forms.TextInput(attrs={'class': 'input-style', 'placeholder': _('First Name*')}),
         label='',
+        error_messages={'required': _("This field is required.")},
     )
     last_name = forms.CharField(
         validators=[name_validator],
         widget=forms.TextInput(attrs={'class': 'input-style', 'placeholder': _('Last Name*')}),
         label='',
+        error_messages={'required': _("This field is required.")},
     )
     email = forms.EmailField(
         label='', 
@@ -47,8 +48,6 @@ class ContactForm(forms.ModelForm):
             'class': 'input-style-message rounded-md',
             'rows': 10, 
             'maxlength': '1000'}),
-       
-        # widget=forms.Textarea(attrs={'class': 'rounded-md border-gray-300 focus:border-yellow-500 focus:ring focus:ring-yellow-500 focus:ring-opacity-50 text-red', 'maxlength': '1000'}),
         label=_("Message*"),
     )
     
