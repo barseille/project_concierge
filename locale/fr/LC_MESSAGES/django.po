@@ -544,6 +544,25 @@ msgstr "ANGKOR MANAGEMENT se réserve le droit de modifier ces conditions d'util
 msgid "Contact Information"
 msgstr "Informations de Contact"
 
+msgid "Please read and accept the acceptance criteria before submitting your form."
+msgstr "Veuillez lire et accepter les critères d'acceptation avant de soumettre votre formulaire."
+
+msgid "Acceptance Criteria:"
+msgstr "Critères d'acceptation :"
+
+msgid "LOCATION: The property must be located in Siem Reap, Cambodia."
+msgstr "EMPLACEMENT : La propriété doit être située à Siem Reap, au Cambodge."
+
+msgid "PROPERTY TYPE: We focus our services on houses and villas, excluding apartments for the moment."
+msgstr "TYPE DE PROPRIÉTÉ : Nous concentrons nos services sur les maisons et les villas, excluant les appartements pour le moment."
+
+msgid "FUNCTIONAL EQUIPMENT: All essential equipment (electricity, plumbing, etc.) must be in working order."
+msgstr "ÉQUIPEMENT FONCTIONNEL : Tous les équipements essentiels (électricité, plomberie, etc.) doivent être en état de marche."
+
+msgid "I have read and accepted the acceptance criteria."
+msgstr "J'ai lu et accepté les critères d'acceptation."
+
+
 
 
 

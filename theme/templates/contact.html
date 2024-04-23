@@ -72,6 +72,34 @@
     </div>
     {% endfor %}
 
+    <div class="acceptance-criteria text-white flex flex-col gap-4 py-4">
+      <h3 class="font-semibold mb-4 uppercase">{% trans "Acceptance Criteria:" %}</h3>
+      <ul class="flex flex-col gap-y-4">
+        <li>{% trans "LOCATION: The property must be located in Siem Reap, Cambodia." %}</li>
+        <li>{% trans "PROPERTY TYPE: We focus our services on houses and villas, excluding apartments for the moment." %}</li>
+        <li>{% trans "FUNCTIONAL EQUIPMENT: All essential equipment (electricity, plumbing, etc.) must be in working order." %}</li>
+      </ul>
+      <label class="pt-4">
+        <input type="checkbox" name="acceptance" required>
+        {% trans "I have read and accepted the acceptance criteria." %}
+      </label>
+    </div>
+    
+
+    {% comment %} <div class="acceptance-criteria text-white flex flex-col gap-4 py-4">
+      <h3 class=" font-semibold mb-4 uppercase">Critères d'acceptation :</h3>
+      <ul class="flex flex-col gap-y-4 list-disc">
+          <li>EMPLACEMENT : La propriété doit être située à Siem Reap, au Cambodge.</li>
+          <li>TYPE DE PROPRIÉTÉ : Nous concentrons nos services sur les maisons et villas, hors appartements pour le moment.</li>
+          <li>ÉQUIPEMENT FONCTIONNEL : Tous les équipements essentiels (électricité, plomberie, etc.) doivent être en état de marche.</li>
+      </ul>
+      <label class="pt-4">
+          <input type="checkbox" name="acceptance" required>
+          J'ai lu et accepté les critères d'acceptation.
+      </label>
+    </div> {% endcomment %}
+  
+
     <button
       type="submit"
       class="inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-yellow-500 to-orange-500 px-6 py-3 text-sm uppercase leading-tight text-black shadow-md transition duration-150 ease-in-out hover:shadow-outline hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 font-semibold"
