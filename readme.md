@@ -2,7 +2,7 @@
 
 ## À Propos du Projet
 
-Ce projet Django est une simulation d'un système de gestion locative pour ANGKOR MANAGEMENT, une entreprise fictive de gestion immobilière basée au Cambodge. Il met en évidence les compétences en développement backend à travers la gestion des formulaires, l'interaction avec une base de données, l'envoi d'emails, et l'internationalisation.
+Ce projet Django représente une solution de gestion locative en production pour ANGKOR MANAGEMENT, une entreprise de gestion immobilière opérant au Cambodge. Il démontre mes compétences en développement backend, avec la mise en œuvre de fonctionnalités telles que la gestion de formulaires, la manipulation de bases de données, l'envoi d'emails, et l'internationalisation.
 
 ## Fonctionnalités Clés
 
