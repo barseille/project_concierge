@@ -7,6 +7,12 @@
 
 {% include '_custom_section_title.html' with h1_text="Launch Your Real Estate Project With ANGKOR MANAGEMENT" p_text="Whether it is maximizing the profitability of your properties, seeking excellence in rental management, or simply freeing you from daily hassles, our team is ready to listen to your needs and offer you tailor-made solutions. Fill out the form below so we can start bringing your vision to life." %}
 
+<img 
+  src="{% static 'images/12.png' %}" 
+  alt="" 
+  class="w-full h-[700px] object-cover object-center pt-10" 
+  loading="lazy">
+
 
 <!-- Section Critères d'Acceptation -->
 <section id="acceptance-criteria" class="text-white pt-[100px] flex items-center flex-col gap-10">
@@ -72,40 +78,21 @@
     </div>
     {% endfor %}
 
-    <div class="acceptance-criteria text-white flex flex-col gap-4 py-4">
-      <h3 class="font-semibold mb-4 uppercase">{% trans "Acceptance Criteria:" %}</h3>
-      <ul class="flex flex-col gap-y-4">
-        <li>{% trans "LOCATION: The property must be located in Siem Reap, Cambodia." %}</li>
-        <li>{% trans "PROPERTY TYPE: We focus our services on houses and villas, excluding apartments for the moment." %}</li>
-        <li>{% trans "FUNCTIONAL EQUIPMENT: All essential equipment (electricity, plumbing, etc.) must be in working order." %}</li>
-      </ul>
-      <label class="pt-4">
+    <div class="acceptance-criteria text-white flex justify-center w-full">
+      <label class="py-4 flex items-center">
         <input type="checkbox" name="acceptance" required>
-        {% trans "I have read and accepted the acceptance criteria." %}
+        <span class="ml-4 sm:ml-6">{% trans "I confirm that I have read and understood the Acceptance Criteria and I accept the General Terms and Conditions." %}</span>
       </label>
     </div>
-    
 
-    {% comment %} <div class="acceptance-criteria text-white flex flex-col gap-4 py-4">
-      <h3 class=" font-semibold mb-4 uppercase">Critères d'acceptation :</h3>
-      <ul class="flex flex-col gap-y-4 list-disc">
-          <li>EMPLACEMENT : La propriété doit être située à Siem Reap, au Cambodge.</li>
-          <li>TYPE DE PROPRIÉTÉ : Nous concentrons nos services sur les maisons et villas, hors appartements pour le moment.</li>
-          <li>ÉQUIPEMENT FONCTIONNEL : Tous les équipements essentiels (électricité, plomberie, etc.) doivent être en état de marche.</li>
-      </ul>
-      <label class="pt-4">
-          <input type="checkbox" name="acceptance" required>
-          J'ai lu et accepté les critères d'acceptation.
-      </label>
-    </div> {% endcomment %}
-  
-
+    <div class="flex justify-center w-full">
     <button
       type="submit"
-      class="inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-yellow-500 to-orange-500 px-6 py-3 text-sm uppercase leading-tight text-black shadow-md transition duration-150 ease-in-out hover:shadow-outline hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 font-semibold"
+      class="inline-flex items-center justify-center rounded-lg bg-gradient-to-br from-yellow-500 to-orange-500 px-4 py-3 mt-4 text-sm uppercase leading-tight text-black shadow-md transition duration-150 ease-in-out hover:shadow-outline hover:text-white focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:ring-opacity-50 font-semibold"
     >
       {% trans "SEND" %}
     </button>
+  </div>
   </form>
 </div>
 {% endblock %}
