@@ -1,1 +1,1 @@
-web: gunicorn project_khmer_concierge.wsgi --log-file -
+web: gunicorn angkormanagement.wsgi --log-file -
