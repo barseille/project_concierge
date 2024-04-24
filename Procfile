@@ -1,1 +1,1 @@
-web: gunicorn config.wsgi --log-file -
+web: gunicorn project_khmer_concierge.wsgi --log-file -
