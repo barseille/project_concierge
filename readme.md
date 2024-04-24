@@ -47,7 +47,6 @@ python manage.py tailwind start
 ## Exécutez les migrations :
 ```
 python manage.py migrate
-
 ```
 ## Lancez le serveur de développement :
 ```

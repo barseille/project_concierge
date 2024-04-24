@@ -21,6 +21,7 @@ Flask-Login==0.6.3
 gevent==24.2.1
 geventhttpclient==2.0.12
 greenlet==3.0.3
+gunicorn==22.0.0
 idna==3.6
 importlib_metadata==7.1.0
 iniconfig==2.0.0
@@ -58,6 +59,7 @@ typing_extensions==4.10.0
 tzdata==2024.1
 urllib3==2.2.1
 Werkzeug==3.0.2
+whitenoise==6.6.0
 zipp==3.18.1
 zope.event==5.0
 zope.interface==6.2
