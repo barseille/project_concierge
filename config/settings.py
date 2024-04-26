@@ -13,7 +13,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG = os.getenv('DEBUG') == 'True'
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
 
-print("SECRET_KEY:", SECRET_KEY)
+# print("SECRET_KEY:", SECRET_KEY)
 
 # Application definition
 
@@ -43,7 +43,6 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
-
 
 
 ROOT_URLCONF = "config.urls"
@@ -79,15 +78,38 @@ WSGI_APPLICATION = "config.wsgi.application"
 #     }
 # }
 
-# Configuration conditionnelle de la base de données
-DATABASES = {
-    'default': dj_database_url.config(
-        default=f"postgres://{os.getenv('DB_USER')}:{os.getenv('DB_PASSWORD')}@{os.getenv('DB_HOST')}:{os.getenv('DB_PORT')}/{os.getenv('DB_NAME')}",
-        conn_max_age=600,
-        ssl_require=True
-    )
-}
+# # Configuration conditionnelle de la base de données
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         default=f"postgres://{os.getenv('DB_USER')}:{os.getenv('DB_PASSWORD')}@{os.getenv('DB_HOST')}:{os.getenv('DB_PORT')}/{os.getenv('DB_NAME')}",
+#         conn_max_age=600,
+#         ssl_require=True
+#     )
+# }
 
+# Déterminez si vous êtes en mode développement ou production
+# Cela peut être déterminé par une variable d'environnement ou autre mécanisme
+# Ici, je suppose que vous avez une variable d'environnement 'ENV' qui détermine cela
+ENV = os.getenv('ENV', 'development')
+
+if ENV == 'production':
+    # En production, utilisez SSL
+    DATABASES = {
+        'default': dj_database_url.config(
+            default=f"postgres://{os.getenv('DB_USER')}:{os.getenv('DB_PASSWORD')}@{os.getenv('DB_HOST')}:{os.getenv('DB_PORT')}/{os.getenv('DB_NAME')}",
+            conn_max_age=600,
+            ssl_require=True
+        )
+    }
+else:
+    # En développement, désactivez SSL si ce n'est pas nécessaire
+    DATABASES = {
+        'default': dj_database_url.config(
+            default=f"postgres://{os.getenv('DB_USER')}:{os.getenv('DB_PASSWORD')}@{os.getenv('DB_HOST')}:{os.getenv('DB_PORT')}/{os.getenv('DB_NAME')}",
+            conn_max_age=600,
+            ssl_require=False
+        )
+    }
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -114,15 +136,6 @@ USE_I18N = True
 
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.2/howto/static-files/
-
-
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
-
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
@@ -144,7 +157,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
 
 
-
 LANGUAGES = [
     ('en', 'en'),
     ('fr', 'fr'),
@@ -162,21 +174,21 @@ EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS', 'True') == 'True'
 EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'handlers': {
-        'console': {
-            'class': 'logging.StreamHandler',
-        },
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['console'],
-            'level': 'DEBUG',
-        },
-    },
-}
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#     'handlers': {
+#         'console': {
+#             'class': 'logging.StreamHandler',
+#         },
+#     },
+#     'loggers': {
+#         'django': {
+#             'handlers': ['console'],
+#             'level': 'DEBUG',
+#         },
+#     },
+# }
 
 
 
