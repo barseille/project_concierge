@@ -10,11 +10,14 @@ load_dotenv()
 # Définition du chemin de base du projet
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Clé secrète et mode débogage
 SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG = os.getenv('DEBUG') == 'True'
+
+# Hôtes autorisés
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
 
-# Définition des applications installées
+# Applications Django et applications tierces
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -26,15 +29,15 @@ INSTALLED_APPS = [
     "theme",
     "authentication",
     "blog",
-    "modeltranslation",
+    "modeltranslation",  # Gestion des traductions des modèles
 ]
 
-# Configuration du middleware
+# Middleware utilisé par l'application
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",  # Gestion des fichiers statiques
     "django.contrib.sessions.middleware.SessionMiddleware",
-    "django.middleware.locale.LocaleMiddleware",
+    "django.middleware.locale.LocaleMiddleware",  # Gestion des langues
     "middleware.AdminLocaleMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -43,6 +46,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
+# Configuration de l'URL principale
 ROOT_URLCONF = "config.urls"
 
 # Configuration des templates
@@ -63,9 +67,10 @@ TEMPLATES = [
     },
 ]
 
+# Configuration de l'application WSGI
 WSGI_APPLICATION = "config.wsgi.application"
 
-# Configuration de la base de données
+# Configuration de la base de données selon l'environnement
 ENV = os.getenv('ENV', 'development')
 if ENV == 'production':
     DATABASES = {
@@ -84,13 +89,13 @@ else:
         )
     }
 
-# Configuration pour les fichiers statiques
+# Configuration des fichiers statiques
 STATIC_URL = "/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-# Configuration pour l'envoi d'emails
+# Configuration de l'envoi d'emails
 EMAIL_BACKEND = os.getenv('EMAIL_BACKEND', 'django.core.mail.backends.smtp.EmailBackend')
 EMAIL_HOST = os.getenv('EMAIL_HOST', 'smtp.gmail.com')
 EMAIL_PORT = int(os.getenv('EMAIL_PORT', 587))
@@ -98,7 +103,7 @@ EMAIL_USE_TLS = os.getenv('EMAIL_USE_TLS', 'True') == 'True'
 EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 
-# Autres configurations
+# Configuration des langues et de la localisation
 LANGUAGE_CODE = "en-us"
 TIME_ZONE = "UTC"
 USE_I18N = True
@@ -111,5 +116,14 @@ AUTH_USER_MODEL = 'authentication.User'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-# Configuration django-heroku pour paramétrer automatiquement l'application pour Heroku.
+# Langues disponibles
+LANGUAGES = [
+    ('en', 'English'),
+    ('fr', 'Français'),
+]
+
+# Chemins des fichiers de traduction
+LOCALE_PATHS = (os.path.join(BASE_DIR, 'locale'),)
+
+# Configuration django-heroku pour paramétrer automatiquement l'application pour Heroku
 django_heroku.settings(locals())
