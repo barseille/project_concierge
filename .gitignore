@@ -167,6 +167,5 @@ cython_debug/
 
 db.json
 
-media
 
 db.sqlite3

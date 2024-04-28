@@ -113,8 +113,9 @@ INTERNAL_IPS = ["127.0.0.1"]
 TAILWIND_APP_NAME = 'theme'
 NPM_BIN_PATH = "C:/Program Files/nodejs/npm.cmd"
 AUTH_USER_MODEL = 'authentication.User'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
 
 # Langues disponibles
 LANGUAGES = [
