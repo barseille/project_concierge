@@ -1,6 +1,8 @@
 from pathlib import Path
 import os
 from dotenv import load_dotenv
+import dj_database_url
+
 
 # Charge les variables d'environnement du fichier .env
 load_dotenv()
@@ -13,8 +15,27 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv("SECRET_KEY")
 DEBUG = os.getenv('DEBUG') == 'True'
 
+# les hôtes autorisés pour l'application
+ALLOWED_HOSTS = [host.strip() for host in os.getenv('ALLOWED_HOSTS', '').split(',')]
 
-ALLOWED_HOSTS = []
+
+print(ALLOWED_HOSTS)  # Devrait maintenant montrer chaque entrée comme une chaîne distincte sans espaces superflus
+
+
+
+# # Utilisation de l'URL de la base de données fournie par Heroku
+# DATABASES = {
+#     'default': dj_database_url.config(conn_max_age=600, ssl_require=True)
+# }
+
+# Choisis l'URL de la base de données en fonction de la valeur de DEBUG
+database_url = os.getenv('LOCAL_DATABASE_URL') if os.getenv('DEBUG') == 'True' else os.getenv('DATABASE_URL')
+DATABASES = {
+    'default': dj_database_url.config(default=database_url, conn_max_age=600, ssl_require=True if os.getenv('DEBUG') == 'False' else False)
+}
+
+
+print("Database URL:", DATABASES['default'])
 
 
 # Application definition
@@ -69,16 +90,6 @@ TEMPLATES = [
 WSGI_APPLICATION = "config.wsgi.application"
 
 
-DATABASES = {
-    "default": {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('DB_NAME'),
-        'USER': os.getenv('DB_USER'),
-        'PASSWORD': os.getenv('DB_PASSWORD'),
-        'HOST': os.getenv('DB_HOST'),
-        'PORT': os.getenv('DB_PORT'),
-    }
-}
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -109,7 +120,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = "static/"
+STATIC_URL = "/static/"
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
@@ -127,7 +139,7 @@ NPM_BIN_PATH = "C:/Program Files/nodejs/npm.cmd"
 
 AUTH_USER_MODEL = 'authentication.User'
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
