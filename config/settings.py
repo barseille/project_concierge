@@ -24,13 +24,17 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
-    "django.contrib.staticfiles",
     "tailwind",
     "theme",
     "authentication",
     "blog",
     "modeltranslation",  # Gestion des traductions des modèles
 ]
+
+if DEBUG:
+    INSTALLED_APPS += ["whitenoise.runserver_nostatic"]
+else:
+    INSTALLED_APPS += ["django.contrib.staticfiles"]
 
 # Middleware utilisé par l'application
 MIDDLEWARE = [
