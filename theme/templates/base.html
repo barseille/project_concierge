@@ -98,19 +98,31 @@
 </script>
 <script src="{% url 'javascript-catalog' %}"></script>
 <script>
+// Attend que le DOM soit entièrement chargé
 document.addEventListener('DOMContentLoaded', function () {
+    // Récupère le formulaire de contact par son ID
     const contactForm = document.getElementById('contactForm');
-    contactForm.addEventListener('submit', function (event) {
-        const checkbox = document.querySelector('input[name="acceptance"]');
-        if (!checkbox.checked) {
-            event.preventDefault(); // Empêcher la soumission du formulaire
-            alert(gettext("Please read and accept the acceptance criteria before submitting your form."));
-        }
-    });
+    
+    // Vérifie si le formulaire existe dans le DOM
+    if (contactForm) {
+        // Si le formulaire existe, ajoute un écouteur d'événements sur l'événement de soumission du formulaire
+        contactForm.addEventListener('submit', function (event) {
+            // Récupère la case à cocher d'acceptation des critères
+            const checkbox = document.querySelector('input[name="acceptance"]');
+            
+            // Vérifie si la case à cocher n'est pas cochée
+            if (!checkbox.checked) {
+                // Si la case à cocher n'est pas cochée, empêche la soumission du formulaire
+                event.preventDefault(); // Empêcher la soumission du formulaire
+                
+                // Affiche une alerte demandant à l'utilisateur de lire et d'accepter les critères d'acceptation
+                alert(gettext("Please read and accept the acceptance criteria before submitting your form."));
+            }
+        });
+    }
 });
-</script>
 
     
-
+</script>
 </body>
 </html>
