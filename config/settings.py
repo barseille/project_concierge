@@ -13,26 +13,29 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Accéder à une variable d'environnement
 SECRET_KEY = os.getenv("SECRET_KEY")
+
+# DEBUG mode
 DEBUG = os.getenv('DEBUG') == 'True'
 
 # les hôtes autorisés pour l'application
 ALLOWED_HOSTS = [host.strip() for host in os.getenv('ALLOWED_HOSTS', '').split(',')]
 
 
-print(ALLOWED_HOSTS)  # Devrait maintenant montrer chaque entrée comme une chaîne distincte sans espaces superflus
-
-
-
-# # Utilisation de l'URL de la base de données fournie par Heroku
+# # Choisis l'URL de la base de données en fonction de la valeur de DEBUG
+# database_url = os.getenv('LOCAL_DATABASE_URL') if os.getenv('DEBUG') == 'True' else os.getenv('DATABASE_URL')
 # DATABASES = {
-#     'default': dj_database_url.config(conn_max_age=600, ssl_require=True)
+#     'default': dj_database_url.config(default=database_url, conn_max_age=600, ssl_require=True if os.getenv('DEBUG') == 'False' else False)
 # }
 
-# Choisis l'URL de la base de données en fonction de la valeur de DEBUG
-database_url = os.getenv('LOCAL_DATABASE_URL') if os.getenv('DEBUG') == 'True' else os.getenv('DATABASE_URL')
+# Configuration de la base de données
 DATABASES = {
-    'default': dj_database_url.config(default=database_url, conn_max_age=600, ssl_require=True if os.getenv('DEBUG') == 'False' else False)
+    'default': dj_database_url.config(
+        default=os.getenv('DATABASE_URL'),
+        conn_max_age=600,
+        ssl_require=not DEBUG
+    )
 }
+
 
 
 # Application definition
@@ -53,6 +56,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.locale.LocaleMiddleware",
     "middleware.AdminLocaleMiddleware",
@@ -66,6 +70,7 @@ MIDDLEWARE = [
 
 
 ROOT_URLCONF = "config.urls"
+WSGI_APPLICATION = "config.wsgi.application"
 
 TEMPLATES = [
     {
@@ -84,7 +89,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = "config.wsgi.application"
+
 
 
 
@@ -118,8 +123,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = "/static/"
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), os.path.join(BASE_DIR, 'theme', 'static')]
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'static'),
+#     os.path.join(BASE_DIR, 'theme', 'static'),
+# ]
+
+
 
 
 # Default primary key field type
@@ -141,7 +154,7 @@ AUTH_USER_MODEL = 'authentication.User'
 # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
+# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
 
 LANGUAGES = [
     ('en', 'en'),
