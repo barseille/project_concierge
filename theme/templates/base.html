@@ -22,9 +22,18 @@
 </head>
 
 <body class="bg-black">
+
 {% include '_header.html' %}
 <main>
     {% block content %}
+    <!--test-->
+
+    {% if example_instance %}
+        <h1 class="text-green-700 bg-red-800">{{ example_instance.text }}</h1>
+    {% endif %}
+   
+
+    
     {% endblock %}
 </main>
 {% include '_footer.html' %}

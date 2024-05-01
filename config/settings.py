@@ -9,8 +9,6 @@ load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# DEBUG = True
-
 # Accéder à une variable d'environnement
 SECRET_KEY = os.getenv("SECRET_KEY")
 
@@ -21,12 +19,6 @@ DEBUG = os.getenv('DEBUG') == 'True'
 ALLOWED_HOSTS = [host.strip() for host in os.getenv('ALLOWED_HOSTS', '').split(',')]
 
 
-# # Choisis l'URL de la base de données en fonction de la valeur de DEBUG
-# database_url = os.getenv('LOCAL_DATABASE_URL') if os.getenv('DEBUG') == 'True' else os.getenv('DATABASE_URL')
-# DATABASES = {
-#     'default': dj_database_url.config(default=database_url, conn_max_age=600, ssl_require=True if os.getenv('DEBUG') == 'False' else False)
-# }
-
 # Configuration de la base de données
 DATABASES = {
     'default': dj_database_url.config(
@@ -36,10 +28,7 @@ DATABASES = {
     )
 }
 
-
-
 # Application definition
-
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -68,7 +57,6 @@ MIDDLEWARE = [
 ]
 
 
-
 ROOT_URLCONF = "config.urls"
 WSGI_APPLICATION = "config.wsgi.application"
 
@@ -90,9 +78,6 @@ TEMPLATES = [
 ]
 
 
-
-
-
 AUTH_PASSWORD_VALIDATORS = [
     {
         "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator",
@@ -109,7 +94,6 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-
 LANGUAGE_CODE = "en-us"
 
 TIME_ZONE = "UTC"
@@ -119,26 +103,14 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/4.2/howto/static-files/
-
 STATIC_URL = "/static/"
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
-# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-# STATICFILES_DIRS = [
-#     os.path.join(BASE_DIR, 'static'),
-#     os.path.join(BASE_DIR, 'theme', 'static'),
-# ]
 
-
-
-
-# Default primary key field type
-# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
@@ -152,11 +124,6 @@ TAILWIND_APP_NAME = 'theme'
 NPM_BIN_PATH = "C:/Program Files/nodejs/npm.cmd"
 
 AUTH_USER_MODEL = 'authentication.User'
-
-# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
-
-# STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
 
 LANGUAGES = [
     ('en', 'en'),
