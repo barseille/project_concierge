@@ -23,15 +23,14 @@ python manage.py test
 ## Technologies Utilisées:
 
 - **Backend :** Django (Python)
-- **Base de Données :** Postgres (production sur Heroku)
-- **Frontend :** HTML, CSS, TailwindCSS pour le stylisme
-- **Déploiement :** Heroku
+- **Base de Données :** Postgresql
+- **Frontend :** HTML, CSS, TailwindCSS
 
 ## Démarrage Rapide
 
 ### Cloner le projet depuis votre éditeur de code : 
 ```
-https://github.com/barseille/project_AL.git
+https://github.com/barseille/project_concierge.git
 ```
 
 ### Installez les dépendances :
