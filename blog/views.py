@@ -4,7 +4,7 @@ from .forms import ContactForm
 from django.utils.translation import gettext_lazy as _
 from django.core.mail import send_mail
 from django.conf import settings
-from .models import Service, Testimonial,FAQ, SiteInformation,HomePageSection, ExampleModel
+from .models import Service, Testimonial,FAQ, SiteInformation,HomePageSection
 # from django.views.generic import DetailView
 
 
@@ -19,7 +19,6 @@ def home(request):
     site_info = SiteInformation.objects.first()
     general_faqs = FAQ.objects.filter(is_general=True)
     homepage_section = HomePageSection.objects.first()
-    example_instance = ExampleModel.objects.create(text="Exemple de texte")
     
     context = {
         'form': form,

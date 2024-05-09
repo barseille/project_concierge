@@ -1,34 +1,24 @@
 from pathlib import Path
 import os
 from dotenv import load_dotenv
-import dj_database_url
-
 
 # Charge les variables d'environnement du fichier .env
 load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# DEBUG = True
+
 # Accéder à une variable d'environnement
 SECRET_KEY = os.getenv("SECRET_KEY")
-
-# DEBUG mode
 DEBUG = os.getenv('DEBUG') == 'True'
 
-# les hôtes autorisés pour l'application
-ALLOWED_HOSTS = [host.strip() for host in os.getenv('ALLOWED_HOSTS', '').split(',')]
 
+ALLOWED_HOSTS = []
 
-# Configuration de la base de données
-DATABASES = {
-    'default': dj_database_url.config(
-        default=os.getenv('DATABASE_URL'),
-        conn_max_age=600,
-        ssl_require=not DEBUG
-    )
-}
 
 # Application definition
+
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -45,7 +35,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.locale.LocaleMiddleware",
     "middleware.AdminLocaleMiddleware",
@@ -57,8 +46,8 @@ MIDDLEWARE = [
 ]
 
 
+
 ROOT_URLCONF = "config.urls"
-WSGI_APPLICATION = "config.wsgi.application"
 
 TEMPLATES = [
     {
@@ -77,6 +66,19 @@ TEMPLATES = [
     },
 ]
 
+WSGI_APPLICATION = "config.wsgi.application"
+
+
+DATABASES = {
+    "default": {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv('DB_NAME'),
+        'USER': os.getenv('DB_USER'),
+        'PASSWORD': os.getenv('DB_PASSWORD'),
+        'HOST': os.getenv('DB_HOST'),
+        'PORT': os.getenv('DB_PORT'),
+    }
+}
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -94,6 +96,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+
 LANGUAGE_CODE = "en-us"
 
 TIME_ZONE = "UTC"
@@ -103,14 +106,13 @@ USE_I18N = True
 USE_TZ = True
 
 
-STATIC_URL = "/static/"
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
-]
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATIC_URL = "static/"
 
+# Default primary key field type
+# https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
@@ -124,6 +126,11 @@ TAILWIND_APP_NAME = 'theme'
 NPM_BIN_PATH = "C:/Program Files/nodejs/npm.cmd"
 
 AUTH_USER_MODEL = 'authentication.User'
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
 
 LANGUAGES = [
     ('en', 'en'),

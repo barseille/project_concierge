@@ -107,14 +107,3 @@ class HomePageSection(models.Model):
 
     def __str__(self):
         return self.title
-
-
-
-class ExampleModel(models.Model):
-    """
-    Un modèle d'exemple simple avec un champ de texte.
-    """
-    text = models.CharField(max_length=100)
-
-    def __str__(self):
-        return self.text

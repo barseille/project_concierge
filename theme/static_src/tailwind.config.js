@@ -55,5 +55,4 @@ module.exports = {
         require('@tailwindcss/line-clamp'),
         require('@tailwindcss/aspect-ratio'),
     ],
-    // output: './theme/static/css/dist',
 }
